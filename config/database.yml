@@ -1,0 +1,25 @@
+# PostgreSQL via Docker container (paneldata-dev-pg) for development
+# Production uses Kamal accessory PG18 container (separate, configured in deploy.yml)
+# Secrets: ALL passwords via ENV (NEVER plaintext in this file - public repo)
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("DATABASE_HOST", "127.0.0.1") %>
+  port: <%= ENV.fetch("DATABASE_PORT", 5432) %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "paneldata") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "devpass_local_only") %>
+
+development:
+  <<: *default
+  database: paneldata_development
+
+test:
+  <<: *default
+  database: paneldata_test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "paneldata_production") %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>

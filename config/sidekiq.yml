@@ -1,0 +1,6 @@
+# pvar_jobs runs the long R shell-out; concurrency 1 keeps one PVAR at a time ( - OOM-safe on the
+# shared VPS;  accepts queue saturation at portfolio scale, surfaced as "position in queue" in the UI).
+:concurrency: 1
+:queues:
+  - pvar_jobs
+  - default
