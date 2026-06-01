@@ -1,0 +1,208 @@
+---
+pl:
+  a11y:
+    close_menu: Zamknij menu
+    menu: Menu
+    search: Szukaj (wkrótce)
+    sections: Sekcje
+    views: Widoki
+  common:
+    back_to_map: Wróć do mapy
+    back_to_panel: "← Wróć do panelu"
+  coverage_map:
+    no_data: brak danych
+    title: Mapa pokrycia
+    year: Rok
+    hist:
+      "Soviet Union": Związek Radziecki
+      "Austria-Hungary": Austro-Węgry
+      "Czechoslovakia": Czechosłowacja
+      "Yugoslavia": Jugosławia
+      "German Democratic Republic": Niemiecka Republika Demokratyczna
+      "Korea": Korea
+      "Tibet": Tybet
+      "Newfoundland": Nowa Fundlandia
+      "Palestine": Palestyna
+      "Zanzibar": Zanzibar
+  data_selection:
+    coverage: Pokrycie
+    family: Rodzina
+    indicator: Wskaźnik
+    license: Licencja
+    period: Okres
+    source: Źródło
+    title: Wybór danych
+  history:
+    today: Dziś
+    yesterday: Wczoraj
+    older: Starsze
+    failed: nieudane
+    queued: w kolejce
+    delete: Usuń przebieg
+  indicators:
+    non_loggable_hint: "wartości ≤ 0 - nie można logarytmować (wyszarzone)"
+    pick_publisher: "- najpierw wybierz wydawcę -"
+    facet:
+      coverage: Pokrycie
+      region: Region
+      dziedzina: Dziedzina
+      publisher: Wydawca
+      all_publishers: Wszyscy wydawcy
+      collection: Kolekcja
+    scope:
+      global: Globalne
+      regional: Regionalne
+      national: Krajowe
+    region:
+      all: Wszystkie
+      countries: krajów
+      africa: Afryka
+      latam: Ameryka Łacińska
+      asean: Azja Płd.-Wsch.
+      asia: Azja
+      cis: Postsowieckie (WNP)
+      europe: Europa
+      oecd: OECD
+      gulf: Zatoka (GCC)
+      brazil: Brazylia
+      india: Indie
+      pakistan: Pakistan
+      israel: Izrael
+      mexico: Meksyk
+      france: Francja
+      norway: Norwegia
+      sweden: Szwecja
+      bahrain: Bahrajn
+      qatar: Katar
+      morocco: Maroko
+      ghana: Ghana
+      guatemala: Gwatemala
+      singapore: Singapur
+      malaysia: Malezja
+      indonesia: Indonezja
+      mekong: Subregion Wielkiego Mekongu (GMS)
+    dziedzina:
+      all: Wszystkie dziedziny
+      economy: Gospodarka i finanse
+      trade: Handel
+      governance: Instytucje i rządzenie
+      health: Zdrowie
+      education: Edukacja i nauka
+      labour: Praca
+      demography: Demografia
+      environment: Środowisko i energia
+      development: Rozwój i ubóstwo
+      gender: Płeć
+      infrastructure: Infrastruktura i innowacje
+      other: Inne
+  search:
+    label: Szukaj wskaźnika
+    placeholder: Szukaj wskaźnika...
+    no_results: Brak wyników
+    close: Zamknij
+    target:
+      map: Wskaźnik mapy
+      analysis-predictor: Zmienna objaśniająca
+      analysis-response: Zmienna odpowiedzi
+  validation:
+    checking: Sprawdzam dostępność danych...
+    no_years: Brak wspólnych lat dla tej pary - dopasuj wskaźnik lub okres.
+    too_short: Okres za krótki (min. 5 lat)
+    few_countries: "Za mało wspólnych krajów: {n} (min. {min}). Zmień okres lub wskaźnik."
+    short_panel: "{n} krajów · tylko {t} lat - wynik orientacyjny"
+    ok: "✓ {n} krajów zbalansowanych"
+    pick_indicator: Wybierz wskaźnik (najpierw wydawcę)
+  pvar:
+    loading: Ładowanie...
+    running: "Liczę... {progress}/{total} bootstrapów"
+    queued: W kolejce...
+    computing: Obliczam...
+    done: "Gotowe - γ₁₂ = {gamma} (p = {p}), N = {n}"
+    failed: "Błąd: {msg}"
+    failed_note: To uruchomienie nie powiodło się - brak wyników.
+    no_diagnostics: Brak diagnostyki.
+    pair_summary: "{predictor} ⇄ {response} · {n} krajów · {years} lat"
+    peak_response: Szczyt odpowiedzi
+    at_year: "w roku {h}"
+    gamma12: γ₁₂ (objaśniająca→odpowiedzi)
+    gamma21: γ₂₁ (odpowiedzi→objaśniająca)
+    countries: Kraje
+    years_n: "{years} lat"
+    th_year: Rok
+    th_irf: IRF (%)
+    th_ci: 90% CI
+    th_equation: Równanie
+    th_test: Test
+    th_statistic: Statystyka
+    th_pvalue: wartość p
+  locale_switcher:
+    label: Język
+  methodology:
+    title: Metodologia
+    exit: Powrót do aplikacji
+    docs_aria: Dokumenty
+    tab_replication: Replikacja
+    goes_note_html: '„Institutions and Growth: a GMM/IV Panel VAR Approach" Carlosa Góesa (2016)
+      to praca badawcza,<br> którą w&nbsp;ramach modułu obliczeniowego paneldata.app zreplikowaliśmy.<br>
+      Replikacja narodziła się w&nbsp;ramach projektu studenckiego
+      na Wydziale Nauk Ekonomicznych UW.'
+    goes_imf: 'Pełny tekst - IMF Working Paper'
+    goes_elsevier: 'Opublikowane - Economics Letters'
+  panels:
+    analysis_lead_html: Skonfiguruj estymację i uruchom (silnik <code class="font-mono">plm::pgmm</code>).
+    analysis_title: Analiza Panel-VAR
+    diagnostics_empty: Brak wyników. Testy diagnostyczne (AR(1) / AR(2) / Hansen) pojawią
+      się po uruchomieniu analizy.
+    diagnostics_summary: Diagnostyka - AR(1) / AR(2) / Hansen
+    documentation_body: Metodologia, opis danych i dokumentacja API - wkrótce.
+    documentation_title: Dokumentacja
+    irf_empty_html: Brak wyników. Uruchom analizę, aby zobaczyć funkcję odpowiedzi na impuls.
+    irf_summary: Funkcja odpowiedzi na impuls i histogram
+    results_lead: Funkcje odpowiedzi na impuls i testy diagnostyczne ostatniego runu.
+    results_title: Wyniki i diagnostyka
+  run_config:
+    bootstrap: bootstrap
+    bootstrap_aria: Bootstrap
+    engine_note_html: Silnik <code class="font-mono">plm::pgmm</code> (equation-by-equation,
+      onestep, FD) - na żywo. Wybierz predyktor i uruchom.
+    estimate: Estymuj
+    over_period: w okresie
+    period_aria: Okres
+    response_aria: Zmienna odpowiedzi
+    predictor_aria: Zmienna objaśniająca
+    run_button: Uruchom PVAR
+    run_button_title: Uruchom estymację PVAR na żywo
+    title: Konfiguracja analizy
+  sidebar:
+    run_history: Historia przebiegów
+    run_history_empty: Brak przebiegów. Uruchom analizę, aby je tu zobaczyć.
+    search_placeholder: Szukaj...
+    theme: Motyw
+    workspace: Obszar roboczy
+  tabs:
+    analysis: Uruchom analizę
+    documentation: Dokumentacja
+    explore: Eksploruj mapę
+    results: Wyniki i diagnostyka
+  themes:
+    light: Granatowy
+    grafit: Grafit
+    konsola: Konsola
+    sepia: Sepia
+    nokturn: Nokturn
+    kontrast: Kontrast
+    mosiadz: Mosiądz
+  top_bar:
+    coming_soon: Wkrótce
+    nav:
+      api: API
+      downloads: Pobrania
+      indicators: Wskaźniki
+      methodology: Metodologia
+    tagline: Platforma danych o jakości rządzenia
+  upload:
+    badge: Wkrótce
+    in_progress: Funkcja w przygotowaniu.
+    lead: Już niedługo - wgrywaj swoje pliki CSV/Excel i porównuj z globalnymi wzorcami
+      z bazy 31 wskaźników.
+    title: Upload własnych danych

@@ -1,0 +1,209 @@
+---
+en:
+  a11y:
+    close_menu: Close menu
+    menu: Menu
+    search: Search (soon)
+    sections: Sections
+    views: Views
+  common:
+    back_to_map: Back to the map
+    back_to_panel: "← Back to panel"
+  coverage_map:
+    no_data: no data
+    title: Coverage map
+    year: Year
+    hist:
+      "Soviet Union": Soviet Union
+      "Austria-Hungary": Austria-Hungary
+      "Czechoslovakia": Czechoslovakia
+      "Yugoslavia": Yugoslavia
+      "German Democratic Republic": German Democratic Republic
+      "Korea": Korea
+      "Tibet": Tibet
+      "Newfoundland": Newfoundland
+      "Palestine": Palestine
+      "Zanzibar": Zanzibar
+  data_selection:
+    coverage: Coverage
+    family: Family
+    indicator: Indicator
+    license: License
+    period: Period
+    source: Source
+    title: Data selection
+  history:
+    today: Today
+    yesterday: Yesterday
+    older: Older
+    failed: failed
+    queued: queued
+    delete: Delete run
+  indicators:
+    non_loggable_hint: "values ≤ 0 - cannot be log-transformed (greyed out)"
+    pick_publisher: "- pick a publisher first -"
+    facet:
+      coverage: Coverage
+      region: Region
+      dziedzina: Theme
+      publisher: Publisher
+      all_publishers: All publishers
+      collection: Collection
+    scope:
+      global: Global
+      regional: Regional
+      national: National
+    region:
+      all: All
+      countries: countries
+      africa: Africa
+      latam: Latin America
+      asean: Southeast Asia
+      asia: Asia
+      cis: Post-Soviet (CIS)
+      europe: Europe
+      oecd: OECD
+      gulf: Gulf (GCC)
+      brazil: Brazil
+      india: India
+      pakistan: Pakistan
+      israel: Israel
+      mexico: Mexico
+      france: France
+      norway: Norway
+      sweden: Sweden
+      bahrain: Bahrain
+      qatar: Qatar
+      morocco: Morocco
+      ghana: Ghana
+      guatemala: Guatemala
+      singapore: Singapore
+      malaysia: Malaysia
+      indonesia: Indonesia
+      mekong: Greater Mekong Subregion (GMS)
+    dziedzina:
+      all: All themes
+      economy: Economy & finance
+      trade: Trade
+      governance: Institutions & governance
+      health: Health
+      education: Education & science
+      labour: Labour
+      demography: Demography
+      environment: Environment & energy
+      development: Development & poverty
+      gender: Gender
+      infrastructure: Infrastructure & innovation
+      other: Other
+  search:
+    label: Search indicators
+    placeholder: Search indicators...
+    no_results: No results
+    close: Close
+    target:
+      map: Map indicator
+      analysis-predictor: Explanatory variable
+      analysis-response: Response variable
+  validation:
+    checking: Checking data coverage...
+    no_years: No common years for this pair - change the indicator or period.
+    too_short: Period too short (min. 5 years)
+    few_countries: "Too few common countries: {n} (min. {min}). Change the period or indicator."
+    short_panel: "{n} countries · only {t} years - indicative result"
+    ok: "✓ {n} balanced countries"
+    pick_indicator: Pick an indicator (choose a publisher first)
+  pvar:
+    loading: Loading...
+    running: "Running... {progress}/{total} bootstraps"
+    queued: Queued...
+    computing: Computing...
+    done: "Done - γ₁₂ = {gamma} (p = {p}), N = {n}"
+    failed: "Failed: {msg}"
+    failed_note: This run failed - no results to show.
+    no_diagnostics: No diagnostics.
+    pair_summary: "{predictor} ⇄ {response} · {n} countries · {years} years"
+    peak_response: Peak response
+    at_year: "at year {h}"
+    gamma12: γ₁₂ (explanatory→response)
+    gamma21: γ₂₁ (response→explanatory)
+    countries: Countries
+    years_n: "{years} years"
+    th_year: Year
+    th_irf: IRF (%)
+    th_ci: 90% CI
+    th_equation: Equation
+    th_test: Test
+    th_statistic: Statistic
+    th_pvalue: p-value
+  locale_switcher:
+    label: Language
+  methodology:
+    title: Methodology
+    exit: Back to the app
+    docs_aria: Documents
+    tab_replication: Replication
+    goes_note_html: '“Institutions and Growth: a GMM/IV Panel VAR Approach” by Carlos Góes (2016)
+      is the study replicated by the paneldata.app compute module. The inspiration and first
+      version of the software originated as a student project at the Faculty of Economic Sciences,
+      University of Warsaw - critical analysis welcome.'
+    goes_imf: 'Full text - IMF Working Paper'
+    goes_elsevier: 'Published - Economics Letters'
+  panels:
+    analysis_lead_html: Configure the estimation and run it (engine <code class="font-mono">plm::pgmm</code>).
+    analysis_title: Panel-VAR analysis
+    diagnostics_empty: No results yet. Diagnostic tests (AR(1) / AR(2) / Hansen) appear
+      after you run an analysis.
+    diagnostics_summary: Diagnostics - AR(1) / AR(2) / Hansen
+    documentation_body: Methodology, data description and API documentation - coming
+      soon.
+    documentation_title: Documentation
+    irf_empty_html: No results yet. Run an analysis to see the impulse-response function.
+    irf_summary: Impulse-response function & histogram
+    results_lead: Impulse-response functions and diagnostic tests for the latest run.
+    results_title: Results & diagnostics
+  run_config:
+    bootstrap: bootstrap
+    bootstrap_aria: Bootstrap
+    engine_note_html: Engine <code class="font-mono">plm::pgmm</code> (equation-by-equation,
+      onestep, FD). Choose a predictor and run.
+    estimate: Estimate
+    over_period: over
+    period_aria: Period
+    predictor_aria: Explanatory variable
+    response_aria: Response variable
+    run_button: Run PVAR
+    run_button_title: Run the live PVAR estimation
+    title: Analysis configuration
+  sidebar:
+    run_history: Run history
+    run_history_empty: No runs yet. Run an analysis to see it here.
+    search_placeholder: Search...
+    theme: Theme
+    workspace: Workspace
+  tabs:
+    analysis: Run analysis
+    documentation: Documentation
+    explore: Explore map
+    results: Results & diagnostics
+  themes:
+    light: Navy
+    grafit: Graphite
+    konsola: Console
+    sepia: Sepia
+    nokturn: Nocturne
+    kontrast: Contrast
+    mosiadz: Brass
+  top_bar:
+    coming_soon: Coming soon
+    nav:
+      api: API
+      downloads: Downloads
+      indicators: Indicators
+      methodology: Methodology
+    tagline: Governance Data Platform
+  upload:
+    badge: Coming soon
+    in_progress: Feature in progress.
+    lead: Soon - upload your CSV/Excel files and compare them against global benchmarks
+      from the 31-indicator database.
+    title: Upload your own data

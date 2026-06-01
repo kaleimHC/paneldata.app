@@ -1,0 +1,2627 @@
+---
+pl:
+  data:
+    indicators:
+      FP_CPI_TOTL_ZG:
+        name: Inflacja CPI (roczny %)
+      GOV_WGI_CC_EST:
+        name: 'Kontrola korupcji: estymata'
+      GOV_WGI_GE_EST:
+        name: 'Efektywność rządu: estymata'
+      GOV_WGI_PV_EST:
+        name: 'Stabilność polityczna i brak przemocy/terroryzmu: estymata'
+      GOV_WGI_RL_EST:
+        name: 'Rządy prawa: estymata'
+      GOV_WGI_RQ_EST:
+        name: 'Jakość regulacji: estymata'
+      GOV_WGI_VA_EST:
+        name: 'Głos i odpowiedzialność: estymata'
+      NE_GDI_TOTL_ZS:
+        name: Nakłady brutto na środki trwałe (% PKB)
+      NE_TRD_GNFS_ZS:
+        name: Wymiana handlowa (% PKB)
+      NY_GDP_MKTP_CD:
+        name: PKB (bieżące USD)
+      NY_GDP_MKTP_KD:
+        name: PKB (ceny stałe 2015 USD)
+      NY_GDP_MKTP_KD_ZG:
+        name: Wzrost PKB (roczny %)
+      NY_GDP_PCAP_CD:
+        name: PKB per capita (bieżące USD)
+      NY_GDP_PCAP_KD:
+        name: PKB per capita (ceny stałe 2015 USD)
+      SP_POP_TOTL:
+        name: Populacja, ogółem
+      SP_URB_TOTL_IN_ZS:
+        name: Ludność miejska (% ogółu)
+      v2x_civlib:
+        name: Indeks swobód obywatelskich
+      v2x_clphy:
+        name: Wolność od przemocy fizycznej
+      v2x_corr:
+        name: Indeks korupcji politycznej
+      v2x_delibdem:
+        name: Indeks demokracji deliberatywnej
+      v2x_egaldem:
+        name: Indeks demokracji egalitarnej
+      v2x_frassoc_thick:
+        name: Wolność zrzeszania się
+      v2x_freexp_altinf:
+        name: Wolność wypowiedzi i informacja alternatywna
+      v2x_gender:
+        name: Indeks politycznego upodmiotowienia kobiet
+      v2x_jucon:
+        name: Ograniczenia sądowe egzekutywy
+      v2x_libdem:
+        name: Indeks demokracji liberalnej
+      v2x_partipdem:
+        name: Indeks demokracji uczestniczącej
+      v2x_polyarchy:
+        name: Indeks demokracji elektoralnej (poliarchia)
+      v2xcl_rol:
+        name: Równość wobec prawa i wolność indywidualna
+      v2xel_frefair:
+        name: Indeks czystych wyborów
+      v2xlg_legcon:
+        name: Ograniczenia legislatywne egzekutywy
+      cement_co2:
+        name: CO₂ z cementu
+      cement_co2_per_capita:
+        name: CO₂ z cementu na osobę
+      co2:
+        name: CO₂
+      co2_growth_abs:
+        name: Wzrost CO₂ (bezwzgl.)
+      co2_growth_prct:
+        name: Wzrost CO₂ %
+      co2_including_luc:
+        name: CO₂ z LUC
+      co2_including_luc_growth_abs:
+        name: Wzrost CO₂ z LUC (bezwzgl.)
+      co2_including_luc_growth_prct:
+        name: Wzrost CO₂ z LUC %
+      co2_including_luc_per_capita:
+        name: CO₂ z LUC na osobę
+      co2_including_luc_per_gdp:
+        name: CO₂ z LUC na PKB
+      co2_including_luc_per_unit_energy:
+        name: CO₂ z LUC na jednostkę energii
+      co2_per_capita:
+        name: CO₂ na osobę
+      co2_per_gdp:
+        name: CO₂ na PKB
+      co2_per_unit_energy:
+        name: CO₂ na jednostkę energii
+      coal_co2:
+        name: CO₂ z węgla
+      coal_co2_per_capita:
+        name: CO₂ z węgla na osobę
+      consumption_co2:
+        name: CO₂ konsumpcyjne
+      consumption_co2_per_capita:
+        name: CO₂ konsumpcyjne na osobę
+      consumption_co2_per_gdp:
+        name: CO₂ konsumpcyjne na PKB
+      cumulative_cement_co2:
+        name: Skumulowane CO₂ z cementu
+      cumulative_co2:
+        name: Skumulowane CO₂
+      cumulative_co2_including_luc:
+        name: Skumulowane CO₂ z LUC
+      cumulative_coal_co2:
+        name: Skumulowane CO₂ z węgla
+      cumulative_flaring_co2:
+        name: Skumulowane CO₂ ze spalania w pochodniach
+      cumulative_gas_co2:
+        name: Skumulowane CO₂ z gazu
+      cumulative_luc_co2:
+        name: Skumulowane CO₂ z LUC
+      cumulative_oil_co2:
+        name: Skumulowane CO₂ z ropy
+      cumulative_other_co2:
+        name: Skumulowane CO₂ - inne
+      energy_per_capita:
+        name: Energia na osobę
+      energy_per_gdp:
+        name: Energia na PKB
+      flaring_co2:
+        name: CO₂ ze spalania w pochodniach
+      flaring_co2_per_capita:
+        name: CO₂ ze spalania w pochodniach na osobę
+      gas_co2:
+        name: CO₂ z gazu
+      gas_co2_per_capita:
+        name: CO₂ z gazu na osobę
+      ghg_excluding_lucf_per_capita:
+        name: GHG bez LUCF na osobę
+      ghg_per_capita:
+        name: GHG na osobę
+      land_use_change_co2:
+        name: CO₂ ze zmiany użytkowania gruntów
+      land_use_change_co2_per_capita:
+        name: CO₂ ze zmiany użytkowania gruntów na osobę
+      methane:
+        name: Metan
+      methane_per_capita:
+        name: Metan na osobę
+      nitrous_oxide:
+        name: Podtlenek azotu
+      nitrous_oxide_per_capita:
+        name: Podtlenek azotu na osobę
+      oil_co2:
+        name: CO₂ z ropy
+      oil_co2_per_capita:
+        name: CO₂ z ropy na osobę
+      other_co2_per_capita:
+        name: CO₂ - inne na osobę
+      other_industry_co2:
+        name: CO₂ z innych gałęzi przemysłu
+      primary_energy_consumption:
+        name: Zużycie energii pierwotnej
+      share_global_cement_co2:
+        name: Udział w globalnym CO₂ z cementu
+      share_global_co2:
+        name: Udział w globalnym CO₂
+      share_global_co2_including_luc:
+        name: Udział w globalnym CO₂ z LUC
+      share_global_coal_co2:
+        name: Udział w globalnym CO₂ z węgla
+      share_global_cumulative_cement_co2:
+        name: Udział w globalnym skumulowanym CO₂ z cementu
+      share_global_cumulative_co2:
+        name: Udział w globalnym skumulowanym CO₂
+      share_global_cumulative_co2_including_luc:
+        name: Udział w globalnym skumulowanym CO₂ z LUC
+      share_global_cumulative_coal_co2:
+        name: Udział w globalnym skumulowanym CO₂ z węgla
+      share_global_cumulative_flaring_co2:
+        name: Udział w globalnym skumulowanym CO₂ ze spalania w pochodniach
+      share_global_cumulative_gas_co2:
+        name: Udział w globalnym skumulowanym CO₂ z gazu
+      share_global_cumulative_luc_co2:
+        name: Udział w globalnym skumulowanym CO₂ z LUC
+      share_global_cumulative_oil_co2:
+        name: Udział w globalnym skumulowanym CO₂ z ropy
+      share_global_cumulative_other_co2:
+        name: Udział w globalnym skumulowanym CO₂ - inne
+      share_global_flaring_co2:
+        name: Udział w globalnym CO₂ ze spalania w pochodniach
+      share_global_gas_co2:
+        name: Udział w globalnym CO₂ z gazu
+      share_global_luc_co2:
+        name: Udział w globalnym CO₂ z LUC
+      share_global_oil_co2:
+        name: Udział w globalnym CO₂ z ropy
+      share_global_other_co2:
+        name: Udział w globalnym CO₂ - inne
+      share_of_temperature_change_from_ghg:
+        name: Udział w zmianie temperatury z GHG
+      temperature_change_from_ch4:
+        name: Zmiana temperatury z CH₄
+      temperature_change_from_co2:
+        name: Zmiana temperatury z CO₂
+      temperature_change_from_ghg:
+        name: Zmiana temperatury z GHG
+      temperature_change_from_n2o:
+        name: Zmiana temperatury z N₂O
+      total_ghg:
+        name: Łączne GHG
+      total_ghg_excluding_lucf:
+        name: Łączne GHG bez LUCF
+      trade_co2:
+        name: CO₂ z handlu
+      trade_co2_share:
+        name: Udział CO₂ z handlu
+      biofuel_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia biopaliw
+      biofuel_cons_change_twh:
+        name: Roczna zmiana zużycia biopaliw
+      biofuel_cons_per_capita:
+        name: Zużycie biopaliw na mieszkańca
+      biofuel_consumption:
+        name: Zużycie energii pierwotnej z biopaliw
+      biofuel_elec_per_capita:
+        name: Produkcja energii elektrycznej z bioenergii na osobę
+      biofuel_electricity:
+        name: Produkcja energii elektrycznej z bioenergii
+      biofuel_share_elec:
+        name: Udział bioenergii w produkcji energii elektrycznej
+      biofuel_share_energy:
+        name: Udział biopaliw w zużyciu energii pierwotnej
+      carbon_intensity_elec:
+        name: Cykliczna emisyjność węglowa produkcji energii elektrycznej
+      coal_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia węgla
+      coal_cons_change_twh:
+        name: Roczna zmiana zużycia węgla
+      coal_cons_per_capita:
+        name: Zużycie węgla na mieszkańca
+      coal_consumption:
+        name: Zużycie energii pierwotnej z węgla
+      coal_elec_per_capita:
+        name: Produkcja energii elektrycznej z węgla na osobę
+      coal_electricity:
+        name: Produkcja energii elektrycznej z węgla
+      coal_prod_change_pct:
+        name: Roczna zmiana wydobycia węgla
+      coal_prod_change_twh:
+        name: Roczna zmiana wydobycia węgla
+      coal_prod_per_capita:
+        name: Wydobycie węgla na mieszkańca
+      coal_production:
+        name: Wydobycie węgla
+      coal_share_elec:
+        name: Udział węgla w produkcji energii elektrycznej
+      coal_share_energy:
+        name: Udział węgla w zużyciu energii pierwotnej
+      electricity_demand:
+        name: Zapotrzebowanie na energię elektryczną
+      electricity_demand_per_capita:
+        name: Całkowite zapotrzebowanie na energię elektryczną na osobę
+      electricity_generation:
+        name: Całkowita produkcja energii elektrycznej
+      electricity_share_energy:
+        name: Całkowita produkcja energii elektrycznej jako udział w energii pierwotnej
+      energy_cons_change_pct:
+        name: Roczna zmiana zużycia energii pierwotnej
+      energy_cons_change_twh:
+        name: Roczna zmiana zużycia energii pierwotnej
+      fossil_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia paliw kopalnych
+      fossil_cons_change_twh:
+        name: Roczna zmiana zużycia paliw kopalnych
+      fossil_elec_per_capita:
+        name: Produkcja energii elektrycznej z paliw kopalnych na osobę
+      fossil_electricity:
+        name: Produkcja energii elektrycznej z paliw kopalnych
+      fossil_energy_per_capita:
+        name: Zużycie paliw kopalnych na mieszkańca
+      fossil_fuel_consumption:
+        name: Zużycie energii pierwotnej z paliw kopalnych
+      fossil_share_elec:
+        name: Udział paliw kopalnych w produkcji energii elektrycznej
+      fossil_share_energy:
+        name: Udział paliw kopalnych w zużyciu energii pierwotnej
+      gas_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia gazu
+      gas_cons_change_twh:
+        name: Roczna zmiana zużycia gazu
+      gas_consumption:
+        name: Zużycie energii pierwotnej z gazu
+      gas_elec_per_capita:
+        name: Produkcja energii elektrycznej z gazu na osobę
+      gas_electricity:
+        name: Produkcja energii elektrycznej z gazu
+      gas_energy_per_capita:
+        name: Zużycie gazu na mieszkańca
+      gas_prod_change_pct:
+        name: Roczna zmiana wydobycia gazu
+      gas_prod_change_twh:
+        name: Roczna zmiana wydobycia gazu
+      gas_prod_per_capita:
+        name: Wydobycie gazu na mieszkańca
+      gas_production:
+        name: Wydobycie gazu
+      gas_share_elec:
+        name: Udział gazu w produkcji energii elektrycznej
+      gas_share_energy:
+        name: Udział gazu w zużyciu energii pierwotnej
+      greenhouse_gas_emissions:
+        name: Cykliczne emisje z produkcji energii elektrycznej
+      hydro_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia energii wodnej
+      hydro_cons_change_twh:
+        name: Roczna zmiana zużycia energii wodnej
+      hydro_consumption:
+        name: Zużycie energii pierwotnej z energii wodnej
+      hydro_elec_per_capita:
+        name: Produkcja energii elektrycznej z energii wodnej na osobę
+      hydro_electricity:
+        name: Produkcja energii elektrycznej z energii wodnej
+      hydro_energy_per_capita:
+        name: Zużycie energii wodnej na mieszkańca
+      hydro_share_elec:
+        name: Udział energii wodnej w produkcji energii elektrycznej
+      hydro_share_energy:
+        name: Udział energii wodnej w zużyciu energii pierwotnej
+      low_carbon_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia energii niskoemisyjnej
+      low_carbon_cons_change_twh:
+        name: Roczna zmiana zużycia energii niskoemisyjnej
+      low_carbon_consumption:
+        name: Zużycie energii pierwotnej ze źródeł niskoemisyjnych
+      low_carbon_elec_per_capita:
+        name: Produkcja energii elektrycznej ze źródeł niskoemisyjnych na osobę
+      low_carbon_electricity:
+        name: Produkcja energii elektrycznej ze źródeł niskoemisyjnych
+      low_carbon_energy_per_capita:
+        name: Zużycie energii niskoemisyjnej na mieszkańca
+      low_carbon_share_elec:
+        name: Udział źródeł niskoemisyjnych w produkcji energii elektrycznej
+      low_carbon_share_energy:
+        name: Udział źródeł niskoemisyjnych w zużyciu energii pierwotnej
+      net_elec_imports:
+        name: Import netto energii elektrycznej
+      net_elec_imports_share_demand:
+        name: Import netto energii elektrycznej jako udział w zapotrzebowaniu
+      nuclear_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia energii jądrowej
+      nuclear_cons_change_twh:
+        name: Roczna zmiana zużycia energii jądrowej
+      nuclear_consumption:
+        name: Zużycie energii pierwotnej z energii jądrowej
+      nuclear_elec_per_capita:
+        name: Produkcja energii elektrycznej z energii jądrowej na osobę
+      nuclear_electricity:
+        name: Produkcja energii elektrycznej z energii jądrowej
+      nuclear_energy_per_capita:
+        name: Zużycie energii jądrowej na mieszkańca
+      nuclear_share_elec:
+        name: Udział energii jądrowej w produkcji energii elektrycznej
+      nuclear_share_energy:
+        name: Udział energii jądrowej w zużyciu energii pierwotnej
+      oil_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia ropy naftowej
+      oil_cons_change_twh:
+        name: Roczna zmiana zużycia ropy naftowej
+      oil_consumption:
+        name: Zużycie energii pierwotnej z ropy naftowej
+      oil_elec_per_capita:
+        name: Produkcja energii elektrycznej z ropy naftowej na osobę
+      oil_electricity:
+        name: Produkcja energii elektrycznej z ropy naftowej
+      oil_energy_per_capita:
+        name: Zużycie ropy naftowej na mieszkańca
+      oil_prod_change_pct:
+        name: Roczna zmiana wydobycia ropy naftowej
+      oil_prod_change_twh:
+        name: Roczna zmiana wydobycia ropy naftowej
+      oil_prod_per_capita:
+        name: Wydobycie ropy naftowej na mieszkańca
+      oil_production:
+        name: Wydobycie ropy naftowej
+      oil_share_elec:
+        name: Udział ropy naftowej w produkcji energii elektrycznej
+      oil_share_energy:
+        name: Udział ropy naftowej w zużyciu energii pierwotnej
+      other_renewable_consumption:
+        name: Zużycie energii pierwotnej z innych źródeł odnawialnych
+      other_renewable_electricity:
+        name: Produkcja energii elektrycznej z innych źródeł odnawialnych, w tym bioenergii
+      other_renewable_exc_biofuel_electricity:
+        name: Produkcja energii elektrycznej z innych źródeł odnawialnych, bez bioenergii
+      other_renewables_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia innych źródeł odnawialnych
+      other_renewables_cons_change_twh:
+        name: Roczna zmiana zużycia innych źródeł odnawialnych
+      other_renewables_elec_per_capita:
+        name: Produkcja energii elektrycznej z innych źródeł odnawialnych, w tym bioenergii,
+          na osobę
+      other_renewables_elec_per_capita_exc_biofuel:
+        name: Produkcja energii elektrycznej z innych źródeł odnawialnych, bez bioenergii,
+          na osobę
+      other_renewables_energy_per_capita:
+        name: Zużycie innych źródeł odnawialnych na mieszkańca
+      other_renewables_share_elec:
+        name: Udział innych źródeł odnawialnych, w tym bioenergii, w produkcji energii
+          elektrycznej
+      other_renewables_share_elec_exc_biofuel:
+        name: Udział innych źródeł odnawialnych, bez bioenergii, w produkcji energii
+          elektrycznej
+      other_renewables_share_energy:
+        name: Udział innych źródeł odnawialnych w zużyciu energii pierwotnej
+      per_capita_electricity:
+        name: Całkowita produkcja energii elektrycznej na osobę
+      renewables_cons_change_pct:
+        name: Roczna zmiana procentowa zużycia energii odnawialnej
+      renewables_cons_change_twh:
+        name: Roczna zmiana zużycia energii odnawialnej
+      renewables_consumption:
+        name: Zużycie energii pierwotnej z OZE
+      renewables_elec_per_capita:
+        name: Produkcja energii elektrycznej z OZE na osobę
+      renewables_electricity:
+        name: Produkcja energii elektrycznej z OZE
+      renewables_energy_per_capita:
+        name: Zużycie energii z OZE na osobę
+      renewables_share_elec:
+        name: Udział OZE w produkcji energii elektrycznej
+      renewables_share_energy:
+        name: Udział OZE w zużyciu energii pierwotnej
+      solar_cons_change_pct:
+        name: Roczna zmiana zużycia energii słonecznej (%)
+      solar_cons_change_twh:
+        name: Roczna zmiana zużycia energii słonecznej
+      solar_consumption:
+        name: Zużycie energii pierwotnej ze źródeł słonecznych
+      solar_elec_per_capita:
+        name: Produkcja energii elektrycznej ze słońca na osobę
+      solar_electricity:
+        name: Produkcja energii elektrycznej ze słońca
+      solar_energy_per_capita:
+        name: Zużycie energii słonecznej na osobę
+      solar_share_elec:
+        name: Udział energii słonecznej w produkcji energii elektrycznej
+      solar_share_energy:
+        name: Udział energii słonecznej w zużyciu energii pierwotnej
+      wind_cons_change_pct:
+        name: Roczna zmiana zużycia energii wiatrowej (%)
+      wind_cons_change_twh:
+        name: Roczna zmiana zużycia energii wiatrowej
+      wind_consumption:
+        name: Zużycie energii pierwotnej z wiatru
+      wind_elec_per_capita:
+        name: Produkcja energii elektrycznej z wiatru na osobę
+      wind_electricity:
+        name: Produkcja energii elektrycznej z wiatru
+      wind_energy_per_capita:
+        name: Zużycie energii wiatrowej na osobę
+      wind_share_elec:
+        name: Udział energii wiatrowej w produkcji energii elektrycznej
+      wind_share_energy:
+        name: Udział energii wiatrowej w zużyciu energii pierwotnej
+      faostat_qcl_15_5312:
+        name: Pszenica - powierzchnia zbiorów
+      faostat_qcl_15_5510:
+        name: Pszenica - produkcja
+      faostat_qcl_1717_5312:
+        name: Zboża, podstawowe - powierzchnia zbiorów
+      faostat_qcl_1717_5510:
+        name: Zboża, podstawowe - produkcja
+      faostat_qcl_1720_5312:
+        name: Rośliny okopowe i bulwiaste, ogółem - powierzchnia zbiorów
+      faostat_qcl_1720_5510:
+        name: Rośliny okopowe i bulwiaste, ogółem - produkcja
+      faostat_qcl_1723_5312:
+        name: Rośliny cukrowe, podstawowe - powierzchnia zbiorów
+      faostat_qcl_1723_5510:
+        name: Rośliny cukrowe, podstawowe - produkcja
+      faostat_qcl_1726_5312:
+        name: Rośliny strączkowe, ogółem - powierzchnia zbiorów
+      faostat_qcl_1726_5510:
+        name: Rośliny strączkowe, ogółem - produkcja
+      faostat_qcl_1730_5312:
+        name: Rośliny oleiste, podstawowe - powierzchnia zbiorów
+      faostat_qcl_1730_5510:
+        name: Rośliny oleiste, podstawowe - produkcja
+      faostat_qcl_1735_5312:
+        name: Warzywa, podstawowe - powierzchnia zbiorów
+      faostat_qcl_1735_5510:
+        name: Warzywa, podstawowe - produkcja
+      faostat_qcl_1738_5312:
+        name: Owoce, podstawowe - powierzchnia zbiorów
+      faostat_qcl_1738_5510:
+        name: Owoce, podstawowe - produkcja
+      faostat_qcl_1765_5111:
+        name: Mięso, ogółem - pogłowie
+      faostat_qcl_1765_5510:
+        name: Mięso, ogółem - produkcja
+      faostat_qcl_1780_5111:
+        name: Mleko, ogółem - pogłowie
+      faostat_qcl_1780_5510:
+        name: Mleko, ogółem - produkcja
+      faostat_qcl_1783_5111:
+        name: Jaja, podstawowe - pogłowie
+      faostat_qcl_1783_5510:
+        name: Jaja, podstawowe - produkcja
+      faostat_qcl_27_5312:
+        name: Ryż - powierzchnia zbiorów
+      faostat_qcl_27_5510:
+        name: Ryż - produkcja
+      faostat_qcl_56_5312:
+        name: Kukurydza - powierzchnia zbiorów
+      faostat_qcl_56_5510:
+        name: Kukurydza - produkcja
+      undp_abr:
+        name: Wskaźnik urodzeń wśród nastolatek
+      undp_co2_prod:
+        name: Emisja CO₂ na mieszkańca (produkcja)
+      undp_coef_ineq:
+        name: Współczynnik nierówności społecznej
+      undp_diff_hdi_phdi:
+        name: Różnica względem HDI (HDI minus PHDI)
+      undp_eys:
+        name: Oczekiwana liczba lat nauki
+      undp_eys_f:
+        name: Oczekiwana liczba lat nauki, kobiety
+      undp_eys_m:
+        name: Oczekiwana liczba lat nauki, mężczyźni
+      undp_gdi:
+        name: Wskaźnik rozwoju ze względu na płeć (GDI)
+      undp_gii:
+        name: Wskaźnik nierówności płci (GII)
+      undp_gni_pc_f:
+        name: DNB na mieszkańca, kobiety
+      undp_gni_pc_m:
+        name: DNB na mieszkańca, mężczyźni
+      undp_gnipc:
+        name: DNB na mieszkańca
+      undp_hdi:
+        name: Wskaźnik rozwoju społecznego (HDI)
+      undp_hdi_f:
+        name: HDI, kobiety
+      undp_hdi_m:
+        name: HDI, mężczyźni
+      undp_ihdi:
+        name: HDI skorygowany o nierówności (IHDI)
+      undp_ineq_edu:
+        name: Nierówność w edukacji
+      undp_ineq_inc:
+        name: Nierówność dochodów
+      undp_ineq_le:
+        name: Nierówność w oczekiwanej długości życia
+      undp_le:
+        name: Oczekiwana długość życia w chwili urodzenia
+      undp_le_f:
+        name: Oczekiwana długość życia w chwili urodzenia, kobiety
+      undp_le_m:
+        name: Oczekiwana długość życia w chwili urodzenia, mężczyźni
+      undp_lfpr_f:
+        name: Współczynnik aktywności zawodowej, kobiety
+      undp_lfpr_m:
+        name: Współczynnik aktywności zawodowej, mężczyźni
+      undp_loss:
+        name: Łączny spadek HDI z powodu nierówności
+      undp_mf:
+        name: Ślad materiałowy na mieszkańca
+      undp_mmr:
+        name: Wskaźnik umieralności matek
+      undp_mys:
+        name: Średnia liczba lat nauki
+      undp_mys_f:
+        name: Średnia liczba lat nauki, kobiety
+      undp_mys_m:
+        name: Średnia liczba lat nauki, mężczyźni
+      undp_phdi:
+        name: HDI skorygowany o presje planetarne (PHDI)
+      undp_pr_f:
+        name: Udział mandatów w parlamencie, kobiety
+      undp_pr_m:
+        name: Udział mandatów w parlamencie, mężczyźni
+      undp_se_f:
+        name: Ludność z co najmniej częściowym wykształceniem średnim, kobiety
+      undp_se_m:
+        name: Ludność z co najmniej częściowym wykształceniem średnim, mężczyźni
+      00db5fe4-4b5f-4e97-9fec-59e09a64c045:
+        name: Krajowy dług publiczny (sektor publiczny niefinansowy) (% długu całkowitego,
+          koniec okresu)
+      01146e19-40f5-4a5a-a660-2ac0bddf5dd2:
+        name: Pierwotne wydatki fiskalne (sektor instytucji rządowych) (mln bieżących
+          USD)
+      '0193810e-2347-4304-81bb-f8346fc1a797':
+        name: Saldo fiskalne ogółem (sektor instytucji rządowych) (mln bieżących USD,
+          suma 4 ostatnich kwartałów)
+      02db2d7b-1738-480c-a538-d60c7db9d80f:
+        name: Stopa międzybankowa (stopa realna, średnia okresu, %)
+      02ea6934-cc5a-4a83-95d5-50e19035cbcd:
+        name: Saldo fiskalne ogółem (sektor instytucji rządowych) (% PKB)
+      02f99183-381e-4104-873b-775b850f0e59:
+        name: Bezpośrednie inwestycje zagraniczne, netto (mln bieżących USD)
+      0357d022-ccb7-4cfd-97d1-f04fdb2a7214:
+        name: M2 (mln bieżących USD, średnia okresu)
+      '038ea084-fad1-4917-93f5-3f0e674353fb':
+        name: Płatności odsetkowe fiskalne (sektor instytucji rządowych) (mln bieżących
+          USD, suma 12 ostatnich miesięcy)
+      05c1ff64-e1ca-408a-a82b-1cb66228f153:
+        name: Przepływy kapitałowe, netto (mln bieżących USD)
+      05f76b06-e30f-4368-9459-4f1af9f7dcfd:
+        name: PKB (ceny stałe, wzrost rok do roku, %)
+      05ff25b0-00c7-4354-a771-ad1e6dea3710:
+        name: Dług publiczny w walucie obcej (sektor instytucji rządowych) (% długu
+          całkowitego, koniec okresu)
+      '07864f1b-b38b-48bf-86d1-8cc1a7995172':
+        name: Ceny eksportu (indeks, koniec okresu)
+      07ebe3d5-ba43-4372-a725-d6a095779220:
+        name: NER dwustronny wobec USD (waluta krajowa za USD, koniec okresu, wzrost
+          rok do roku, %)
+      07f98c28-3c16-44de-b673-ced03e126a0a:
+        name: Kredyt ogółem (% PKB, koniec okresu)
+      '0922203b-b860-463b-b64c-d71272671ca3':
+        name: Krajowy dług publiczny (rząd centralny) (% PKB, koniec okresu)
+      '09d176f2-da98-4cb3-a44b-77235f0c28f5':
+        name: Stopa referencyjna banku centralnego (stopa nominalna, koniec okresu,
+          %)
+      '09d7c7c1-0313-4ce5-9a57-25aa5d9057ea':
+        name: Krajowy dług publiczny (sektor publiczny niefinansowy) (mln bieżących
+          USD, średnia okresu)
+      0a29f24a-3f25-4e34-89cd-82f3e3f09427:
+        name: Produkcja przemysłowa (indeks realny, średnia okresu)
+      0a463f58-3e3b-48ef-8533-ff4c7969efea:
+        name: Dług publiczny ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, koniec okresu)
+      0b9ad0e9-1a12-4556-9019-1311eccf6c2b:
+        name: Konsumpcja (% PKB)
+      0c119ed1-e848-440b-8cb8-2e888816dd37:
+        name: Dochody fiskalne (rząd centralny) (% PKB)
+      0c85898d-1dd1-4daa-88df-8cb34b7095fa:
+        name: Płatności czynnikowe, netto (% PKB)
+      0cb5404f-a94e-4152-be78-36db2de17d46:
+        name: Eksport (bilans handlowy) (mln bieżących USD, suma 12 ostatnich miesięcy)
+      0e4c5325-c135-4070-8fb4-e113ad927e05:
+        name: Dochody fiskalne (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma 4 ostatnich kwartałów)
+      0fe6608b-fad3-4eb5-a96f-9eea4a3ee756:
+        name: Rezerwy międzynarodowe (w liczbie miesięcy importu ogółem, koniec okresu)
+      0fee08e6-111a-4beb-88ac-d31aa8172896:
+        name: PKB niehandlowy (indeks realny, średnia okresu)
+      1041a406-fef8-45f9-871d-3189bc2776e4:
+        name: Dług publiczny ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, średnia okresu)
+      10646d36-fe87-4f27-b3bb-ade22d40f7f0:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (% długu całkowitego,
+          średnia okresu)
+      10a05644-d507-4db4-85c6-841290483c5b:
+        name: Zewnętrzny dług publiczny (rząd centralny) (mln bieżących USD, średnia
+          okresu)
+      114e911b-a5d0-4615-9862-6c8995ecf05f:
+        name: Dochody fiskalne (sektor publiczny niefinansowy) (% PKB)
+      11c1bdcc-8f37-4b71-bab1-fcdab26703b0:
+        name: Przepływy finansowe, netto (mln bieżących USD)
+      1210ae85-a3a1-42f0-bf74-096f31f06b11:
+        name: NER dwustronny wobec USD (waluta krajowa za USD, średnia okresu, wzrost
+          rok do roku, %)
+      1230c2f0-597d-4561-9de4-284725b15ec6:
+        name: Wydatki fiskalne ogółem (sektor instytucji rządowych) (mln bieżących
+          USD)
+      12b40f88-123b-4035-b700-fdd09de3409e:
+        name: Eksport netto (indeks realny, średnia okresu)
+      13ccc2a3-6b06-42d9-8e85-53d5edeff9e0:
+        name: CPI (inflacja miesięczna, %)
+      14e1e96d-d53c-42b3-b7d6-5fd818a9555e:
+        name: Kredyt w walucie obcej (% kredytu całkowitego, średnia okresu)
+      157a562c-e53b-47b8-97c5-063d28ccf629:
+        name: Saldo rachunku bieżącego (% PKB)
+      188b46be-425f-4676-8de9-4927cbed849f:
+        name: Eksport (ceny stałe, wzrost rok do roku, %)
+      19c959cd-42c3-4335-b362-96b3b8f39608:
+        name: Bezrobocie (stopa, koniec okresu, %)
+      1a3545c1-f422-454d-b5de-14d2163ccca2:
+        name: M3 (% PKB, koniec okresu)
+      1df5b92b-fe21-458e-adb5-f8b31631caf1:
+        name: Płatności odsetkowe fiskalne (rząd centralny) (% PKB)
+      1e4354f6-c06d-4fc7-a32d-3b4e8fa95c95:
+        name: Ceny eksportu (indeks, średnia okresu)
+      21123e59-62de-44b7-aeaf-3699ea6ef259:
+        name: Pierwotne wydatki fiskalne (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma 12 ostatnich miesięcy)
+      21156ed7-f0ef-4f11-bbfd-70332db4b689:
+        name: Pierwotne wydatki fiskalne (sektor publiczny niefinansowy) (mln bieżących
+          USD)
+      2194becf-6244-40d8-b2bf-77cc71cf332d:
+        name: Kredyt dla sektora publicznego (mln bieżących USD, koniec okresu)
+      2384de72-c3b5-41bf-a719-1afbd1858ad2:
+        name: Stopa depozytowa banków (stopa nominalna, koniec okresu, %)
+      23cb24bb-0d6b-438f-b6fd-ffb9acb0c18c:
+        name: Absorpcja krajowa (mln bieżących USD)
+      23f4511e-fc76-4a18-b163-dfa3d298b07a:
+        name: Pierwotne wydatki fiskalne (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma 4 ostatnich kwartałów)
+      24d9347c-1512-4095-b4bc-04eb563b0771:
+        name: Nakłady brutto na środki trwałe (ceny stałe, wzrost rok do roku, %)
+      25b1d74f-baca-44c6-9ee5-a609838fbbe6:
+        name: M3 (mln bieżących USD, koniec okresu)
+      26eca617-dee8-4f6c-b312-f02b71037e5e:
+        name: RER dwustronny wobec USD (indeks, koniec okresu)
+      276bc0c0-73c3-44fa-b4df-1e614d200a0a:
+        name: Eksport (% PKB)
+      2798d43e-92fa-4444-a10f-b64948b48571:
+        name: RER dwustronny wobec USD (indeks, średnia okresu, wzrost rok do roku,
+          %)
+      280cba06-ab38-4d8c-aca8-8b63dbfda0ca:
+        name: M2 (% PKB, koniec okresu)
+      285a88f8-25c3-4767-bff8-a5f4059e8bb1:
+        name: Depozyty w walucie obcej (% depozytów ogółem, średnia okresu)
+      29e3d69e-55c7-42a0-9374-6ba5dc8db8b5:
+        name: Przekazy pieniężne (% PKB)
+      2a790e99-3cd5-4277-96d4-cf56453adba1:
+        name: PKB handlowy (% PKB)
+      2a8c81ef-273a-49d2-87b6-d3eed3d1cb07:
+        name: Saldo pierwotne (rząd centralny - rok kalendarzowy) (% PKB)
+      2b76303c-dbbb-448f-a677-4892ba16dede:
+        name: Saldo pierwotne (sektor publiczny niefinansowy) (mln bieżących USD)
+      2f603016-f47f-40d8-b1b5-c535988d697b:
+        name: Wydatki fiskalne ogółem (rząd centralny) (mln bieżących USD, suma 12
+          ostatnich miesięcy)
+      2f64f069-3133-4217-8c16-0ab81f507270:
+        name: Saldo pierwotne (rząd centralny - rok kalendarzowy) (mln bieżących USD)
+      30000c7e-82f1-4d35-8dec-35779561aa2b:
+        name: RER wielostronny (indeks, średnia okresu)
+      30c47321-56d1-4d73-9e92-7015b7c3e76a:
+        name: Depozyty w walucie krajowej (mln bieżących USD, koniec okresu)
+      31287b0e-9b90-46d6-835e-926ec3579d33:
+        name: Wydatki fiskalne ogółem (rząd centralny) (mln bieżących USD, suma 4
+          ostatnich kwartałów)
+      3314ace5-f55e-4096-b86c-9859a5eb8ed1:
+        name: M1 (% PKB, koniec okresu)
+      33b81116-0586-4566-a72f-8b6f56de4d75:
+        name: Import (wkład we wzrost PKB, p.p. PKB)
+      33db58ce-c247-428d-b86f-fc9b94645a6b:
+        name: M1 (ceny bieżące, średnia ruchoma 3-miesięczna, wzrost rok do roku,
+          %)
+      3400b2e9-0c90-44fc-a5cb-3cef368e96b0:
+        name: Stopa kredytowa banków (stopa nominalna, średnia okresu, %)
+      3485a35f-f1c0-43a5-9129-479fd1f025a7:
+        name: Wydatki fiskalne ogółem (sektor publiczny niefinansowy) (% PKB)
+      35ab5df1-a684-444a-8c0b-688d236aaa7d:
+        name: Wydatki fiskalne ogółem (rząd centralny - rok kalendarzowy) (% PKB)
+      35f57300-8ba9-4192-833c-cfbc3618e6e7:
+        name: Terms of trade (indeks, średnia okresu, wzrost rok do roku, %)
+      3805de5b-d9ea-42df-b3e3-15464bdcfaf5:
+        name: Pierwotne wydatki fiskalne (rząd centralny) (mln bieżących USD)
+      396b5fea-daea-44e6-beb6-e74dff48df7b:
+        name: Saldo pierwotne (rząd centralny) (mln bieżących USD, suma 12 ostatnich
+          miesięcy)
+      3dc8ebc1-d387-487c-ab74-241cae42ed20:
+        name: Zewnętrzny dług publiczny (sektor instytucji rządowych) (% PKB, średnia
+          okresu)
+      3ef8c827-1bee-4037-afc8-c377ba76bb74:
+        name: Wydatki fiskalne ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma 4 ostatnich kwartałów)
+      3f49f455-2427-4030-ba8d-df2490615d52:
+        name: PKB (USD na mieszkańca, ceny bieżące)
+      424f78a2-9b33-4f32-bad2-5f37e123e5a9:
+        name: Saldo pierwotne (sektor publiczny niefinansowy) (% PKB)
+      42e82edf-5303-4928-8bc0-66fde1943f79:
+        name: Eksport (bilans handlowy) (% PKB)
+      45186f21-1ab4-42fb-b806-1f5384da2438:
+        name: Saldo fiskalne ogółem (rząd centralny) (mln bieżących USD)
+      46377cd1-7ed8-404d-b790-9055f12200b8:
+        name: Jednostronne transfery bieżące, netto (mln bieżących USD)
+      478f840f-78df-4d78-9c36-6328803c939c:
+        name: Depozyty w walucie obcej (mln bieżących USD, koniec okresu)
+      47dfa601-7e41-49e5-8ea6-91a44bab1842:
+        name: Dochody fiskalne (rząd centralny) (mln bieżących USD, suma 12 ostatnich
+          miesięcy)
+      48605d43-7d6d-4b3d-a93a-0d9dbb762a01:
+        name: Saldo fiskalne ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD)
+      49333c4d-75c6-412e-9842-fab795b26cda:
+        name: Depozyty ogółem (% PKB, koniec okresu)
+      4a45c25d-378c-42af-ae8b-ed2476bd52e7:
+        name: Stopa międzybankowa (stopa nominalna, koniec okresu, %)
+      4b36fa77-bf66-4510-820a-73dcd6499375:
+        name: Baza monetarna (ceny bieżące, średnia ruchoma 3-miesięczna, wzrost rok
+          do roku, %)
+      4b600910-aae3-432d-8abb-f31a2b3797b9:
+        name: NER dwustronny wobec USD (waluta krajowa za USD, średnia okresu)
+      4bea00cd-854e-4061-b790-cecdbf7d11e6:
+        name: NER wielostronny (indeks, średnia okresu)
+      4c609ad9-6d50-4ffc-9de3-a3c63132ee15:
+        name: Import (bilans handlowy) (mln bieżących USD, suma 12 ostatnich miesięcy)
+      4db91339-83a6-4a36-ae3e-a6217eceabb6:
+        name: Depozyty ogółem (mln bieżących USD, koniec okresu)
+      4e3345cf-e805-4f72-b6a6-7c1587d4cc0e:
+        name: Dług publiczny ogółem (sektor instytucji rządowych) (% PKB, średnia
+          okresu)
+      4f0645ee-6cfb-4430-a373-f7a21804b28b:
+        name: Bilans handlowy (% PKB)
+      5017101b-c3cd-4b42-8da1-742aa70ac9e4:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (mln bieżących
+          USD, koniec okresu)
+      5189525b-81a2-4247-bf08-7eca7098602f:
+        name: Dług publiczny ogółem (sektor publiczny niefinansowy) (% PKB, koniec
+          okresu)
+      51afe37b-82c8-4406-b50e-581985bec93f:
+        name: Błędy i opuszczenia (mln bieżących USD)
+      51ba22ad-4332-424d-b341-6ba0119bff78:
+        name: Płatności odsetkowe fiskalne (sektor instytucji rządowych) (mln bieżących
+          USD)
+      52edab6f-e712-4782-92c4-4692e3b7204e:
+        name: Depozyty w walucie krajowej (mln bieżących USD, średnia okresu)
+      5334c542-a319-4268-b8ae-f89fcda811f9:
+        name: Kredyt ogółem (indeks realny, średnia okresu)
+      533c7366-d916-4314-a9a4-3f02b0161865:
+        name: Saldo pierwotne (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma 12 ostatnich miesięcy)
+      534eedd0-060b-4b87-bbe9-5d0f50b81f8b:
+        name: Dochody fiskalne (sektor publiczny niefinansowy) (mln bieżących USD)
+      53d68b9d-b118-4a26-8bb8-72c0aae268d5:
+        name: Import (ceny stałe, wzrost rok do roku, %)
+      54472fa5-1af0-49bc-9fc8-81ec1102dbb5:
+        name: Płace (indeks realny, średnia w okresie)
+      553ec854-0b6d-43f2-bf03-f020cdc42d9c:
+        name: M1 (mln bieżących USD, koniec okresu)
+      55fb10b2-cedb-4fa4-b7c7-1cb93c87452a:
+        name: Pierwotne wydatki fiskalne (sektor general government) (mln bieżących
+          USD, suma ostatnich 12 miesięcy)
+      570dd8ab-ac5d-442a-a1f2-24d824d1f3ca:
+        name: Import (indeks realny, średnia w okresie)
+      571a6e33-da0c-47e2-a7dc-29d622a51c7c:
+        name: Saldo pierwotne (sektor general government) (mln bieżących USD, suma
+          ostatnich 4 kwartałów)
+      579144c4-3ced-4108-b21b-3338572b70d4:
+        name: Saldo fiskalne ogółem (sektor general government) (mln bieżących USD)
+      5a8f6ad5-a028-40c5-94dc-f69e93303d60:
+        name: Eksport towarów i usług (BOP) (% PKB)
+      5ad859c3-10db-4529-911c-015ec8b19a25:
+        name: Zewnętrzny dług publiczny (rząd centralny) (% PKB, koniec okresu)
+      5ade1d9b-d055-4469-8eec-5674fed1294f:
+        name: Kredyt ogółem (mln bieżących USD, średnia w okresie)
+      5b7e04f4-2842-433f-962c-347994310baa:
+        name: Zewnętrzny dług publiczny (rząd centralny) (% długu ogółem, koniec okresu)
+      5b89f8b9-b1a6-44f2-af66-b621f62616d7:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (% długu ogółem,
+          koniec okresu)
+      5b9f8b7a-19ed-4197-aa5a-c9e199929ee8:
+        name: M3 (mln bieżących USD, średnia w okresie)
+      5cc89bb4-2340-4393-bbb6-e1d696312278:
+        name: Baza monetarna (% PKB, koniec okresu)
+      5d20d87e-c699-44f8-921a-63a7bf4e9259:
+        name: Saldo rachunku kapitałowego i finansowego (% PKB)
+      5e95c9d3-9a90-44f1-868c-efc95532d668:
+        name: Wydatki fiskalne ogółem (sektor general government) (mln bieżących USD,
+          suma ostatnich 12 miesięcy)
+      5f8ebbef-4fb0-4e21-880c-ad099b5259f4:
+        name: Dług publiczny w walutach obcych (rząd centralny) (% długu ogółem, koniec
+          okresu)
+      5f9c99eb-13ba-4848-a53f-4dc9e61df610:
+        name: Ceny eksportu (indeks, średnia w okresie, wzrost rok do roku, %)
+      645f1daf-2383-4c08-8df3-bfad4d49db12:
+        name: Pierwotne wydatki fiskalne (rząd centralny - rok kalendarzowy) (mln
+          bieżących USD)
+      6651f02a-badb-4f2e-a34b-2bd5333c5fb8:
+        name: Saldo fiskalne ogółem (rząd centralny) (mln bieżących USD, suma ostatnich
+          4 kwartałów)
+      66d6e51d-1a94-48b8-9c88-93f484cab57e:
+        name: Pierwotne wydatki fiskalne (rząd centralny) (mln bieżących USD, suma
+          ostatnich 12 miesięcy)
+      6705922b-cf29-44a5-8445-4ab8062b4326:
+        name: Zadłużenie zagraniczne ogółem (% PKB, średnia w okresie)
+      6752561e-802a-4260-aeff-a35fd8500b9e:
+        name: Eksport netto (mln bieżących USD)
+      67e9dd2a-2302-49ab-b1ea-1701fb4d62e5:
+        name: Saldo rachunku kapitałowego i finansowego (mln bieżących USD)
+      69400e8e-252f-4b8c-bffc-0854f85ce187:
+        name: Wewnętrzny dług publiczny (sektor general government) (% długu ogółem,
+          średnia w okresie)
+      695e05d1-fd30-4b2d-9307-646838aba2ab:
+        name: Absorpcja krajowa (indeks realny, średnia w okresie)
+      69dd6055-38e2-471e-8597-50b26cba79e6:
+        name: Terms of trade (indeks, średnia w okresie)
+      6acacbdf-caca-4cf4-ac8d-1e9fae9f89e4:
+        name: Saldo pierwotne (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma ostatnich 4 kwartałów)
+      6af3dd36-20ec-474a-af50-73780d6fc311:
+        name: Dochody fiskalne (sektor general government) (mln bieżących USD)
+      6bb1b50e-ac3d-4d9b-8dd6-6cd9c0dd5640:
+        name: Kredyt dla sektora publicznego (mln bieżących USD, średnia w okresie)
+      6c4fb383-5850-401f-9f30-82f77aaa486d:
+        name: Saldo pierwotne (rząd centralny) (mln bieżących USD)
+      6dbd3b4b-6cc7-4b79-9d0b-57e75821b15c:
+        name: Nakłady brutto na środki trwałe (mln bieżących USD)
+      6e1d7eb9-002d-458d-a524-d349bc2d7bad:
+        name: M3 (% PKB, średnia w okresie)
+      6e74cf16-a983-4af6-9e17-f46779620bd1:
+        name: Wewnętrzny dług publiczny (sektor publiczny niefinansowy) (% PKB, koniec
+          okresu)
+      7083c58a-5d56-486a-b8b9-e0a1340af80b:
+        name: PKB sektora niehandlowego (% PKB)
+      70ada996-6801-4d09-a78b-a6c9b692161b:
+        name: Dług publiczny ogółem (rząd centralny) (% PKB, średnia w okresie)
+      7294ede7-4200-4a03-af9c-4de167730961:
+        name: Dochody fiskalne (sektor general government) (mln bieżących USD, suma
+          ostatnich 4 kwartałów)
+      72a69b63-da9a-4a68-889a-f3d611cc0865:
+        name: M1 (mln bieżących USD, średnia w okresie)
+      74ba31b3-c8b3-491a-b9f4-7ffd453b408b:
+        name: Dług publiczny ogółem (sektor general government) (% PKB, koniec okresu)
+      74c1f876-f28b-4329-b0db-c5244efbc970:
+        name: Depozyty ogółem (ceny bieżące, koniec okresu, wzrost rok do roku, %)
+      754923ac-03e0-42ee-89f9-29c6a9079095:
+        name: Saldo fiskalne ogółem (rząd centralny - rok kalendarzowy) (mln bieżących
+          USD)
+      75665ad9-2b20-4907-a0d3-d760b40d17b8:
+        name: Import towarów i usług (BOP) (mln bieżących USD)
+      75bdf36e-21cd-4c6c-8c44-a0934e266a23:
+        name: Depozyty na żądanie (mln bieżących USD, średnia w okresie)
+      77563a19-5d62-4767-9bcf-b82007546bf6:
+        name: Eksport towarów (BOP) (% PKB)
+      78670634-bba9-4fcc-b194-11a6afca9dbe:
+        name: M2 (mln bieżących USD, koniec okresu)
+      79fbb1c0-7e37-4437-9f62-44700f4f8197:
+        name: Kredyt dla sektora prywatnego (mln bieżących USD, koniec okresu)
+      7b8c0db4-8526-4774-b9e0-43d52a14fb67:
+        name: M2 (% PKB, średnia w okresie)
+      7bbec151-8106-4299-83c7-0925fac89cb7:
+        name: Zewnętrzny dług publiczny (rząd centralny) (mln bieżących USD, koniec
+          okresu)
+      7d5df5b8-ff66-4273-8c12-839c91c8c753:
+        name: Płatności odsetek fiskalnych (rząd centralny - rok kalendarzowy) (mln
+          bieżących USD)
+      7effe1c5-5db6-43a9-aede-3a5d26431e3c:
+        name: Kredyt dla sektora publicznego (indeks realny, średnia w okresie)
+      7f4a2d59-c3d4-4039-9b0d-0a052fbdc7bf:
+        name: Import (bilans handlowy) (mln bieżących USD)
+      7fe3cdfd-193e-4c50-a202-4041497fc353:
+        name: Eksport netto (% PKB)
+      80539a82-cc0d-4ccf-955e-31dd11a51f0b:
+        name: Płatności odsetek fiskalnych (sektor general government) (mln bieżących
+          USD, suma ostatnich 4 kwartałów)
+      809827bf-9996-447a-83da-d7932685657c:
+        name: Płatności odsetek fiskalnych (rząd centralny) (mln bieżących USD, suma
+          ostatnich 12 miesięcy)
+      8298cf27-a666-47f4-80c5-77e7a24fb80c:
+        name: Eksport netto (wkład we wzrost PKB, p.p. PKB)
+      82a55b99-94f6-4d85-9dfe-36008de9869b:
+        name: Kredyt dla sektora publicznego (% PKB, koniec okresu)
+      82df40e2-22e8-47d9-bd3d-6ffb74e70cb8:
+        name: WPI (inflacja średnia w okresie, %)
+      8391a6aa-a02e-49e7-9e28-5ce5e4767a58:
+        name: Wewnętrzny dług publiczny (rząd centralny) (% PKB, średnia w okresie)
+      83f00ae8-1ccd-4c65-8614-236b1c218d94:
+        name: PKB (mln bieżących USD)
+      849352ff-7264-426c-a54b-9855938c0f72:
+        name: Dług publiczny ogółem (rząd centralny) (% PKB, koniec okresu)
+      84ba1a92-d8be-4f3e-9558-690a36e84b4b:
+        name: Saldo rachunku bieżącego (mln bieżących USD)
+      8685ac59-f2d1-4c3c-b5ee-d850b38f7b65:
+        name: Saldo fiskalne ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma ostatnich 4 kwartałów)
+      874d84f4-a2a7-4175-b154-416f2503c09a:
+        name: Saldo fiskalne ogółem (rząd centralny) (mln bieżących USD, suma ostatnich
+          12 miesięcy)
+      87fe5bed-3ce3-4c7e-bc65-4788d33f3ad3:
+        name: Stopa międzybankowa (stopa nominalna, średnia w okresie, %)
+      88069b0b-1582-4da0-9eff-7737412bc29b:
+        name: Produkcja przemysłowa (indeks realny, wzrost rok do roku, %)
+      8af54409-ef82-4aa9-a88f-fa3e95b8410a:
+        name: Import (bilans handlowy) (% PKB)
+      8b3d1dd1-4b87-47ae-865b-6da2682daa66:
+        name: Płace (indeks, średnia w okresie)
+      8b4b587b-c61d-4cf7-9038-4f01fa00fa5b:
+        name: Saldo pierwotne (rząd centralny) (% PKB)
+      8b71d7e5-9905-451e-9add-a65d9698928d:
+        name: Płatności odsetek fiskalnych (sektor publiczny niefinansowy) (% PKB)
+      8c6c3591-529a-433d-bcf6-a386b075ba06:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (mln bieżących
+          USD, średnia w okresie)
+      8d8626ff-546b-4267-b7b8-e3d8b1f32f70:
+        name: Import towarów i usług (BOP) (% PKB)
+      8e62450b-f23c-4184-995a-bf83d861a22a:
+        name: WPI (indeks, koniec okresu)
+      916fab3c-2500-4644-86c2-01097f5bf184:
+        name: Import towarów (BOP) (% PKB)
+      91ec189a-4146-4222-859d-1de310351806:
+        name: Zewnętrzny dług publiczny (rząd centralny) (% PKB, średnia w okresie)
+      925c9e01-ea7c-4835-8691-7a7c9510f1e2:
+        name: Płatności czynników produkcji netto (mln bieżących USD)
+      92f6b463-2777-40cf-ad0c-565cba8fd433:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (% PKB, koniec
+          okresu)
+      92fdfcab-b527-4900-82fd-2130b46b8a02:
+        name: Eksport towarów i usług (BOP) (mln bieżących USD)
+      930dca2f-8056-4c9a-8e97-24e924010f2d:
+        name: Stopa kredytowa banków (stopa realna, koniec okresu, %)
+      933a0b3e-2e63-4c1e-a7a8-5f1c26525e82:
+        name: Terms of trade (indeks, koniec okresu)
+      93728d7e-c3b7-4ece-aef4-fa3e3f4eb19d:
+        name: Kredyt ogółem (mln bieżących USD, koniec okresu)
+      9432501d-6aae-47b3-8569-90c078bf7c26:
+        name: Saldo fiskalne ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma ostatnich 12 miesięcy)
+      9774f8f4-9b79-4ebf-a0bb-de48ffbb368f:
+        name: Eksport usług (BOP) (mln bieżących USD)
+      98a175ab-22db-4356-bae5-c75426029adb:
+        name: Depozyty oszczędnościowe (mln bieżących USD, średnia w okresie)
+      992d8b32-ec9f-4438-a365-e1cff49b9244:
+        name: Rezerwy międzynarodowe (mln bieżących USD, koniec okresu)
+      99c8e2b3-4789-4863-87e8-a78f0866d154:
+        name: WPI (inflacja miesięczna, %)
+      9a182534-10b1-47c6-805e-b936a7cdad8a:
+        name: Wydatki fiskalne ogółem (sektor publiczny niefinansowy) (mln bieżących
+          USD, suma ostatnich 12 miesięcy)
+      9a6f5ec2-ceeb-441c-be15-5de34b5d27e4:
+        name: Ceny importu (indeks, średnia w okresie, wzrost rok do roku, %)
+      9bb82dc3-5aea-4148-aa4a-2fcf86938c31:
+        name: Konsumpcja (indeks realny, średnia w okresie)
+      9bdf7fdc-22b5-4362-9abe-bbe547c9c26e:
+        name: Absorpcja krajowa (wkład we wzrost PKB, p.p. PKB)
+      9c00b391-1c77-4000-b513-ff3557ba8e53:
+        name: Saldo fiskalne ogółem (sektor publiczny niefinansowy) (% PKB)
+      9c1aa7de-7728-4134-955b-5e11361ee6ba:
+        name: Przepływy finansowe netto (% PKB)
+      9d04ac46-804c-43f6-83fe-e18f0b39be1f:
+        name: Dług publiczny ogółem (rząd centralny) (mln bieżących USD, koniec okresu)
+      9d0fafce-4f7b-41b4-8519-e3a1bacd1a94:
+        name: Konsumpcja (mln bieżących USD)
+      9d2d702d-cd01-4c67-95ab-6538d88a11b9:
+        name: CPI (indeks, średnia w okresie)
+      9f625939-42aa-40e7-b62e-e77a71559acf:
+        name: Depozyty na żądanie (mln bieżących USD, koniec okresu)
+      9f8687df-24e0-4c1a-bbec-239fed838b08:
+        name: Zewnętrzny dług publiczny (sektor general government) (mln bieżących
+          USD, średnia w okresie)
+      9fb22f04-15f0-4faf-b17e-12fed89398c3:
+        name: Baza monetarna (% PKB, średnia w okresie)
+      a09b1766-63db-407b-87a3-44684f4517c7:
+        name: Dochody fiskalne (sektor general government) (% PKB)
+      a33e6162-b038-4ab4-bd86-dd3a99a2f0ea:
+        name: Baza monetarna (mln bieżących USD, średnia w okresie)
+      a3ae81b2-fc91-40aa-a319-cb49d4ff5e6a:
+        name: Ceny importu (indeks, koniec okresu)
+      a3e1ccd9-8e57-47b6-bcfd-dbb5aa85a161:
+        name: Płatności odsetkowe (budżet centralny - rok kalendarzowy) (% PKB)
+      a4cc0ba5-48d4-4697-a84f-6ea14990e3a7:
+        name: Dług publiczny w walucie obcej (sektor publiczny niefinansowy) (% długu
+          ogółem, koniec okresu)
+      a4fafe9a-5657-417c-8858-5bbe7e9f19df:
+        name: M2 (ceny bieżące, średnia 3-miesięczna, zmiana r/r, %)
+      a58da3ff-eb17-4b32-bd65-ad75c49e3413:
+        name: Płatności odsetkowe (budżet centralny) (mln bieżących USD, suma 4 ostatnich
+          kwartałów)
+      a5aacd1c-ab8c-4ed2-b88e-3c748b6a8187:
+        name: Rezerwy międzynarodowe (mln bieżących USD, średnia w okresie)
+      a6d426d3-eaad-4053-b5ca-b757ce35fda0:
+        name: Płatności odsetkowe (sektor instytucji rządowych) (% PKB)
+      a90fc512-cbe3-4968-bf61-e702cc4e5b04:
+        name: Wydatki budżetowe ogółem (budżet centralny) (% PKB)
+      a9a8eb05-cf56-4ef9-8146-f39a80866e37:
+        name: Dług publiczny ogółem (sektor publiczny niefinansowy) (% PKB, średnia
+          w okresie)
+      aa30a486-a517-4246-a1d9-683b85472158:
+        name: Indeks giełdowy (indeks, średnia w okresie)
+      aa97025d-fec2-435f-a5f9-6f563dc319c4:
+        name: Zmiana rezerw międzynarodowych (mln bieżących USD)
+      ab3e9aa4-a003-4820-bcff-224477f2d646:
+        name: Bilans handlowy (mln bieżących USD)
+      ac0f5590-8dfa-4520-81cd-1651a0d36bff:
+        name: Zadłużenie zagraniczne ogółem (% PKB, koniec okresu)
+      ac6e57d5-111c-4c54-8924-b1e4eb9f33c9:
+        name: Wydatki budżetowe ogółem (budżet centralny) (mln bieżących USD)
+      ae3372ee-f105-49b2-9f7f-826c852ee8ec:
+        name: Absorpcja krajowa (ceny stałe, zmiana r/r, %)
+      ae7fabbd-6ab3-4963-9539-6a73a99ee257:
+        name: Rezerwy międzynarodowe (relacja do krótkoterminowego długu zagranicznego,
+          koniec okresu)
+      af08a05c-c23b-411b-8a6a-21044f98d066:
+        name: CPI (indeks, koniec okresu)
+      afdde81b-9f8c-485b-a298-f31884fb18fd:
+        name: Eksport towarów (BOP) (mln bieżących USD)
+      b0282088-aa44-49e9-9d2e-fe473a1fd42f:
+        name: Zewnętrzny dług publiczny (budżet centralny) (% długu ogółem, średnia
+          w okresie)
+      b0558afb-9ac5-4418-a17d-dba0b4f9dd9d:
+        name: Zewnętrzny dług publiczny (sektor instytucji rządowych) (% długu ogółem,
+          średnia w okresie)
+      b06acd76-c0b7-4f17-812f-72789808e580:
+        name: Ceny importu (indeks, średnia w okresie)
+      b0bee6a5-8124-45d1-a4f1-28f5a1eb0096:
+        name: Depozyty oszczędnościowe (mln bieżących USD, koniec okresu)
+      b0d7c93e-dbd7-45c5-9d89-7bf6a7435181:
+        name: Wydatki budżetowe ogółem (sektor instytucji rządowych) (% PKB)
+      b343985b-1926-4d71-b9a2-7aeda40c91b9:
+        name: Depozyty ogółem (% PKB, średnia w okresie)
+      b41243a6-9eeb-4ede-9030-4f5c478014b3:
+        name: Depozyty w walutach obcych (mln bieżących USD, średnia w okresie)
+      b429c791-29be-4c7e-a6d7-1301c444da2b:
+        name: PKB sektora handlowego (indeks realny, średnia w okresie)
+      b4381c2b-678a-4776-ba7e-0847fa89efcb:
+        name: Eksport usług (BOP) (% PKB)
+      b4a91d47-c246-4209-bf22-682def18c5ef:
+        name: Konsumpcja (ceny stałe, zmiana r/r, %)
+      b53cb38b-92a7-4107-ab2a-de0de3f72653:
+        name: Dochody budżetowe (budżet centralny) (mln bieżących USD, suma 4 ostatnich
+          kwartałów)
+      b5973613-a12c-4bef-bbc2-3fed3dbf43db:
+        name: NER dwustronny wobec USD (waluta krajowa za USD, koniec okresu)
+      b623b760-1fc0-41e1-b505-4769f2338bdb:
+        name: Błędy i opuszczenia (% PKB)
+      b6311e8b-6166-48d3-b22a-ef1753b0aace:
+        name: Płatności odsetkowe (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma 4 ostatnich kwartałów)
+      b78aac7b-d311-4aa0-ba52-445bb37e015b:
+        name: Krajowy dług publiczny (sektor publiczny niefinansowy) (% długu ogółem,
+          średnia w okresie)
+      b851b30c-d7e5-4de4-8226-0e21c5af263b:
+        name: Indeks giełdowy (indeks, koniec okresu)
+      b860490d-f427-44ca-ade9-b8a41a58b3c6:
+        name: Dochody budżetowe (budżet centralny - rok kalendarzowy) (% PKB)
+      ba8278aa-4859-4e1c-9e43-22d3da0eaddc:
+        name: Dług publiczny w walucie obcej (sektor instytucji rządowych) (% długu
+          ogółem, średnia w okresie)
+      ba9a6f5c-4cf9-42ab-ae92-9f940776c1bb:
+        name: Saldo budżetu ogółem (sektor instytucji rządowych) (mln bieżących USD,
+          suma 12 ostatnich miesięcy)
+      bc6b9bb6-3b96-4cd4-be4a-f854bda5d01c:
+        name: Nakłady brutto na środki trwałe (wkład we wzrost PKB, p.p. PKB)
+      bcea1156-447c-4480-9479-1f2ff6cc6452:
+        name: Bezrobocie (stopa, średnia w okresie, %)
+      bd1d7ea7-2239-4b03-b65e-986a9ac7d2a8:
+        name: Dochody budżetowe (budżet centralny - rok kalendarzowy) (mln bieżących
+          USD)
+      bdbc61e2-3edd-4dba-a9d3-9f7fee880d1e:
+        name: Pierwotne wydatki budżetowe (budżet centralny - rok kalendarzowy) (%
+          PKB)
+      bdca1cc8-4626-44d3-9cb7-5b3d644fe656:
+        name: Zewnętrzny dług publiczny (sektor instytucji rządowych) (% PKB, koniec
+          okresu)
+      bdd5f76e-c1a8-4a24-ad17-bf4f3f401cfd:
+        name: Krajowy dług publiczny (sektor instytucji rządowych) (mln bieżących
+          USD, koniec okresu)
+      beec12d4-7175-4e6e-848e-55be67d583dc:
+        name: Import usług (BOP) (% PKB)
+      bf375118-1d9b-4b19-a386-88c552238468:
+        name: Zadłużenie zagraniczne ogółem (mln bieżących USD, koniec okresu)
+      bf5f6698-86f7-445e-828a-42aaa70c5279:
+        name: RER wielostronny (indeks, średnia w okresie, zmiana r/r, %)
+      c063a838-ebab-471c-b9f8-239cd09a5dc6:
+        name: Import (% PKB)
+      c07ccdfc-0826-4013-aea3-839df0c42a6d:
+        name: Eksport (bilans handlowy) (mln bieżących USD)
+      c0a6fb71-bd17-44ab-9250-bf6fb6388f68:
+        name: Krajowy dług publiczny (budżet centralny) (% długu ogółem, koniec okresu)
+      c16f446a-29f7-4185-bec1-3328659170ff:
+        name: Zewnętrzny dług publiczny (sektor instytucji rządowych) (% długu ogółem,
+          koniec okresu)
+      c1dce7cb-3371-4050-8e25-ddb2a651adf2:
+        name: Saldo pierwotne (budżet centralny) (mln bieżących USD, suma 4 ostatnich
+          kwartałów)
+      c273a3a8-375a-4f5d-bb9f-f0044d856ed2:
+        name: Zewnętrzny dług publiczny (sektor publiczny niefinansowy) (% PKB, średnia
+          w okresie)
+      c2ccdd33-8af1-484f-b405-7cab335ecb99:
+        name: Kredyt dla sektora prywatnego (mln bieżących USD, średnia w okresie)
+      c2edfd0d-cd17-43d8-b618-ab034ad3671b:
+        name: Stopa międzybankowa (stopa realna, koniec okresu, %)
+      c42acf63-011a-4abc-8f7d-e269c218aa16:
+        name: Baza monetarna (mln bieżących USD, koniec okresu)
+      c4bffb73-6ed3-4fd1-92b6-89ad59ce5e85:
+        name: Krajowy dług publiczny (sektor instytucji rządowych) (% długu ogółem,
+          koniec okresu)
+      c53fb9e6-b6fd-46bd-ba0d-fe9ac2b2db60:
+        name: Przekazy zarobkowe (mln bieżących USD)
+      c634fc74-2345-47ce-a33c-96dd12b092a3:
+        name: Pierwotne wydatki budżetowe (budżet centralny) (mln bieżących USD, suma
+          4 ostatnich kwartałów)
+      c71c948d-6193-4c1e-8d84-9ec3a91a83e4:
+        name: Kredyt dla sektora prywatnego (indeks realny, średnia w okresie)
+      c7586a69-5a8e-4e63-9df1-222de708378c:
+        name: Eksport netto (ceny stałe, zmiana r/r, %)
+      c77c5040-e665-44e7-bbdf-18842fae606a:
+        name: Krajowy dług publiczny (sektor instytucji rządowych) (% PKB, koniec
+          okresu)
+      c9b31127-3a25-4458-9cce-fa708be4861a:
+        name: Zmiana rezerw międzynarodowych (% PKB)
+      ca1066c7-5bbd-4262-9d60-54506bc7a7ea:
+        name: Saldo budżetu ogółem (budżet centralny) (% PKB)
+      cb3037e8-64cb-461f-a76c-37fd091c8088:
+        name: Zewnętrzny dług publiczny (sektor instytucji rządowych) (mln bieżących
+          USD, koniec okresu)
+      cb3d2bd0-7412-43b8-9f5a-ab2b55788214:
+        name: Oprocentowanie depozytów bankowych (stopa realna, średnia w okresie,
+          %)
+      cc58a96b-8ddf-47e3-9ac5-d2abb5e1d178:
+        name: RER dwustronny wobec USD (indeks, koniec okresu, zmiana r/r, %)
+      cd916d59-3c77-4c71-90ea-d10a636a1d46:
+        name: CPI (inflacja 12-miesięczna, %)
+      cdf56d56-16b7-4ab1-a76c-3637ca49068f:
+        name: Saldo pierwotne (sektor instytucji rządowych) (mln bieżących USD, suma
+          12 ostatnich miesięcy)
+      ce661566-1ebd-4758-b9fb-535ec8a81fb4:
+        name: Nakłady brutto na środki trwałe (indeks realny, średnia w okresie)
+      cee1cf1b-becb-4025-b64d-c2d22c3e266e:
+        name: Konsumpcja (wkład we wzrost PKB, p.p. PKB)
+      cf3dd933-55f7-426f-bd74-480ebb3d762b:
+        name: Bilans handlowy (mln bieżących USD, suma 12 ostatnich miesięcy)
+      cf9fb88d-e700-40ff-9f21-81ec57c041ab:
+        name: Depozyty ogółem (mln bieżących USD, średnia w okresie)
+      d2a8a705-9f8b-4ab8-b060-930b42f7852a:
+        name: Płatności odsetkowe (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma 12 ostatnich miesięcy)
+      d312febd-39c9-48cb-9097-13e40270e4ed:
+        name: Pierwotne wydatki budżetowe (sektor instytucji rządowych) (% PKB)
+      d3f460d5-5aa7-4107-96e8-65fc894b0703:
+        name: Kredyt dla sektora prywatnego (% PKB, koniec okresu)
+      d450ac41-997f-4453-86a2-3bdccba2f1c3:
+        name: Depozyty w walutach obcych (% depozytów ogółem, koniec okresu)
+      d553e130-37d2-4031-8bfd-5374dfe26a50:
+        name: Bezpośrednie inwestycje zagraniczne, netto (% PKB)
+      d56a9006-32b0-463f-9200-3daa96908766:
+        name: Eksport (wkład we wzrost PKB, p.p. PKB)
+      d63b23e3-0fdf-442d-aa83-c7930a6dd2c9:
+        name: Saldo budżetu ogółem (budżet centralny - rok kalendarzowy) (% PKB)
+      d78a4050-643a-4927-85a4-d1ba6d6d6554:
+        name: Pierwotne wydatki budżetowe (sektor instytucji rządowych) (mln bieżących
+          USD, suma 4 ostatnich kwartałów)
+      d847c78c-0067-429d-8f6f-14fa964d70a0:
+        name: Krajowy dług publiczny (sektor instytucji rządowych) (mln bieżących
+          USD, średnia w okresie)
+      d8ebca9b-7138-4319-91c0-216637abc530:
+        name: Dług publiczny ogółem (sektor instytucji rządowych) (mln bieżących USD,
+          koniec okresu)
+      d9350541-832c-44be-a14b-f7d43ec5ff14:
+        name: Kredyt w walutach obcych (% kredytu ogółem, koniec okresu)
+      d9555626-328a-4407-b8dd-c161a346264d:
+        name: Pierwotne wydatki budżetowe (budżet centralny) (% PKB)
+      db6539bd-6d44-4819-96a0-591e3b3b465a:
+        name: Stopa kredytowa banków (stopa nominalna, koniec okresu, %)
+      dc1de82b-caf2-448e-81d2-c55d55fe7afd:
+        name: Dług publiczny w walucie obcej (sektor publiczny niefinansowy) (% długu
+          ogółem, średnia w okresie)
+      dca5a13b-3f37-44e0-ba8b-573a602a5a9d:
+        name: Zadłużenie zagraniczne ogółem (mln bieżących USD, średnia w okresie)
+      dd8e68dd-78a9-452c-9340-6bb596e9d6bc:
+        name: WPI (indeks, średnia w okresie)
+      ddeb21be-59d4-4c59-9931-20dba126e6a5:
+        name: M1 (% PKB, średnia w okresie)
+      e15ef8e6-4952-433b-bcb4-e85dbebbdc1c:
+        name: Absorpcja krajowa (% PKB)
+      e33de59f-4e90-4814-93d0-8a81b57a55d4:
+        name: Eksport (mln bieżących USD)
+      e39143ca-8f8a-4304-be18-285377731ed9:
+        name: Płatności odsetkowe (budżet centralny) (mln bieżących USD)
+      e3d7f44c-0fc1-4625-b7c2-37395ad7e7b9:
+        name: PKB (indeks realny, średnia w okresie)
+      e47542da-d45f-424d-b4e2-57a2eee5cdec:
+        name: Nakłady brutto na środki trwałe (% PKB)
+      e47e0e00-b618-4764-8624-c6df0a60eb01:
+        name: Krajowy dług publiczny (sektor publiczny niefinansowy) (% PKB, średnia
+          w okresie)
+      e56aa33b-03c4-43cd-9aba-d94e6d3c2a28:
+        name: Pierwotne wydatki budżetowe (sektor publiczny niefinansowy) (% PKB)
+      e584f9fd-792d-4665-90bc-4364c1a0e8ec:
+        name: Stopa kredytowa banków (stopa realna, średnia w okresie, %)
+      e5b007a9-7fa1-4c80-ad1e-e189e5c4d5f3:
+        name: Dług publiczny ogółem (sektor instytucji rządowych) (mln bieżących USD,
+          średnia w okresie)
+      e6f264c5-a2ed-43b0-abc4-04dde8abba12:
+        name: Eksport (indeks realny, średnia w okresie)
+      e6f9a0cf-c9eb-4b6d-8d91-1c29255ae2ab:
+        name: Przepływy kapitałowe, netto (% PKB)
+      e6ffa52d-8602-488d-a09e-c7470f3a7449:
+        name: Saldo pierwotne (sektor instytucji rządowych) (mln bieżących USD)
+      e7dd2139-ee7e-4555-b043-4a0ee9101a33:
+        name: CPI (inflacja średniookresowa, %)
+      e82d72fc-114e-4f31-8af6-52664a8455e0:
+        name: Wewnętrzny dług publiczny (sektor instytucji rządowych) (% PKB, średnia
+          w okresie)
+      e8879231-3df1-41d4-8b76-8c30eb307d1e:
+        name: Płatności odsetkowe (sektor publiczny niefinansowy) (mln bieżących USD)
+      e8cede90-71ef-46d0-98c9-871a723965c9:
+        name: WPI (inflacja 12-miesięczna, %)
+      e9820c86-6359-4aec-b015-5ed0e8926178:
+        name: Wewnętrzny dług publiczny (rząd centralny) (mln bieżących USD, koniec
+          okresu)
+      e99ea798-49f5-43a2-bb98-7151ad5eca5e:
+        name: Łączne wydatki fiskalne (sektor publiczny niefinansowy) (mln bieżących
+          USD)
+      e9ab7acf-22ae-4279-9f32-1c1f2582c8ff:
+        name: Wewnętrzny dług publiczny (sektor publiczny niefinansowy) (mln bieżących
+          USD, koniec okresu)
+      e9ca6bb8-6954-4761-a801-e61cd043a4a1:
+        name: Dochody fiskalne (rząd centralny) (mln bieżących USD)
+      e9cbc2b3-8bb4-4c7f-90fa-a5966046913a:
+        name: Realny kurs dwustronny wobec USD (indeks, średnia w okresie)
+      ebd8a19c-65d1-4603-82e5-00aefc1ffaf0:
+        name: Saldo pierwotne (sektor instytucji rządowych) (% PKB)
+      ed1b76d0-9c32-44ae-9f8a-99945c71b03e:
+        name: Łączny dług publiczny (rząd centralny) (mln bieżących USD, średnia w
+          okresie)
+      ee5bf41a-3b56-498b-a1fc-992aff6829c1:
+        name: Rezerwy międzynarodowe (% M2, koniec okresu)
+      eef7ce5b-b663-4f1c-af05-b5f50fc8ea7e:
+        name: M3 (ceny bieżące, średnia ruchoma 3-miesięczna, zmiana r/r, %)
+      f17221a1-0733-439e-9999-5d073978c41e:
+        name: Stopa depozytów bankowych (stopa realna, koniec okresu, %)
+      f23654a3-6ca2-4faf-b797-7cc563b28443:
+        name: Stopa referencyjna banku centralnego (stopa nominalna, średnia w okresie,
+          %)
+      f5043420-733a-4a1a-87b1-00b37567fcbd:
+        name: Import (mln bieżących USD)
+      f51cd8b4-33d4-4ea3-80b9-4cabab01e1c9:
+        name: Wewnętrzny dług publiczny (rząd centralny) (mln bieżących USD, średnia
+          w okresie)
+      f5a7e19b-2fa3-4530-8a9a-58a515615181:
+        name: Stopa depozytów bankowych (stopa nominalna, średnia w okresie, %)
+      f75a4673-719a-4e90-a3fa-ab1ddea912fb:
+        name: Łączne wydatki fiskalne (sektor instytucji rządowych) (mln bieżących
+          USD, suma ostatnich 4 kwartałów)
+      f7a6a286-ab29-44b2-9c11-d4a9855e87f3:
+        name: Rezerwy międzynarodowe (% PKB, koniec okresu)
+      f7d179c4-2f69-496b-878b-6fe8fef67acb:
+        name: Import usług (BoP) (mln bieżących USD)
+      f8c4d823-ddd3-4001-976d-c6efc348763a:
+        name: Import towarów (BoP) (mln bieżących USD)
+      f9fe9904-5372-4a5d-a295-22ac286fcd9d:
+        name: Dług publiczny w walutach obcych (rząd centralny) (% długu ogółem, średnia
+          w okresie)
+      fa783a01-0d16-4240-9e6f-a80bedcb2761:
+        name: Jednostronne transfery bieżące netto (% PKB)
+      fabe4823-4a4d-4138-93fb-386867842370:
+        name: Dochody fiskalne (sektor publiczny niefinansowy) (mln bieżących USD,
+          suma ostatnich 12 miesięcy)
+      fc6ba283-b647-4026-80b9-a0afaf4e0e97:
+        name: Wewnętrzny dług publiczny (rząd centralny) (% długu ogółem, średnia
+          w okresie)
+      fd069e8e-c12b-4c5c-9d54-d10324b63bfb:
+        name: Rezerwy międzynarodowe (% PKB, średnia w okresie)
+      fe60c830-141f-4bef-be3d-784161303761:
+        name: Dochody fiskalne (sektor instytucji rządowych) (mln bieżących USD, suma
+          ostatnich 12 miesięcy)
+      ff0c1519-bada-4f27-a971-b642190e8783:
+        name: Łączne wydatki fiskalne (rząd centralny - rok kalendarzowy) (mln bieżących
+          USD)
+      EAP_2EAP_SEX_AGE_NB_A:
+        name: Siła robocza, ogółem 15+ (model MOP)
+      EAP_2WAP_SEX_AGE_RT_A:
+        name: Współczynnik aktywności zawodowej (model MOP, ogółem 15+)
+      EIP_2EET_SEX_RT_A:
+        name: Udział młodzieży NEET (model MOP, ogółem)
+      EIP_2PLF_SEX_RT_A:
+        name: Wskaźnik potencjalnej siły roboczej (model MOP, ogółem)
+      EIP_2WAP_SEX_AGE_RT_A:
+        name: Wskaźnik bierności zawodowej (model MOP, ogółem 15+)
+      EMP_2IFL_SEX_RT_A:
+        name: Wskaźnik zatrudnienia nieformalnego (model MOP, ogółem)
+      EMP_2TRU_SEX_AGE_RT_A:
+        name: Wskaźnik niepełnego zatrudnienia ze względu na czas (model MOP, ogółem
+          15+)
+      EMP_2WAP_SEX_AGE_RT_A:
+        name: Wskaźnik zatrudnienia do ludności (model MOP, ogółem 15+)
+      HOW_2TDP_SEX_RT_A:
+        name: Stosunek łącznych tygodniowych godzin pracy do ludności w wieku 15-64
+          (model MOP, ogółem)
+      LAP_2FTM_NOC_RT_A:
+        name: Luka dochodowa płci, stosunek dochodów z pracy kobiet do mężczyzn (model
+          MOP)
+      LAP_2GDP_NOC_RT_A:
+        name: Udział dochodów z pracy w PKB (model MOP)
+      LUU_2LU2_SEX_RT_A:
+        name: Łączny wskaźnik niepełnego zatrudnienia ze względu na czas i bezrobocia,
+          LU2 (model MOP, ogółem)
+      LUU_2LU3_SEX_RT_A:
+        name: Łączny wskaźnik bezrobocia i potencjalnej siły roboczej, LU3 (model
+          MOP, ogółem)
+      LUU_2LU4_SEX_RT_A:
+        name: Złożony wskaźnik niepełnego wykorzystania siły roboczej, LU4 (model
+          MOP, ogółem)
+      LUU_2LUX_SEX_RT_A:
+        name: Wskaźnik luki w miejscach pracy (model MOP, ogółem)
+      POP_2LDR_NOC_RT_A:
+        name: Wskaźnik obciążenia siły roboczej (model MOP)
+      SDG_0111_SEX_AGE_RT_A:
+        name: Wskaźnik ubóstwa pracujących, SDG 1.1.1 (poniżej 3 USD PPP, ogółem 15+)
+      SDG_0861_SEX_RT_A:
+        name: Wskaźnik młodzieży NEET, SDG 8.6.1 (ogółem)
+      UNE_2EAP_SEX_AGE_RT_A:
+        name: Stopa bezrobocia (model MOP, ogółem 15+)
+      UNE_2UNE_SEX_AGE_NB_A:
+        name: Bezrobocie, ogółem 15+ (model MOP)
+      wid_gdiincj992_p0p100:
+        name: Współczynnik Giniego, dochód narodowy po opodatkowaniu (dorośli, równy
+          podział)
+      wid_ghwealj992_p0p100:
+        name: Współczynnik Giniego, majątek netto gospodarstw domowych (dorośli, równy
+          podział)
+      wid_gptincj992_p0p100:
+        name: Współczynnik Giniego, dochód narodowy przed opodatkowaniem (dorośli,
+          równy podział)
+      wid_sdiincj992_p0p50:
+        name: Udział dolnych 50% w dochodzie narodowym po opodatkowaniu (dorośli,
+          równy podział)
+      wid_sdiincj992_p50p90:
+        name: Udział środkowych 40% w dochodzie narodowym po opodatkowaniu (dorośli,
+          równy podział)
+      wid_sdiincj992_p90p100:
+        name: Udział górnych 10% w dochodzie narodowym po opodatkowaniu (dorośli,
+          równy podział)
+      wid_sdiincj992_p99p100:
+        name: Udział górnego 1% w dochodzie narodowym po opodatkowaniu (dorośli, równy
+          podział)
+      wid_shwealj992_p0p50:
+        name: Udział dolnych 50% w majątku netto gospodarstw domowych (dorośli, równy
+          podział)
+      wid_shwealj992_p50p90:
+        name: Udział środkowych 40% w majątku netto gospodarstw domowych (dorośli,
+          równy podział)
+      wid_shwealj992_p90p100:
+        name: Udział górnych 10% w majątku netto gospodarstw domowych (dorośli, równy
+          podział)
+      wid_shwealj992_p99p100:
+        name: Udział górnego 1% w majątku netto gospodarstw domowych (dorośli, równy
+          podział)
+      wid_sptincj992_p0p50:
+        name: Udział dolnych 50% w dochodzie narodowym przed opodatkowaniem (dorośli,
+          równy podział)
+      wid_sptincj992_p50p90:
+        name: Udział środkowych 40% w dochodzie narodowym przed opodatkowaniem (dorośli,
+          równy podział)
+      wid_sptincj992_p90p100:
+        name: Udział górnych 10% w dochodzie narodowym przed opodatkowaniem (dorośli,
+          równy podział)
+      wid_sptincj992_p99p100:
+        name: Udział górnego 1% w dochodzie narodowym przed opodatkowaniem (dorośli,
+          równy podział)
+      BCA:
+        name: Saldo rachunku bieżącego (USD)
+      BCA_NGDPD:
+        name: Saldo rachunku bieżącego (% PKB)
+      GGR:
+        name: Dochody sektora instytucji rządowych (waluta krajowa)
+      GGR_NGDP:
+        name: Dochody sektora instytucji rządowych (% PKB)
+      GGSB:
+        name: Saldo strukturalne sektora instytucji rządowych (waluta krajowa)
+      GGSB_NPGDP:
+        name: Saldo strukturalne sektora instytucji rządowych (% potencjalnego PKB)
+      GGX:
+        name: Wydatki ogółem sektora instytucji rządowych (waluta krajowa)
+      GGXCNL:
+        name: Wynik netto sektora instytucji rządowych (waluta krajowa)
+      GGXCNL_NGDP:
+        name: Wynik netto sektora instytucji rządowych (% PKB)
+      GGXONLB:
+        name: Pierwotny wynik netto sektora instytucji rządowych (waluta krajowa)
+      GGXONLB_NGDP:
+        name: Pierwotny wynik netto sektora instytucji rządowych (% PKB)
+      GGXWDG:
+        name: Dług brutto sektora instytucji rządowych (waluta krajowa)
+      GGXWDG_NGDP:
+        name: Dług brutto sektora instytucji rządowych (% PKB)
+      GGXWDN:
+        name: Dług netto sektora instytucji rządowych (waluta krajowa)
+      GGXWDN_NGDP:
+        name: Dług netto sektora instytucji rządowych (% PKB)
+      GGX_NGDP:
+        name: Wydatki ogółem sektora instytucji rządowych (% PKB)
+      LE:
+        name: Zatrudnienie (osoby)
+      LUR:
+        name: Stopa bezrobocia (% całkowitej siły roboczej)
+      NGAP_NPGDP:
+        name: Luka produktowa (% potencjalnego PKB)
+      NGDP:
+        name: PKB w cenach bieżących (waluta krajowa)
+      NGDPD:
+        name: PKB w cenach bieżących (USD)
+      NGDPDPC:
+        name: PKB na mieszkańca w cenach bieżących (USD)
+      NGDPPC:
+        name: PKB na mieszkańca w cenach bieżących (waluta krajowa)
+      NGDPRPC:
+        name: PKB na mieszkańca w cenach stałych (waluta krajowa)
+      NGDP_D:
+        name: Deflator PKB (indeks)
+      NGDP_R:
+        name: PKB w cenach stałych (waluta krajowa)
+      NGDP_RPCH:
+        name: PKB w cenach stałych (zmiana %)
+      NGSD_NGDP:
+        name: Oszczędności krajowe brutto (% PKB)
+      NID_NGDP:
+        name: Inwestycje ogółem (% PKB)
+      PCPI:
+        name: Inflacja, średnie ceny konsumpcyjne (indeks)
+      PCPIE:
+        name: Inflacja, ceny konsumpcyjne na koniec okresu (indeks)
+      PCPIEPCH:
+        name: Inflacja, ceny konsumpcyjne na koniec okresu (zmiana %)
+      PCPIPCH:
+        name: Inflacja, średnie ceny konsumpcyjne (zmiana %)
+      PPPEX:
+        name: Domniemany kurs przeliczeniowy PPP (waluta krajowa za dolara międzynar.)
+      PPPGDP:
+        name: PKB wg PPP (bieżący dolar międzynarodowy)
+      PPPPC:
+        name: PKB na mieszkańca wg PPP (bieżący dolar międzynarodowy)
+      PPPSH:
+        name: Udział PKB wg PPP w światowym ogółem (%)
+      TMG_RPCH:
+        name: Wolumen importu towarów (zmiana %)
+      TM_RPCH:
+        name: Wolumen importu towarów i usług (zmiana %)
+      TXG_RPCH:
+        name: Wolumen eksportu towarów (zmiana %)
+      TX_RPCH:
+        name: Wolumen eksportu towarów i usług (zmiana %)
+      wpp_Births:
+        name: Urodzenia
+      wpp_Births1519:
+        name: Urodzenia matek w wieku 15-19
+      wpp_CBR:
+        name: Współczynnik urodzeń
+      wpp_CDR:
+        name: Współczynnik zgonów
+      wpp_CNMR:
+        name: Współczynnik migracji netto
+      wpp_Deaths:
+        name: Zgony
+      wpp_DeathsFemale:
+        name: Zgony kobiet
+      wpp_DeathsMale:
+        name: Zgony mężczyzn
+      wpp_DoublingTime:
+        name: Czas podwojenia ludności
+      wpp_IMR:
+        name: Współczynnik umieralności niemowląt
+      wpp_InfantDeaths:
+        name: Zgony niemowląt (poniżej 1 roku)
+      wpp_LBsurvivingAge1:
+        name: Urodzenia żywe dożywające 1 roku
+      wpp_LE15:
+        name: Oczekiwana długość życia w wieku 15 lat, obie płcie
+      wpp_LE15Female:
+        name: Oczekiwana długość życia w wieku 15 lat, kobiety
+      wpp_LE15Male:
+        name: Oczekiwana długość życia w wieku 15 lat, mężczyźni
+      wpp_LE65:
+        name: Oczekiwana długość życia w wieku 65 lat, obie płcie
+      wpp_LE65Female:
+        name: Oczekiwana długość życia w wieku 65 lat, kobiety
+      wpp_LE65Male:
+        name: Oczekiwana długość życia w wieku 65 lat, mężczyźni
+      wpp_LE80:
+        name: Oczekiwana długość życia w wieku 80 lat, obie płcie
+      wpp_LE80Female:
+        name: Oczekiwana długość życia w wieku 80 lat, kobiety
+      wpp_LE80Male:
+        name: Oczekiwana długość życia w wieku 80 lat, mężczyźni
+      wpp_LEx:
+        name: Oczekiwana długość życia w chwili urodzenia, obie płcie
+      wpp_LExFemale:
+        name: Oczekiwana długość życia w chwili urodzenia, kobiety
+      wpp_LExMale:
+        name: Oczekiwana długość życia w chwili urodzenia, mężczyźni
+      wpp_MAC:
+        name: Średni wiek rodzenia dzieci
+      wpp_MedianAgePop:
+        name: Mediana wieku ludności
+      wpp_NRR:
+        name: Współczynnik reprodukcji netto
+      wpp_NatChange:
+        name: Przyrost naturalny (urodzenia minus zgony)
+      wpp_NatChangeRT:
+        name: Stopa przyrostu naturalnego
+      wpp_NetMigrations:
+        name: Liczba migrantów netto
+      wpp_PopChange:
+        name: Zmiana liczby ludności
+      wpp_PopDensity:
+        name: Gęstość zaludnienia
+      wpp_PopGrowthRate:
+        name: Stopa wzrostu ludności
+      wpp_PopSexRatio:
+        name: Współczynnik feminizacji ludności
+      wpp_Q0040:
+        name: Umieralność przed 40. rokiem życia, obie płcie (40q0)
+      wpp_Q0040Female:
+        name: Umieralność przed 40. rokiem życia, kobiety (40q0)
+      wpp_Q0040Male:
+        name: Umieralność przed 40. rokiem życia, mężczyźni (40q0)
+      wpp_Q0060:
+        name: Umieralność przed 60. rokiem życia, obie płcie (60q0)
+      wpp_Q0060Female:
+        name: Umieralność przed 60. rokiem życia, kobiety (60q0)
+      wpp_Q0060Male:
+        name: Umieralność przed 60. rokiem życia, mężczyźni (60q0)
+      wpp_Q1550:
+        name: Umieralność w wieku 15-50 lat, obie płcie (35q15)
+      wpp_Q1550Female:
+        name: Umieralność w wieku 15-50 lat, kobiety (35q15)
+      wpp_Q1550Male:
+        name: Umieralność w wieku 15-50 lat, mężczyźni (35q15)
+      wpp_Q1560:
+        name: Umieralność w wieku 15-60 lat, obie płcie (45q15)
+      wpp_Q1560Female:
+        name: Umieralność w wieku 15-60 lat, kobiety (45q15)
+      wpp_Q1560Male:
+        name: Umieralność w wieku 15-60 lat, mężczyźni (45q15)
+      wpp_Q5:
+        name: Umieralność dzieci do 5 lat (5q0)
+      wpp_SRB:
+        name: Współczynnik płci przy urodzeniu
+      wpp_TFR:
+        name: Współczynnik dzietności
+      wpp_TPopulation1Jan:
+        name: Ludność ogółem, 1 stycznia
+      wpp_TPopulation1July:
+        name: Ludność ogółem, 1 lipca (połowa roku)
+      wpp_TPopulationFemale1July:
+        name: Ludność kobiet, 1 lipca
+      wpp_TPopulationMale1July:
+        name: Ludność mężczyzn, 1 lipca
+      wpp_Under5Deaths:
+        name: Zgony dzieci poniżej 5 lat
+      MALARIA005:
+        name: Zachorowalność na malarię (na 100 000 osób z grupy ryzyka)
+      MCV2:
+        name: Wyszczepialność 2. dawki na odrę (MCV2) (%)
+      MDG_0000000007:
+        name: Umieralność dzieci poniżej 5 lat (na 1000 żywych urodzeń)
+      MDG_0000000019:
+        name: Występowanie HIV wśród dorosłych 15-49 lat (na 100 000)
+      MDG_0000000020:
+        name: Zapadalność na gruźlicę (na 100 000 rocznie)
+      MDG_0000000026:
+        name: Współczynnik umieralności matek (na 100 000 żywych urodzeń)
+      MH_12:
+        name: Umieralność z powodu samobójstw, standaryzowana wiekowo (na 100 000)
+      MORTADO:
+        name: Umieralność młodzieży (na 1000)
+      M_Est_tob_curr:
+        name: Rozpowszechnienie palenia tytoniu, standaryzowane wiekowo (%)
+      NCDMORT3070:
+        name: Ryzyko zgonu w wieku 30-70 z powodu CVD/raka/cukrzycy/CRD (%)
+      NCD_BMI_30A:
+        name: Rozpowszechnienie otyłości u dorosłych, BMI>=30, standaryzowane wiekowo
+          (%)
+      RS_198:
+        name: Szacowana umieralność w wypadkach drogowych (na 100 000)
+      SA_0000001688:
+        name: Spożycie alkoholu na osobę (15+) (SDG 3.5.2), śr. 3-letnia
+      UHC_INDEX_REPORTED:
+        name: Indeks pokrycia usługami zdrowotnymi UHC (SDG 3.8.1)
+      WHOSIS_000001:
+        name: Oczekiwana długość życia w chwili urodzenia (lata)
+      WHOSIS_000002:
+        name: Oczekiwana długość życia w zdrowiu (HALE) w chwili urodzenia (lata)
+      WHOSIS_000015:
+        name: Oczekiwana długość życia w wieku 60 lat (lata)
+      WHS4_117:
+        name: Wyszczepialność WZW B (HepB3) wśród rocznych dzieci (%)
+      dptv:
+        name: Wyszczepialność DTP3 wśród rocznych dzieci (%)
+      imr:
+        name: Umieralność niemowląt (na 1000 żywych urodzeń)
+      nmr:
+        name: Umieralność noworodków (na 1000 żywych urodzeń)
+      qoges_close1:
+        name: 'QoG ES: Zamkniętość - odrębne prawo zatrudnienia'
+      qoges_close2:
+        name: 'QoG ES: Zamkniętość - egzaminy wstępne'
+      qoges_close3:
+        name: 'QoG ES: Zamkniętość - kariera dożywotnia/etatowa'
+      qoges_close_pca:
+        name: 'QoG ES: Zamkniętość (indeks PCA)'
+      qoges_impar1:
+        name: 'QoG ES: Bezstronność (pozycja 1)'
+      qoges_impar2:
+        name: 'QoG ES: Bezstronność (pozycja 2)'
+      qoges_proff1:
+        name: 'QoG ES: Profesjonalizm - rekrutacja i kompetencje'
+      qoges_proff2:
+        name: 'QoG ES: Profesjonalizm - kariera i awans'
+      qoges_proff3:
+        name: 'QoG ES: Profesjonalizm - płace i warunki'
+      qoges_proff_pca:
+        name: 'QoG ES: Profesjonalizm (indeks PCA)'
+      cepalstat:178:
+        name: Odsetek mandatów w parlamencie krajowym zajmowanych przez kobiety
+      cepalstat:1903:
+        name: Otrzymana oficjalna pomoc rozwojowa netto jako udział w DNB
+      cepalstat:2080:
+        name: Odsetek ludności poniżej minimalnego poziomu spożycia energii z pożywienia
+          (raport krajowy)
+      cepalstat:2207:
+        name: Odsetek ludności korzystającej z bezpiecznie zarządzanych usług wody
+          pitnej
+      cepalstat:284:
+        name: Współczynnik Giniego nierówności dochodów
+      cepalstat:352:
+        name: Wskaźnik ubóstwa (krajowa linia ubóstwa)
+      cepalstat:359:
+        name: Wskaźnik skrajnego ubóstwa (nędzy) (linia krajowa)
+      cepalstat:718:
+        name: Publiczne wydatki socjalne jako udział w PKB
+      '20062':
+        name: 'Liczba uczniów w szkolnictwie podstawowym, obie płcie (liczba)'
+      CR_1:
+        name: 'Wskaźnik ukończenia, szkoła podstawowa, obie płcie (%)'
+      CR_2:
+        name: 'Wskaźnik ukończenia, niższe średnie, obie płcie (%)'
+      CR_3:
+        name: 'Wskaźnik ukończenia, wyższe średnie, obie płcie (%)'
+      GER_1:
+        name: 'Współczynnik skolaryzacji brutto, szkoła podstawowa, obie płcie (%)'
+      GER_2:
+        name: 'Współczynnik skolaryzacji brutto, niższe średnie, obie płcie (%)'
+      GER_3:
+        name: 'Współczynnik skolaryzacji brutto, wyższe średnie, obie płcie (%)'
+      GER_5T8:
+        name: 'Współczynnik skolaryzacji brutto, szkolnictwo wyższe, obie płcie (%)'
+      LR_AG15T24:
+        name: 'Wskaźnik alfabetyzacji młodzieży, 15-24 lata, obie płcie (%)'
+      LR_AG15T99:
+        name: 'Wskaźnik alfabetyzacji dorosłych, 15+ lat, obie płcie (%)'
+      NER_02_CP:
+        name: 'Współczynnik skolaryzacji netto, edukacja przedszkolna, obie płcie (%)'
+      NERT_1_CP:
+        name: 'Całkowity współczynnik skolaryzacji netto, szkoła podstawowa, obie płcie (%)'
+      OFST_1_CP:
+        name: 'Dzieci w wieku szkoły podstawowej poza szkołą, obie płcie (liczba)'
+      PTRHC_1_TRAINED:
+        name: 'Liczba uczniów na wykwalifikowanego nauczyciela, szkoła podstawowa'
+      ROFST_1_CP:
+        name: 'Wskaźnik dzieci poza szkołą, wiek szkoły podstawowej, obie płcie (%)'
+      ROFST_2_CP:
+        name: 'Wskaźnik młodzieży poza szkołą, wiek niższy średni, obie płcie (%)'
+      ROFST_3_CP:
+        name: 'Wskaźnik młodzieży poza szkołą, wiek wyższy średni, obie płcie (%)'
+      ROFST_MOD_3_F:
+        name: 'Wskaźnik młodzieży poza szkołą, wiek wyższy średni, kobiety, model (%)'
+      ROFST_MOD_3_M:
+        name: 'Wskaźnik młodzieży poza szkołą, wiek wyższy średni, mężczyźni, model (%)'
+      SCHBSP_1_WELEC:
+        name: 'Odsetek szkół podstawowych z dostępem do energii elektrycznej (%)'
+      TRTP_1:
+        name: 'Odsetek nauczycieli z minimalnymi kwalifikacjami, szkoła podstawowa (%)'
+      TRTP_2:
+        name: 'Odsetek nauczycieli z minimalnymi kwalifikacjami, niższe średnie (%)'
+      TRTP_3:
+        name: 'Odsetek nauczycieli z minimalnymi kwalifikacjami, wyższe średnie (%)'
+      XGDP_FSGOV:
+        name: 'Wydatki rządowe na edukację jako % PKB (%)'
+      XGOVEXP_IMF:
+        name: 'Wydatki na edukację jako % całkowitych wydatków rządowych (%)'
+      oecd_hsl_air_pollution:
+        name: 'Ludność narażona na zanieczyszczenie powietrza (PM2,5)'
+      oecd_hsl_deaths_despair:
+        name: 'Zgony z powodu samobójstw, alkoholu i narkotyków'
+      oecd_hsl_earnings:
+        name: 'Przeciętne roczne wynagrodzenie brutto'
+      oecd_hsl_employment_rate:
+        name: 'Wskaźnik zatrudnienia (25-64)'
+      oecd_hsl_feeling_lonely:
+        name: 'Poczucie samotności'
+      oecd_hsl_feeling_safe:
+        name: 'Poczucie bezpieczeństwa po zmroku'
+      oecd_hsl_health_positive:
+        name: 'Pozytywna samoocena stanu zdrowia'
+      oecd_hsl_homicides:
+        name: 'Zabójstwa'
+      oecd_hsl_income_pc:
+        name: 'Skorygowany dochód rozporządzalny netto gospodarstw na osobę'
+      oecd_hsl_income_poverty:
+        name: 'Wskaźnik względnego ubóstwa dochodowego'
+      oecd_hsl_internet_home:
+        name: 'Gospodarstwa domowe z dostępem do internetu w domu'
+      oecd_hsl_life_expectancy:
+        name: 'Oczekiwana długość życia w chwili urodzenia'
+      oecd_hsl_life_satisfaction:
+        name: 'Satysfakcja z życia (średnia)'
+      oecd_hsl_lt_unemployment:
+        name: 'Stopa długotrwałego bezrobocia'
+      oecd_hsl_neet_youth:
+        name: 'Młodzież niepracująca, nieucząca się ani nieszkoląca (NEET)'
+      oecd_hsl_negative_affect:
+        name: 'Bilans afektu negatywnego'
+      oecd_hsl_overcrowding:
+        name: 'Gospodarstwa domowe żyjące w warunkach przeludnienia'
+      oecd_hsl_pisa_maths:
+        name: 'Wynik PISA z matematyki'
+      oecd_hsl_pisa_reading:
+        name: 'Wynik PISA z czytania'
+      oecd_hsl_pisa_science:
+        name: 'Wynik PISA z nauk przyrodniczych'
+      oecd_hsl_road_deaths:
+        name: 'Ofiary śmiertelne wypadków drogowych'
+      oecd_hsl_social_support:
+        name: 'Wsparcie społeczne'
+      oecd_hsl_voter_turnout:
+        name: 'Frekwencja wyborcza'
+      ophi_mpi_a:
+        name: 'Intensywność ubóstwa wielowymiarowego (A)'
+      ophi_mpi_h:
+        name: 'Wskaźnik zasięgu ubóstwa wielowymiarowego (H)'
+      ophi_mpi_m0:
+        name: 'Wskaźnik ubóstwa wielowymiarowego (wartość MPI)'
+      ophi_mpi_sev:
+        name: 'Ludność w głębokim ubóstwie wielowymiarowym'
+      ophi_mpi_vuln:
+        name: 'Ludność zagrożona ubóstwem wielowymiarowym'
+      afristat_uneca_1233:
+        name: 'Współczynnik dzietności (urodzenia na kobietę)'
+      afristat_uneca_1347:
+        name: 'Oczekiwana długość życia w chwili urodzenia, ogółem (lata)'
+      afristat_uneca_2085:
+        name: 'Oczekiwana długość życia w chwili urodzenia, mężczyźni (lata)'
+      afristat_uneca_2573:
+        name: 'Wskaźnik alfabetyzacji, 15-24 lata, ogółem (%)'
+      afristat_uneca_2622:
+        name: 'Emisja CO2 na osobę (tony metryczne)'
+      afristat_uneca_26648:
+        name: 'Ludność z dostępem do energii elektrycznej, miasta (%)'
+      afristat_uneca_26655:
+        name: 'Roczna stopa wzrostu realnego PKB na osobę (%)'
+      afristat_uneca_26921:
+        name: 'Wskaźnik zasięgu ubóstwa wielowymiarowego (% ludności)'
+      afristat_uneca_26990:
+        name: 'Roczny wzrost PKB (%)'
+      afristat_uneca_32516:
+        name: 'PKB na osobę w cenach bieżących (dolary USA)'
+      afristat_uneca_32518:
+        name: 'PKB na osobę w cenach stałych (dolary USA)'
+      afristat_uneca_32654:
+        name: 'Bezpieczne serwery internetowe (na 1 000 000 ludności)'
+      afristat_uneca_4464:
+        name: 'Wskaźnik alfabetyzacji dorosłych, ogółem (%)'
+      afristat_uneca_495:
+        name: 'Ludność aktywna zawodowo, ogółem (osoby)'
+      afristat_uneca_567:
+        name: 'Ludność, mężczyźni (tysiące)'
+      afristat_uneca_6045:
+        name: 'Zużycie energii elektrycznej (gigawatogodziny)'
+      afristat_uneca_6249:
+        name: 'Stopa bezrobocia, ogółem (%)'
+      afristat_uneca_6331:
+        name: 'Oczekiwana długość edukacji podstawowej, ogółem (lata)'
+      afristat_uneca_6487:
+        name: 'Ubóstwo żywnościowe (%)'
+      afristat_uneca_6594:
+        name: 'Zatrudnienie w usługach, mężczyźni (% ogółu)'
+      afristat_uneca_6823:
+        name: 'PKB, PPP, ceny bieżące (bieżące dolary międzynarodowe)'
+      afristat_uneca_9441:
+        name: 'Inflacja, ceny konsumpcyjne na koniec okresu (%)'
+      afristat_uneca_9635:
+        name: 'Ludność miejska (tysiące)'
+      ibge_sidra_1737_69:
+        name: 'Inflacja konsumencka IPCA, rocznie (Brazylia)'
+      ibge_sidra_6784_93:
+        name: 'Ludność rezydująca (Brazylia)'
+      ibge_sidra_6784_9808:
+        name: 'PKB w cenach bieżących (Brazylia)'
+      ibge_sidra_6784_9809:
+        name: 'PKB w cenach roku poprzedniego (Brazylia)'
+      ibge_sidra_6784_9810:
+        name: 'PKB, zmiana realnego wolumenu (Brazylia)'
+      ibge_sidra_6784_9811:
+        name: 'Deflator PKB, zmiana roczna (Brazylia)'
+      ibge_sidra_6784_9812:
+        name: 'PKB na osobę w cenach bieżących (Brazylia)'
+      ibge_sidra_6784_9814:
+        name: 'PKB na osobę, zmiana realnego wolumenu (Brazylia)'
+      mo_ibrahim_iiag_ACCTRANS:
+        name: 'IIAG - Odpowiedzialność i przejrzystość'
+      mo_ibrahim_iiag_ANTICORR:
+        name: 'IIAG - Przeciwdziałanie korupcji'
+      mo_ibrahim_iiag_BUSENV:
+        name: 'IIAG - Środowisko biznesu i pracy'
+      mo_ibrahim_iiag_EDUC:
+        name: 'IIAG - Edukacja'
+      mo_ibrahim_iiag_FEO:
+        name: 'IIAG - Podstawy szans gospodarczych'
+      mo_ibrahim_iiag_GOVERNANCE:
+        name: 'IIAG - Zarządzanie ogółem'
+      mo_ibrahim_iiag_HD:
+        name: 'IIAG - Rozwój społeczny'
+      mo_ibrahim_iiag_HEALTH:
+        name: 'IIAG - Zdrowie'
+      mo_ibrahim_iiag_INCLEQ:
+        name: 'IIAG - Włączenie i równość'
+      mo_ibrahim_iiag_INFR:
+        name: 'IIAG - Infrastruktura'
+      mo_ibrahim_iiag_PARTICIP:
+        name: 'IIAG - Uczestnictwo'
+      mo_ibrahim_iiag_PRI:
+        name: 'IIAG - Uczestnictwo, prawa i włączenie'
+      mo_ibrahim_iiag_PUBADMIN:
+        name: 'IIAG - Administracja publiczna'
+      mo_ibrahim_iiag_RIGHTS:
+        name: 'IIAG - Prawa'
+      mo_ibrahim_iiag_ROLJUS:
+        name: 'IIAG - Rządy prawa i sprawiedliwość'
+      mo_ibrahim_iiag_RURAL:
+        name: 'IIAG - Gospodarka wiejska'
+      mo_ibrahim_iiag_SECSAF:
+        name: 'IIAG - Bezpieczeństwo i ochrona'
+      mo_ibrahim_iiag_SOCPROT:
+        name: 'IIAG - Ochrona socjalna i dobrobyt'
+      mo_ibrahim_iiag_SROL:
+        name: 'IIAG - Bezpieczeństwo i rządy prawa'
+      mo_ibrahim_iiag_SUSENV:
+        name: 'IIAG - Zrównoważone środowisko'
+      mo_ibrahim_iiag_WOMEQ:
+        name: 'IIAG - Równość kobiet'
+      sedlac_gini_pci:
+        name: 'Współczynnik Giniego, dochód na osobę w gospodarstwie (SEDLAC)'
+      sedlac_poverty_215:
+        name: 'Wskaźnik zasięgu ubóstwa przy 2,15 USD/dzień (PPP 2017), krajowy (SEDLAC)'
+      sedlac_poverty_365:
+        name: 'Wskaźnik zasięgu ubóstwa przy 3,65 USD/dzień (PPP 2017), krajowy (SEDLAC)'
+      sedlac_poverty_685:
+        name: 'Wskaźnik zasięgu ubóstwa przy 6,85 USD/dzień (PPP 2017), krajowy (SEDLAC)'
+      polity5_polity2:
+        name: 'Wskaźnik Polity (reżim łączny, od -10 autokracja do +10 demokracja)'
+      polity5_democ:
+        name: 'Wskaźnik zinstytucjonalizowanej demokracji (0-10)'
+      polity5_autoc:
+        name: 'Wskaźnik zinstytucjonalizowanej autokracji (0-10)'
+      polity5_durable:
+        name: 'Trwałość reżimu (lata od ostatniej zmiany reżimu)'
+      eurostat_at_risk_poverty:
+        name: 'Stopa zagrożenia ubóstwem (próg 60% mediany dochodu ekwiwalentnego, %)'
+      eurostat_employment_rate:
+        name: 'Wskaźnik zatrudnienia, wiek 20-64 (% ludności)'
+      eurostat_fertility_rate:
+        name: 'Współczynnik dzietności'
+      eurostat_gdp_cp_meur:
+        name: 'Produkt krajowy brutto w cenach rynkowych (ceny bieżące, mln EUR)'
+      eurostat_gdp_pc_eur:
+        name: 'PKB na mieszkańca (ceny bieżące, EUR na mieszkańca)'
+      eurostat_govt_debt_gdp:
+        name: 'Dług sektora instytucji rządowych brutto (% PKB)'
+      eurostat_govt_deficit_gdp:
+        name: 'Wynik sektora instytucji rządowych (+nadwyżka / -deficyt) (% PKB)'
+      eurostat_hicp_inflation:
+        name: 'Inflacja HICP, roczna średnia stopa zmian (ogółem)'
+      eurostat_life_expectancy:
+        name: 'Oczekiwana długość życia w chwili urodzenia (ogółem)'
+      eurostat_population:
+        name: 'Ludność w dniu 1 stycznia (ogółem)'
+      eurostat_rd_gerd_gdp:
+        name: 'Nakłady krajowe brutto na B+R (GERD, % PKB)'
+      eurostat_unemployment_rate:
+        name: 'Stopa bezrobocia, wiek 15-74 (% aktywnych zawodowo)'
+      inegi_mexico_1002000001:
+        name: 'Ludność ogółem (Meksyk)'
+      inegi_mexico_1002000002:
+        name: 'Ludność - mężczyźni (Meksyk)'
+      inegi_mexico_1002000003:
+        name: 'Ludność - kobiety (Meksyk)'
+      inegi_mexico_1002000004:
+        name: 'Udział ludności w wieku 0-14 lat (Meksyk)'
+      inegi_mexico_1002000005:
+        name: 'Udział ludności w wieku 15-29 lat (Meksyk)'
+      inegi_mexico_1002000006:
+        name: 'Udział ludności w wieku 30-59 lat (Meksyk)'
+      inegi_mexico_3104003001:
+        name: 'Przeciętny miesięczny dochód gospodarstwa domowego, decyle (Meksyk)'
+      inegi_mexico_3105001001:
+        name: 'Średnia liczba lat nauki, wiek 15+ (Meksyk)'
+      inegi_mexico_472079:
+        name: 'Eksport towarów ogółem (Meksyk)'
+      inegi_mexico_481748:
+        name: 'Saldo handlowe, udział w PKB (Meksyk)'
+      inegi_mexico_6200205271:
+        name: 'Produkt krajowy brutto, ceny bieżące (Meksyk)'
+      inegi_mexico_6207020032:
+        name: 'Udział działalności pierwotnej w PKB (Meksyk)'
+      inegi_mexico_6207020033:
+        name: 'Udział działalności wtórnej w PKB (Meksyk)'
+      mpd_gdppc_2011usd:
+        name: 'Realny PKB na mieszkańca (Maddison, dolary międzynarodowe 2011)'
+      mpd_pop_thousands:
+        name: 'Ludność, w połowie roku (Maddison, w tysiącach)'
+      epi_yale_agr:
+        name: 'EPI - Rolnictwo'
+      epi_yale_air:
+        name: 'EPI - Jakość powietrza'
+      epi_yale_apo:
+        name: 'EPI - Zanieczyszczenie powietrza (ekosystem)'
+      epi_yale_bdh:
+        name: 'EPI - Różnorodność biologiczna i siedliska'
+      epi_yale_eco:
+        name: 'EPI - Żywotność ekosystemów'
+      epi_yale_ecs:
+        name: 'EPI - Usługi ekosystemowe'
+      epi_yale_epi:
+        name: 'Wskaźnik efektywności środowiskowej (ogółem)'
+      epi_yale_fsh:
+        name: 'EPI - Rybołówstwo'
+      epi_yale_ghn:
+        name: 'EPI - Emisje gazów cieplarnianych na mieszkańca'
+      epi_yale_h2o:
+        name: 'EPI - Sanitacja i woda pitna'
+      epi_yale_hlt:
+        name: 'EPI - Zdrowie środowiskowe'
+      epi_yale_hmt:
+        name: 'EPI - Metale ciężkie'
+      epi_yale_par:
+        name: 'EPI - Wskaźnik reprezentatywności obszarów chronionych'
+      epi_yale_pcc:
+        name: 'EPI - Zmiana klimatu'
+      epi_yale_wmg:
+        name: 'EPI - Gospodarka odpadami'
+      epi_yale_wrs:
+        name: 'EPI - Zasoby wodne'
+      ASE_TRP_AIR_A_302:
+        name: 'Liczba portów lotniczych międzynarodowych (ASEAN)'
+      ASE_TRP_AIR_A_303:
+        name: 'Liczba portów lotniczych krajowych (ASEAN)'
+      ASE_TRP_AIR_C_305:
+        name: 'Krajowy ruch pasażerów lotniczych (ASEAN)'
+      ASE_TRP_RAI_A_101:
+        name: 'Całkowita długość linii kolejowych (ASEAN)'
+      ASE_TRP_RAI_C_108:
+        name: 'Całkowita liczba pasażerów kolei (ASEAN)'
+      ASE_TRP_ROD_A_001:
+        name: 'Całkowita długość dróg (ASEAN)'
+      ASE_TRP_ROD_A_002:
+        name: 'Długość dróg utwardzonych (ASEAN)'
+      ASE_TRP_ROD_E_029:
+        name: 'Liczba wypadków drogowych (ASEAN)'
+      ASE_TRP_WTR_A_201:
+        name: 'Liczba portów krajowych (ASEAN)'
+      ASE_TRP_WTR_A_202:
+        name: 'Liczba portów międzynarodowych (ASEAN)'
+      ASE_TRP_WTR_C_215:
+        name: 'Międzynarodowy przeładunek towarów morskich (ASEAN)'
+      ASI_J_OTH_GIN_TBL_X:
+        name: 'Rozkład dochodów (współczynnik Giniego) (ASEAN)'
+      bti_G:
+        name: 'BTI - Indeks zarządzania (Governance)'
+      bti_GII:
+        name: 'BTI - Wynik zarządzania'
+      bti_Q1:
+        name: 'BTI Q1 - Państwowość'
+      bti_Q10:
+        name: 'BTI Q10 - System opiekuńczy'
+      bti_Q11:
+        name: 'BTI Q11 - Wyniki gospodarcze'
+      bti_Q12:
+        name: 'BTI Q12 - Zrównoważoność'
+      bti_Q13:
+        name: 'BTI Q13 - Poziom trudności'
+      bti_Q14:
+        name: 'BTI Q14 - Zdolność sterowania'
+      bti_Q15:
+        name: 'BTI Q15 - Efektywność zasobów'
+      bti_Q16:
+        name: 'BTI Q16 - Budowanie konsensusu'
+      bti_Q17:
+        name: 'BTI Q17 - Współpraca międzynarodowa'
+      bti_Q2:
+        name: 'BTI Q2 - Uczestnictwo polityczne'
+      bti_Q3:
+        name: 'BTI Q3 - Rządy prawa'
+      bti_Q4:
+        name: 'BTI Q4 - Stabilność instytucji demokratycznych'
+      bti_Q5:
+        name: 'BTI Q5 - Integracja polityczna i społeczna'
+      bti_Q6:
+        name: 'BTI Q6 - Poziom rozwoju społeczno-gospodarczego'
+      bti_Q7:
+        name: 'BTI Q7 - Organizacja rynku i konkurencji'
+      bti_Q8:
+        name: 'BTI Q8 - Stabilność monetarna i fiskalna'
+      bti_Q9:
+        name: 'BTI Q9 - Własność prywatna'
+      bti_S:
+        name: 'BTI - Indeks statusu'
+      bti_SI:
+        name: 'BTI - Status demokracji'
+      bti_SII:
+        name: 'BTI - Status gospodarki'
+      gcc_MOBILE_DF_BTH_CBR:
+        name: 'Surowy współczynnik urodzeń (GCC)'
+      gcc_MOBILE_DF_BTH_GFR:
+        name: 'Współczynnik dzietności (GCC)'
+      gcc_MOBILE_DF_CPI_INF_Y:
+        name: 'Roczna stopa inflacji (GCC)'
+      gcc_MOBILE_DF_ENR_CRD_OIL_PROD:
+        name: 'Wydobycie ropy naftowej (GCC)'
+      gcc_MOBILE_DF_ENR_ELECT_CONS:
+        name: 'Zużycie energii elektrycznej (GCC)'
+      gcc_MOBILE_DF_GDP_CAP_CON:
+        name: 'PKB na mieszkańca w cenach stałych (GCC)'
+      gcc_MOBILE_DF_GDP_CAP_CUR:
+        name: 'PKB na mieszkańca w cenach bieżących (GCC)'
+      gcc_MOBILE_DF_GDP_CON:
+        name: 'PKB w cenach stałych (GCC)'
+      gcc_MOBILE_DF_IT_GEXP:
+        name: 'Eksport towarów ogółem (GCC)'
+      gcc_MOBILE_DF_IT_GIMP:
+        name: 'Import towarów ogółem (GCC)'
+      gcc_MOBILE_DF_LAB_EMPLOYEES:
+        name: 'Liczba pracujących (GCC)'
+      gcc_MOBILE_DF_LAB_PART_RATE:
+        name: 'Współczynnik aktywności zawodowej (GCC)'
+      gcc_MOBILE_DF_MF_M2:
+        name: 'Podaż pieniądza (M2) (GCC)'
+      gcc_MOBILE_DF_NA_GDP_CUR:
+        name: 'PKB w cenach bieżących (GCC)'
+      gcc_MOBILE_DF_NA_GDP_CUR_Q:
+        name: 'PKB w cenach bieżących, kwartalnie (GCC)'
+      gcc_MOBILE_DF_POP:
+        name: 'Ludność ogółem (GCC)'
+      gcc_MOBILE_DF_SDG08_8_5_2:
+        name: 'Stopa bezrobocia (SDG 8.5.2) (GCC)'
+      gcc_MOBILE_DF_TUR_TOURISTS:
+        name: 'Całkowita liczba turystów przybywających do GCC'
+      unctadstat_gdp_const2020_usd:
+        name: 'PKB ogółem (stałe ceny, USD 2020)'
+      unctadstat_gdp_current_usd:
+        name: 'PKB ogółem (ceny bieżące, USD)'
+      unctadstat_gdp_pc_const2020_usd:
+        name: 'PKB na mieszkańca (stałe ceny, USD 2020)'
+      unctadstat_gdp_pc_current_usd:
+        name: 'PKB na mieszkańca (ceny bieżące, USD)'
+      unctadstat_gni_current_usd:
+        name: 'DNB ogółem (ceny bieżące, USD)'
+      unctadstat_gni_pc_current_usd:
+        name: 'DNB na mieszkańca (ceny bieżące, USD)'
+      unctadstat_merch_exports_shr_wld:
+        name: 'Eksport towarów jako udział w świecie (%)'
+      unctadstat_merch_exports_usd:
+        name: 'Eksport towarów ogółem (ceny bieżące, USD)'
+      unctadstat_merch_imports_shr_wld:
+        name: 'Import towarów jako udział w świecie (%)'
+      unctadstat_merch_imports_usd:
+        name: 'Import towarów ogółem (ceny bieżące, USD)'
+      wjp_rol_f1:
+        name: 'WJP RoL - Czynnik 1: Ograniczenia władzy rządu'
+      wjp_rol_f2:
+        name: 'WJP RoL - Czynnik 2: Brak korupcji'
+      wjp_rol_f3:
+        name: 'WJP RoL - Czynnik 3: Otwarty rząd'
+      wjp_rol_f4:
+        name: 'WJP RoL - Czynnik 4: Prawa podstawowe'
+      wjp_rol_f5:
+        name: 'WJP RoL - Czynnik 5: Porządek i bezpieczeństwo'
+      wjp_rol_f6:
+        name: 'WJP RoL - Czynnik 6: Egzekwowanie regulacji'
+      wjp_rol_f7:
+        name: 'WJP RoL - Czynnik 7: Wymiar sprawiedliwości cywilnej'
+      wjp_rol_f8:
+        name: 'WJP RoL - Czynnik 8: Wymiar sprawiedliwości karnej'
+      wjp_rol_overall:
+        name: 'WJP - Wskaźnik rządów prawa: wynik ogólny'
+      HD_HCI_OVRL:
+        name: 'Indeks kapitału ludzkiego (HCI), ogółem (0-1)'
+      LO_PISA_MAT:
+        name: 'PISA - średni wynik z matematyki'
+      LO_PISA_REA:
+        name: 'PISA - średni wynik z czytania'
+      LO_PISA_SCI:
+        name: 'PISA - średni wynik z nauk przyrodniczych'
+      LO_TIMSS_MAT4:
+        name: 'TIMSS - średni wynik z matematyki, klasa 4'
+      SE_ADT_1524_LT_ZS:
+        name: 'Wskaźnik alfabetyzacji młodzieży 15-24, obie płcie (%)'
+      SE_ADT_LITR_ZS:
+        name: 'Wskaźnik alfabetyzacji dorosłych 15+, obie płcie (%)'
+      SE_COM_DURS:
+        name: 'Czas trwania obowiązku szkolnego (lata)'
+      SE_LPV_PRIM:
+        name: 'Ubóstwo edukacyjne: dzieci kończące podstawówkę nieczytające biegle (%)'
+      SE_PRE_ENRR:
+        name: 'Współczynnik skolaryzacji brutto, przedszkole, obie płcie (%)'
+      SE_PRM_AGES:
+        name: 'Wiek rozpoczęcia szkoły podstawowej (lata)'
+      SE_PRM_CMPT_ZS:
+        name: 'Wskaźnik ukończenia szkoły podstawowej, obie płcie (%)'
+      SE_PRM_DURS:
+        name: 'Czas trwania szkoły podstawowej (lata)'
+      SE_PRM_ENRR:
+        name: 'Współczynnik skolaryzacji brutto, podstawowa, obie płcie (%)'
+      SE_PRM_PRS5_ZS:
+        name: 'Przetrwanie do klasy 5, ogółem (% kohorty)'
+      SE_PRM_PRSL_ZS:
+        name: 'Przetrwanie do ostatniej klasy podstawówki, ogółem (% kohorty)'
+      SE_PRM_TCAQ_ZS:
+        name: 'Wykwalifikowani nauczyciele w szkole podstawowej (% ogółu)'
+      SE_PRM_UNER:
+        name: 'Dzieci poza szkołą, podstawowa (liczba)'
+      SE_SCH_LIFE:
+        name: 'Oczekiwana długość edukacji, podstawowa-wyższa, obie płcie (lata)'
+      SE_SEC_AGES:
+        name: 'Wiek rozpoczęcia szkoły średniej (lata)'
+      SE_SEC_CMPT_LO_ZS:
+        name: 'Wskaźnik ukończenia niższej szkoły średniej, obie płcie (%)'
+      SE_SEC_ENRR:
+        name: 'Współczynnik skolaryzacji brutto, średnia, obie płcie (%)'
+      SE_SEC_TCAQ_ZS:
+        name: 'Wykwalifikowani nauczyciele w szkole średniej (% ogółu)'
+      SE_TER_ENRR:
+        name: 'Współczynnik skolaryzacji brutto, wyższa, obie płcie (%)'
+      SE_XPD_TOTL_GB_ZS:
+        name: 'Wydatki rządowe na edukację (% wydatków rządowych ogółem)'
+      SE_XPD_TOTL_GD_ZS:
+        name: 'Wydatki rządowe na edukację, ogółem (% PKB)'
+      SE_ADT_LITR_FE_ZS:
+        name: 'Wskaźnik alfabetyzacji dorosłych kobiet (% kobiet 15+)'
+      SE_ENR_PRSC_FM_ZS:
+        name: 'Skolaryzacja podstawowa i średnia, wskaźnik parytetu płci (GPI)'
+      SE_PRM_ENRR_FE:
+        name: 'Skolaryzacja podstawowa, dziewczęta (% brutto)'
+      SE_SEC_ENRR_FE:
+        name: 'Skolaryzacja średnia, dziewczęta (% brutto)'
+      SE_TER_ENRR_FE:
+        name: 'Skolaryzacja wyższa, kobiety (% brutto)'
+      SG_GEN_PARL_ZS:
+        name: 'Odsetek miejsc w parlamentach krajowych zajmowanych przez kobiety (%)'
+      SH_DYN_AIDS_FE_ZS:
+        name: 'Udział kobiet w populacji 15+ żyjącej z HIV (%)'
+      SH_MMR_DTHS:
+        name: 'Liczba zgonów matek'
+      SH_MMR_RISK:
+        name: 'Ryzyko zgonu matki w ciągu życia (1 na N)'
+      SH_STA_ANVC_ZS:
+        name: 'Kobiety w ciąży objęte opieką prenatalną (%)'
+      SH_STA_BRTC_ZS:
+        name: 'Porody przyjęte przez wykwalifikowany personel (% ogółu)'
+      SH_STA_MMRT:
+        name: 'Wskaźnik umieralności matek (model, na 100 000 żywych urodzeń)'
+      SL_AGR_EMPL_FE_ZS:
+        name: 'Zatrudnienie w rolnictwie, kobiety (% zatrudnienia kobiet, ILO)'
+      SL_EMP_VULN_FE_ZS:
+        name: 'Zatrudnienie wrażliwe, kobiety (% zatrudnienia kobiet, ILO)'
+      SL_IND_EMPL_FE_ZS:
+        name: 'Zatrudnienie w przemyśle, kobiety (% zatrudnienia kobiet, ILO)'
+      SL_SRV_EMPL_FE_ZS:
+        name: 'Zatrudnienie w usługach, kobiety (% zatrudnienia kobiet, ILO)'
+      SL_TLF_CACT_FE_ZS:
+        name: 'Współczynnik aktywności zawodowej, kobiety (% kobiet 15+, ILO)'
+      SL_TLF_CACT_MA_ZS:
+        name: 'Współczynnik aktywności zawodowej, mężczyźni (% mężczyzn 15+, ILO)'
+      SL_TLF_TOTL_FE_ZS:
+        name: 'Siła robocza, kobiety (% całkowitej siły roboczej)'
+      SL_UEM_TOTL_FE_ZS:
+        name: 'Bezrobocie, kobiety (% kobiecej siły roboczej, ILO)'
+      SP_ADO_TFRT:
+        name: 'Wskaźnik dzietności nastolatek (urodzenia na 1000 kobiet 15-19)'
+      SP_DYN_CONU_ZS:
+        name: 'Stosowanie antykoncepcji, dowolna metoda (% zamężnych kobiet 15-49)'
+      SH_DYN_AIDS_ZS:
+        name: 'Częstość występowania HIV, ogółem (% populacji 15-49)'
+      SH_DYN_MORT:
+        name: 'Umieralność dzieci poniżej 5 lat (na 1000 żywych urodzeń)'
+      SH_DYN_NMRT:
+        name: 'Umieralność noworodków (na 1000 żywych urodzeń)'
+      SH_H2O_BASW_ZS:
+        name: 'Ludność z co najmniej podstawowym dostępem do wody pitnej (%)'
+      SH_IMM_HEPB:
+        name: 'Szczepienia HepB3 (% rocznych dzieci)'
+      SH_IMM_IDPT:
+        name: 'Szczepienia DTP (% dzieci 12-23 mies.)'
+      SH_IMM_MEAS:
+        name: 'Szczepienia przeciw odrze (% dzieci 12-23 mies.)'
+      SH_MED_BEDS_ZS:
+        name: 'Łóżka szpitalne (na 1000 osób)'
+      SH_MED_NUMW_P3:
+        name: 'Pielęgniarki i położne (na 1000 osób)'
+      SH_MED_PHYS_ZS:
+        name: 'Lekarze (na 1000 osób)'
+      SH_PRV_SMOK:
+        name: 'Częstość palenia tytoniu, ogółem (15+) (%)'
+      SH_STA_BASS_ZS:
+        name: 'Ludność z co najmniej podstawowymi usługami sanitarnymi (%)'
+      SH_STA_HYGN_ZS:
+        name: 'Ludność z podstawowymi urządzeniami do mycia rąk (mydło i woda) (%)'
+      SH_STA_MALN_ZS:
+        name: 'Częstość niedowagi (waga do wieku) (% dzieci poniżej 5 lat)'
+      SH_STA_OWGH_ZS:
+        name: 'Częstość nadwagi (waga do wzrostu) (% dzieci poniżej 5 lat)'
+      SH_STA_SMSS_ZS:
+        name: 'Ludność z bezpiecznie zarządzanymi usługami sanitarnymi (%)'
+      SH_STA_STNT_ZS:
+        name: 'Częstość zahamowania wzrostu (wzrost do wieku) (% dzieci poniżej 5 lat)'
+      SH_STA_WAST_ZS:
+        name: 'Częstość wyniszczenia (waga do wzrostu) (% dzieci poniżej 5 lat)'
+      SH_XPD_CHEX_GD_ZS:
+        name: 'Bieżące wydatki na zdrowie (% PKB)'
+      SH_XPD_CHEX_PC_CD:
+        name: 'Bieżące wydatki na zdrowie na mieszkańca (bieżące USD)'
+      SH_XPD_GHED_GD_ZS:
+        name: 'Krajowe rządowe wydatki na zdrowie (% PKB)'
+      SH_XPD_OOPC_CH_ZS:
+        name: 'Wydatki z własnej kieszeni (% bieżących wydatków na zdrowie)'
+      SN_ITK_DEFC_ZS:
+        name: 'Częstość niedożywienia (% populacji)'
+      SP_DYN_LE00_FE_IN:
+        name: 'Oczekiwana długość życia w chwili urodzenia, kobiety (lata)'
+      SP_DYN_LE00_MA_IN:
+        name: 'Oczekiwana długość życia w chwili urodzenia, mężczyźni (lata)'
+      SP_DYN_TFRT_IN:
+        name: 'Współczynnik dzietności, ogółem (urodzenia na kobietę)'
+      eurostat_early_leavers:
+        name: 'Osoby wcześnie kończące naukę, 18-24 (% populacji)'
+      eurostat_energy_import_dep:
+        name: 'Zależność od importu energii, ogółem (% dostępnej energii brutto)'
+      eurostat_gender_pay_gap:
+        name: 'Nieskorygowana luka płacowa między płciami (% wynagrodzenia brutto mężczyzn)'
+      eurostat_ghg_emissions_total:
+        name: 'Emisje gazów cieplarnianych, ogółem (bez LULUCF) (tys. ton ekw. CO2)'
+      eurostat_gini_income:
+        name: 'Współczynnik Giniego dochodu ekwiwalentnego rozporządzalnego'
+      eurostat_health_exp_gdp:
+        name: 'Bieżące wydatki na zdrowie, wszystkie źródła (% PKB)'
+      eurostat_healthy_life_years:
+        name: 'Lata życia w zdrowiu w chwili urodzenia (ogółem)'
+      eurostat_hh_internet_access:
+        name: 'Gospodarstwa domowe z dostępem do internetu w domu (% gospodarstw)'
+      eurostat_long_term_unemp:
+        name: 'Stopa długotrwałego bezrobocia, 15-74 (% aktywnych zawodowo)'
+      eurostat_material_deprivation:
+        name: 'Wskaźnik poważnej deprywacji materialnej i społecznej (% populacji)'
+      eurostat_neet_rate:
+        name: 'Młodzież NEET (niepracująca, nieucząca się, nieszkoląca), 15-29 (%)'
+      eurostat_poverty_rate_child:
+        name: 'Stopa zagrożenia ubóstwem, dzieci poniżej 18 lat (próg 60% mediany, %)'
+      eurostat_recycling_rate:
+        name: 'Wskaźnik recyklingu odpadów komunalnych (%)'
+      eurostat_renewable_share:
+        name: 'Udział energii odnawialnej w końcowym zużyciu energii brutto (%)'
+      eurostat_social_protection_gdp:
+        name: 'Wydatki na ochronę socjalną (% PKB)'
+      eurostat_tertiary_attainment:
+        name: 'Wykształcenie wyższe, 25-34 (% populacji)'
+      oecd_eag_below_sec_25_64:
+        name: 'Wykształcenie poniżej średniego II stopnia (25-64)'
+      oecd_eag_exp_gdp_tertiary:
+        name: 'Wydatki na instytucje edukacyjne (wyższe)'
+      oecd_eag_exp_gdp_total:
+        name: 'Wydatki na instytucje edukacyjne (podstawowe-wyższe)'
+      oecd_eag_exp_perstud_tertiary:
+        name: 'Wydatki na ucznia (EPC), wyższe'
+      oecd_eag_exp_perstud_total:
+        name: 'Wydatki na ucznia (EPC), podstawowe-wyższe'
+      oecd_eag_teacher_salary:
+        name: 'Ustawowe wynagrodzenie nauczycieli, niższe średnie (15 lat stażu)'
+      oecd_eag_tertiary_25_34:
+        name: 'Wykształcenie wyższe (25-34)'
+      oecd_eag_tertiary_25_64:
+        name: 'Wykształcenie wyższe (25-64)'
+      oecd_health_avoidable_mort:
+        name: 'Umieralność możliwa do uniknięcia'
+      oecd_health_beds:
+        name: 'Łóżka szpitalne'
+      oecd_health_exp_gdp:
+        name: 'Bieżące wydatki na zdrowie (% PKB)'
+      oecd_health_exp_pc:
+        name: 'Bieżące wydatki na zdrowie na mieszkańca'
+      oecd_health_life_exp:
+        name: 'Oczekiwana długość życia w chwili urodzenia'
+      oecd_health_nurses:
+        name: 'Praktykujące pielęgniarki'
+      oecd_health_physicians:
+        name: 'Praktykujący lekarze'
+      oecd_health_preventable_mort:
+        name: 'Umieralność możliwa do zapobiegnięcia'
+      oecd_health_self_rated_good:
+        name: 'Dorośli oceniający swoje zdrowie jako dobre lub bardzo dobre'
+      oecd_health_treatable_mort:
+        name: 'Umieralność uleczalna'
+      owidh_banana_yield:
+        name: 'Plon bananów'
+      owidh_cereal_yield:
+        name: 'Plon zbóż'
+      owidh_child_mortality:
+        name: 'Umieralność dzieci (poniżej 5 lat)'
+      owidh_civil_liberties:
+        name: 'Wskaźnik swobód obywatelskich (V-Dem)'
+      owidh_daily_caloric_supply:
+        name: 'Dzienna podaż kalorii na osobę'
+      owidh_deliberative_democracy:
+        name: 'Wskaźnik demokracji deliberatywnej (V-Dem)'
+      owidh_egalitarian_democracy:
+        name: 'Wskaźnik demokracji egalitarnej (V-Dem)'
+      owidh_electoral_democracy:
+        name: 'Wskaźnik demokracji wyborczej (V-Dem)'
+      owidh_fertility_rate:
+        name: 'Współczynnik dzietności (dzieci na kobietę)'
+      owidh_freedom_of_association:
+        name: 'Wskaźnik wolności zrzeszania się (V-Dem)'
+      owidh_freedom_of_expression:
+        name: 'Wskaźnik wolności wypowiedzi (V-Dem)'
+      owidh_human_development_index:
+        name: 'Wskaźnik rozwoju społecznego (HDI)'
+      owidh_infant_mortality:
+        name: 'Umieralność niemowląt'
+      owidh_liberal_democracy:
+        name: 'Wskaźnik demokracji liberalnej (V-Dem)'
+      owidh_life_expectancy:
+        name: 'Oczekiwana długość życia w chwili urodzenia'
+      owidh_maize_yield:
+        name: 'Plon kukurydzy'
+      owidh_maternal_mortality_ratio:
+        name: 'Wskaźnik umieralności matek'
+      owidh_participatory_democracy:
+        name: 'Wskaźnik demokracji partycypacyjnej (V-Dem)'
+      owidh_political_corruption:
+        name: 'Wskaźnik korupcji politycznej (V-Dem)'
+      owidh_rice_yield:
+        name: 'Plon ryżu'
+      owidh_rule_of_law:
+        name: 'Wskaźnik rządów prawa (V-Dem)'
+      owidh_under5_mortality:
+        name: 'Prawdopodobieństwo zgonu poniżej 5 lat'
+      owidh_undernourishment:
+        name: 'Częstość niedożywienia'
+      owidh_wheat_yield:
+        name: 'Plon pszenicy'
+      owidh_women_political_empowerment:
+        name: 'Wskaźnik upodmiotowienia politycznego kobiet (V-Dem)'
+      FX_OWN_TOTL_40_ZS:
+        name: 'Posiadanie konta, najbiedniejsze 40% (% populacji 15+)'
+      FX_OWN_TOTL_60_ZS:
+        name: 'Posiadanie konta, najbogatsze 60% (% populacji 15+)'
+      FX_OWN_TOTL_FE_ZS:
+        name: 'Posiadanie konta, kobiety (% kobiet 15+)'
+      FX_OWN_TOTL_MA_ZS:
+        name: 'Posiadanie konta, mężczyźni (% mężczyzn 15+)'
+      FX_OWN_TOTL_OL_ZS:
+        name: 'Posiadanie konta, osoby starsze (% populacji 25+)'
+      FX_OWN_TOTL_PL_ZS:
+        name: 'Posiadanie konta, wykształcenie podstawowe lub niższe (% populacji 15+)'
+      FX_OWN_TOTL_SO_ZS:
+        name: 'Posiadanie konta, wykształcenie średnie lub wyższe (% populacji 15+)'
+      FX_OWN_TOTL_YG_ZS:
+        name: 'Posiadanie konta, młodzi dorośli (% populacji 15-24)'
+      FX_OWN_TOTL_ZS:
+        name: 'Posiadanie konta w instytucji finansowej lub mobile money (% populacji 15+)'
+      borrow_any_t_d:
+        name: 'Pożyczył jakiekolwiek pieniądze (% populacji 15+)'
+      fiaccount_t_d:
+        name: 'Konto w banku lub podobnej instytucji finansowej (% populacji 15+)'
+      fin10:
+        name: 'Posiada kartę kredytową (% populacji 15+)'
+      fin17a:
+        name: 'Oszczędzał w banku lub podobnej instytucji finansowej (% populacji 15+)'
+      fin2_t_d:
+        name: 'Posiada kartę debetową (% populacji 15+)'
+      fin22a:
+        name: 'Pożyczył z formalnego banku lub podobnej instytucji (% populacji 15+)'
+      mobileaccount_t_d:
+        name: 'Konto mobile money (% populacji 15+)'
+      SI_DST_02ND_20:
+        name: 'Udział w dochodzie, drugie 20%'
+      SI_DST_03RD_20:
+        name: 'Udział w dochodzie, trzecie 20%'
+      SI_DST_04TH_20:
+        name: 'Udział w dochodzie, czwarte 20%'
+      SI_DST_05TH_20:
+        name: 'Udział w dochodzie, najwyższe 20%'
+      SI_DST_10TH_10:
+        name: 'Udział w dochodzie, najwyższe 10%'
+      SI_DST_FRST_10:
+        name: 'Udział w dochodzie, najniższe 10%'
+      SI_DST_FRST_20:
+        name: 'Udział w dochodzie, najniższe 20%'
+      SI_POV_DDAY:
+        name: 'Wskaźnik ubóstwa przy 3,00 USD/dzień (PPP 2021) (% populacji)'
+      SI_POV_GAPS:
+        name: 'Luka ubóstwa przy 3,00 USD/dzień (PPP 2021) (%)'
+      SI_POV_GINI:
+        name: 'Indeks Giniego'
+      SI_POV_LMIC:
+        name: 'Wskaźnik ubóstwa przy 4,20 USD/dzień (PPP 2021) (% populacji)'
+      SI_POV_LMIC_GP:
+        name: 'Luka ubóstwa przy 4,20 USD/dzień (PPP 2021) (%)'
+      SI_POV_NAHC:
+        name: 'Wskaźnik ubóstwa przy krajowych liniach ubóstwa (% populacji)'
+      SI_POV_UMIC:
+        name: 'Wskaźnik ubóstwa przy 8,30 USD/dzień (PPP 2021) (% populacji)'
+      SI_POV_UMIC_GP:
+        name: 'Luka ubóstwa przy 8,30 USD/dzień (PPP 2021) (%)'
+      SI_SPR_PC40_ZG:
+        name: 'Roczny wzrost średniej konsumpcji/dochodu na osobę, dolne 40% (%)'
+      SI_SPR_PCAP:
+        name: 'Średnia konsumpcja/dochód na osobę, ogółem (PPP 2021, USD/dzień)'
+      SI_SPR_PCAP_ZG:
+        name: 'Roczny wzrost średniej konsumpcji/dochodu na osobę, ogółem (%)'
+      rieti_ineer_chemical:
+        name: 'Nominalny efektywny kurs walutowy - chemia (I-NEER)'
+      rieti_ireer_chemical:
+        name: 'Realny efektywny kurs walutowy - chemia (I-REER)'
+      rieti_ineer_electrical:
+        name: 'Nominalny efektywny kurs walutowy - maszyny elektryczne (I-NEER)'
+      rieti_ireer_electrical:
+        name: 'Realny efektywny kurs walutowy - maszyny elektryczne (I-REER)'
+      rieti_ineer_food:
+        name: 'Nominalny efektywny kurs walutowy - żywność (I-NEER)'
+      rieti_ireer_food:
+        name: 'Realny efektywny kurs walutowy - żywność (I-REER)'
+      rieti_ineer_general:
+        name: 'Nominalny efektywny kurs walutowy - maszyny ogólne (I-NEER)'
+      rieti_ireer_general:
+        name: 'Realny efektywny kurs walutowy - maszyny ogólne (I-REER)'
+      rieti_ineer_metal:
+        name: 'Nominalny efektywny kurs walutowy - metale (I-NEER)'
+      rieti_ireer_metal:
+        name: 'Realny efektywny kurs walutowy - metale (I-REER)'
+      rieti_ineer_mfg_all:
+        name: 'Nominalny efektywny kurs walutowy - przetwórstwo (ogółem) (I-NEER)'
+      rieti_ireer_mfg_all:
+        name: 'Realny efektywny kurs walutowy - przetwórstwo (ogółem) (I-REER)'
+      rieti_ineer_nonmetal:
+        name: 'Nominalny efektywny kurs walutowy - wyroby niemetalowe (I-NEER)'
+      rieti_ireer_nonmetal:
+        name: 'Realny efektywny kurs walutowy - wyroby niemetalowe (I-REER)'
+      rieti_ineer_optical:
+        name: 'Nominalny efektywny kurs walutowy - optyka (I-NEER)'
+      rieti_ireer_optical:
+        name: 'Realny efektywny kurs walutowy - optyka (I-REER)'
+      rieti_ineer_paper:
+        name: 'Nominalny efektywny kurs walutowy - papier (I-NEER)'
+      rieti_ireer_paper:
+        name: 'Realny efektywny kurs walutowy - papier (I-REER)'
+      rieti_ineer_petroleum:
+        name: 'Nominalny efektywny kurs walutowy - ropa naftowa (I-NEER)'
+      rieti_ireer_petroleum:
+        name: 'Realny efektywny kurs walutowy - ropa naftowa (I-REER)'
+      rieti_ineer_rubber:
+        name: 'Nominalny efektywny kurs walutowy - guma (I-NEER)'
+      rieti_ireer_rubber:
+        name: 'Realny efektywny kurs walutowy - guma (I-REER)'
+      rieti_ineer_textile:
+        name: 'Nominalny efektywny kurs walutowy - tekstylia (I-NEER)'
+      rieti_ireer_textile:
+        name: 'Realny efektywny kurs walutowy - tekstylia (I-REER)'
+      rieti_ineer_transport:
+        name: 'Nominalny efektywny kurs walutowy - sprzęt transportowy (I-NEER)'
+      rieti_ireer_transport:
+        name: 'Realny efektywny kurs walutowy - sprzęt transportowy (I-REER)'
+      rieti_ineer_wood:
+        name: 'Nominalny efektywny kurs walutowy - drewno (I-NEER)'
+      rieti_ireer_wood:
+        name: 'Realny efektywny kurs walutowy - drewno (I-REER)'
+      AverageMonthlyNominalEarningEmployeeY:
+        name: 'Przeciętne miesięczne wynagrodzenie nominalne (CIS-Stat)'
+      CompensationEmployeesCurrentPricesY:
+        name: 'Wynagrodzenia pracowników (ceny bieżące) (CIS-Stat)'
+      EmploymentRateY:
+        name: 'Wskaźnik zatrudnienia (CIS-Stat)'
+      LabourForceParticipationRateY:
+        name: 'Współczynnik aktywności zawodowej (CIS-Stat)'
+      MinimumWageY:
+        name: 'Ustawowa płaca minimalna (CIS-Stat)'
+      NumberEmployedY:
+        name: 'Liczba pracujących (CIS-Stat)'
+      NumberLabourForceY:
+        name: 'Siła robocza / ludność aktywna zawodowo (CIS-Stat)'
+      NumberPersonsOutsideLabourForceY:
+        name: 'Osoby poza siłą roboczą (CIS-Stat)'
+      NumberUnemployedY:
+        name: 'Liczba bezrobotnych (CIS-Stat)'
+      UnemploymentRateY:
+        name: 'Stopa bezrobocia (CIS-Stat)'
+      niti_sdg_composite_score:
+        name: 'Wskaźnik SDG India: krajowy wynik łączny'
+      niti_sdg_goal_1_score:
+        name: 'Wskaźnik SDG India: Cel 1 (Brak ubóstwa)'
+      niti_sdg_goal_2_score:
+        name: 'Wskaźnik SDG India: Cel 2 (Zero głodu)'
+      niti_sdg_goal_3_score:
+        name: 'Wskaźnik SDG India: Cel 3 (Dobre zdrowie i jakość życia)'
+      niti_sdg_goal_4_score:
+        name: 'Wskaźnik SDG India: Cel 4 (Dobra jakość edukacji)'
+      niti_sdg_goal_5_score:
+        name: 'Wskaźnik SDG India: Cel 5 (Równość płci)'
+      niti_sdg_goal_6_score:
+        name: 'Wskaźnik SDG India: Cel 6 (Czysta woda i warunki sanitarne)'
+      niti_sdg_goal_7_score:
+        name: 'Wskaźnik SDG India: Cel 7 (Czysta i dostępna energia)'
+      niti_sdg_goal_8_score:
+        name: 'Wskaźnik SDG India: Cel 8 (Wzrost gospodarczy i godna praca)'
+      niti_sdg_goal_9_score:
+        name: 'Wskaźnik SDG India: Cel 9 (Przemysł, innowacyjność, infrastruktura)'
+      niti_sdg_goal_10_score:
+        name: 'Wskaźnik SDG India: Cel 10 (Mniej nierówności)'
+      niti_sdg_goal_11_score:
+        name: 'Wskaźnik SDG India: Cel 11 (Zrównoważone miasta i społeczności)'
+      niti_sdg_goal_12_score:
+        name: 'Wskaźnik SDG India: Cel 12 (Odpowiedzialna konsumpcja i produkcja)'
+      niti_sdg_goal_13_score:
+        name: 'Wskaźnik SDG India: Cel 13 (Działania w dziedzinie klimatu)'
+      niti_sdg_goal_15_score:
+        name: 'Wskaźnik SDG India: Cel 15 (Życie na lądzie)'
+      niti_sdg_goal_16_score:
+        name: 'Wskaźnik SDG India: Cel 16 (Pokój, sprawiedliwość, silne instytucje)'
+      pbs_pk_cpi_index:
+        name: 'Wskaźnik cen konsumpcyjnych (CPI), Pakistan'
+      pbs_pk_gdp_nominal_pkr_mn:
+        name: 'PKB w cenach bieżących (nominalny), Pakistan'
+      pbs_pk_gdp_real_pkr_mn:
+        name: 'PKB w cenach stałych 2015-16 (realny), Pakistan'
+      pbs_pk_gni_per_capita_pkr:
+        name: 'DNB na mieszkańca, Pakistan'
+      pbs_pk_gni_pkr_mn:
+        name: 'Dochód narodowy brutto (DNB), Pakistan'
+      pbs_pk_ppi_index:
+        name: 'Wskaźnik cen producentów (PPI/WPI), Pakistan'
+      cbs_trade_balance_total:
+        name: 'Saldo bilansu handlowego, ogółem (CBS Izrael)'
+      cbs_trade_deficit_core:
+        name: 'Deficyt handlowy (podstawowy) (CBS Izrael)'
+      cbs_exports_food_beverages:
+        name: 'Eksport żywności i napojów (CBS Izrael)'
+      cbs_imports_raw_material:
+        name: 'Import surowców (CBS Izrael)'
+      cbs_manufacturing_index_total:
+        name: 'Wskaźnik produkcji przemysłowej, ogółem (CBS Izrael)'
+      cbs_labour_force_15plus:
+        name: 'Siła robocza, 15+ (CBS Izrael)'
+      cbs_agri_produce_value:
+        name: 'Wartość krajowej produkcji rolnej (CBS Izrael)'

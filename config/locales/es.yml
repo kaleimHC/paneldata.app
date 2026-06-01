@@ -1,0 +1,210 @@
+---
+es:
+  a11y:
+    close_menu: Cerrar menú
+    menu: Menú
+    search: Buscar (próximamente)
+    sections: Secciones
+    views: Vistas
+  common:
+    back_to_map: Volver al mapa
+    back_to_panel: "← Volver al panel"
+  coverage_map:
+    no_data: sin datos
+    title: Mapa de cobertura
+    year: Año
+    hist:
+      "Soviet Union": Unión Soviética
+      "Austria-Hungary": Austria-Hungría
+      "Czechoslovakia": Checoslovaquia
+      "Yugoslavia": Yugoslavia
+      "German Democratic Republic": República Democrática Alemana
+      "Korea": Corea
+      "Tibet": Tíbet
+      "Newfoundland": Terranova
+      "Palestine": Palestina
+      "Zanzibar": Zanzíbar
+  data_selection:
+    coverage: Cobertura
+    family: Familia
+    indicator: Indicador
+    license: Licencia
+    period: Período
+    source: Fuente
+    title: Selección de datos
+  history:
+    today: Hoy
+    yesterday: Ayer
+    older: Anteriores
+    failed: fallido
+    queued: en cola
+    delete: Eliminar ejecución
+  indicators:
+    non_loggable_hint: "valores ≤ 0 - no se pueden transformar con logaritmo (atenuados)"
+    pick_publisher: "- elige primero un editor -"
+    facet:
+      coverage: Cobertura
+      region: Región
+      dziedzina: Tema
+      publisher: Editor
+      all_publishers: Todos los editores
+      collection: Colección
+    scope:
+      global: Global
+      regional: Regional
+      national: Nacional
+    region:
+      all: Todos
+      countries: países
+      africa: África
+      latam: América Latina
+      asean: Sudeste Asiático
+      asia: Asia
+      cis: Postsoviético (CEI)
+      europe: Europa
+      oecd: OCDE
+      gulf: Golfo (CCG)
+      brazil: Brasil
+      india: India
+      pakistan: Pakistán
+      israel: Israel
+      mexico: México
+      france: Francia
+      norway: Noruega
+      sweden: Suecia
+      bahrain: Baréin
+      qatar: Catar
+      morocco: Marruecos
+      ghana: Ghana
+      guatemala: Guatemala
+      singapore: Singapur
+      malaysia: Malasia
+      indonesia: Indonesia
+      mekong: Gran Mekong (GMS)
+    dziedzina:
+      all: Todos los temas
+      economy: Economía y finanzas
+      trade: Comercio
+      governance: Instituciones y gobernanza
+      health: Salud
+      education: Educación y ciencia
+      labour: Trabajo
+      demography: Demografía
+      environment: Medio ambiente y energía
+      development: Desarrollo y pobreza
+      gender: Género
+      infrastructure: Infraestructura e innovación
+      other: Otros
+  search:
+    label: Buscar indicadores
+    placeholder: Buscar indicadores...
+    no_results: Sin resultados
+    close: Cerrar
+    target:
+      map: Indicador del mapa
+      analysis-predictor: Variable explicativa
+      analysis-response: Variable de respuesta
+  validation:
+    checking: Comprobando cobertura de datos...
+    no_years: Sin años comunes para este par - cambia el indicador o el período.
+    too_short: Período demasiado corto (mín. 5 años)
+    few_countries: "Muy pocos países comunes: {n} (mín. {min}). Cambia el período o el indicador."
+    short_panel: "{n} países · solo {t} años - resultado orientativo"
+    ok: "✓ {n} países equilibrados"
+    pick_indicator: Elige un indicador (primero un editor)
+  pvar:
+    loading: Cargando...
+    running: "Calculando... {progress}/{total} bootstraps"
+    queued: En cola...
+    computing: Calculando...
+    done: "Listo - γ₁₂ = {gamma} (p = {p}), N = {n}"
+    failed: "Error: {msg}"
+    failed_note: Esta ejecución falló - sin resultados.
+    no_diagnostics: Sin diagnósticos.
+    pair_summary: "{predictor} ⇄ {response} · {n} países · {years} años"
+    peak_response: Respuesta máxima
+    at_year: "en el año {h}"
+    gamma12: γ₁₂ (explicativa→respuesta)
+    gamma21: γ₂₁ (respuesta→explicativa)
+    countries: Países
+    years_n: "{years} años"
+    th_year: Año
+    th_irf: IRF (%)
+    th_ci: 90% IC
+    th_equation: Ecuación
+    th_test: Prueba
+    th_statistic: Estadístico
+    th_pvalue: valor p
+  locale_switcher:
+    label: Idioma
+  methodology:
+    title: Metodología
+    exit: Volver a la aplicación
+    docs_aria: Documentos
+    tab_replication: Replicación
+    goes_note_html: '«Institutions and Growth: a GMM/IV Panel VAR Approach» de Carlos Góes (2016)
+      es el estudio replicado por el módulo de cómputo de paneldata.app. La inspiración y la
+      primera versión del software surgieron como proyecto estudiantil en la Facultad de Ciencias
+      Económicas de la Universidad de Varsovia - se invita al análisis crítico.'
+    goes_imf: 'Texto completo - IMF Working Paper'
+    goes_elsevier: 'Publicado - Economics Letters'
+  panels:
+    analysis_lead_html: Configura la estimación y ejecútala (motor <code class="font-mono">plm::pgmm</code>).
+    analysis_title: Análisis Panel-VAR
+    diagnostics_empty: Sin resultados. Las pruebas de diagnóstico (AR(1) / AR(2) / Hansen)
+      aparecen tras ejecutar un análisis.
+    diagnostics_summary: Diagnóstico - AR(1) / AR(2) / Hansen
+    documentation_body: Metodología, descripción de datos y documentación de la API
+      - próximamente.
+    documentation_title: Documentación
+    irf_empty_html: Sin resultados. Ejecuta un análisis para ver la función impulso-respuesta.
+    irf_summary: Función impulso-respuesta e histograma
+    results_lead: Funciones de impulso-respuesta y pruebas de diagnóstico de la última
+      ejecución.
+    results_title: Resultados y diagnóstico
+  run_config:
+    bootstrap: bootstrap
+    bootstrap_aria: Bootstrap
+    engine_note_html: Motor <code class="font-mono">plm::pgmm</code> (equation-by-equation,
+      onestep, FD) - en vivo. Elige un predictor y ejecuta.
+    estimate: Estimar
+    over_period: en el período
+    period_aria: Período
+    response_aria: Variable de respuesta
+    predictor_aria: Variable explicativa
+    run_button: Ejecutar PVAR
+    run_button_title: Ejecuta la estimación PVAR en vivo
+    title: Configuración del análisis
+  sidebar:
+    run_history: Historial de ejecuciones
+    run_history_empty: Aún no hay ejecuciones. Ejecuta un análisis para verlas aquí.
+    search_placeholder: Buscar...
+    theme: Tema
+    workspace: Espacio de trabajo
+  tabs:
+    analysis: Ejecutar análisis
+    documentation: Documentación
+    explore: Explorar mapa
+    results: Resultados y diagnóstico
+  themes:
+    light: Marino
+    grafit: Grafito
+    konsola: Consola
+    sepia: Sepia
+    nokturn: Nocturno
+    kontrast: Contraste
+    mosiadz: Latón
+  top_bar:
+    coming_soon: Próximamente
+    nav:
+      api: API
+      downloads: Descargas
+      indicators: Indicadores
+      methodology: Metodología
+    tagline: Plataforma de datos de gobernanza
+  upload:
+    badge: Próximamente
+    in_progress: Función en preparación.
+    lead: Pronto - sube tus archivos CSV/Excel y compáralos con referencias globales
+      de la base de 31 indicadores.
+    title: Sube tus propios datos

@@ -1,0 +1,66 @@
+---
+en:
+  data:
+    indicators:
+      FP_CPI_TOTL_ZG:
+        name: Inflation, consumer prices (annual %)
+      GOV_WGI_CC_EST:
+        name: 'Control of Corruption: Estimate'
+      GOV_WGI_GE_EST:
+        name: 'Government Effectiveness: Estimate'
+      GOV_WGI_PV_EST:
+        name: 'Political Stability and Absence of Violence/Terrorism: Estimate'
+      GOV_WGI_RL_EST:
+        name: 'Rule of Law: Estimate'
+      GOV_WGI_RQ_EST:
+        name: 'Regulatory Quality: Estimate'
+      GOV_WGI_VA_EST:
+        name: 'Voice and Accountability: Estimate'
+      NE_GDI_TOTL_ZS:
+        name: Gross capital formation (% of GDP)
+      NE_TRD_GNFS_ZS:
+        name: Trade (% of GDP)
+      NY_GDP_MKTP_CD:
+        name: GDP (current US$)
+      NY_GDP_MKTP_KD:
+        name: GDP (constant 2015 US$)
+      NY_GDP_MKTP_KD_ZG:
+        name: GDP growth (annual %)
+      NY_GDP_PCAP_CD:
+        name: GDP per capita (current US$)
+      NY_GDP_PCAP_KD:
+        name: GDP per capita (constant 2015 US$)
+      SP_POP_TOTL:
+        name: Population, total
+      SP_URB_TOTL_IN_ZS:
+        name: Urban population (% of total population)
+      v2x_civlib:
+        name: Civil liberties index
+      v2x_clphy:
+        name: Physical violence index (freedom from)
+      v2x_corr:
+        name: Political corruption index
+      v2x_delibdem:
+        name: Deliberative democracy index
+      v2x_egaldem:
+        name: Egalitarian democracy index
+      v2x_frassoc_thick:
+        name: Freedom of association (thick)
+      v2x_freexp_altinf:
+        name: Freedom of expression and alternative sources of information
+      v2x_gender:
+        name: Women's political empowerment index
+      v2x_jucon:
+        name: Judicial constraints on the executive index
+      v2x_libdem:
+        name: Liberal democracy index
+      v2x_partipdem:
+        name: Participatory democracy index
+      v2x_polyarchy:
+        name: Electoral democracy index (polyarchy)
+      v2xcl_rol:
+        name: Equality before the law and individual liberty
+      v2xel_frefair:
+        name: Clean elections index
+      v2xlg_legcon:
+        name: Legislative constraints on the executive index
