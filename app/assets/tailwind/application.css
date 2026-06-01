@@ -1,0 +1,362 @@
+@import "tailwindcss";
+
+/* Native page transitions (Turbo 8 View Transitions API, opt-in via <meta name="view-transition">).
+   Gentle cross-fade in our ~250ms feel; fully off under reduced-motion. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--dur-base);
+  animation-timing-function: var(--ease-standard);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+/* Keep the (turbo-permanent) map rock-solid during page/language transitions: give it its OWN view-transition
+   group so the root cross-fade no longer snapshots/hides its WebGL canvas (the source of the flicker), and
+   don't animate that group - the same live node persists, so it should not visibly change. */
+#coverage-map {
+  view-transition-name: coverage-map;
+}
+::view-transition-group(coverage-map),
+::view-transition-old(coverage-map),
+::view-transition-new(coverage-map) {
+  animation: none !important;
+}
+
+/* Layer 6 (a11y) - global prefers-reduced-motion reset (Andy Bell pattern). */
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Motion system: one duration ladder + a semantic easing set, referenced from CSS AND inline-JS transition
+   strings (and JS timers derive ms from these via controllers/motion) so timing/easing can never drift (audit:
+   13 ad-hoc durations + mixed ease/linear were the consistency jank). Easing follows the Material convention:
+   enter = ease-out (element lands: fast start, soft stop); exit = ease-in (element leaves: accelerates away);
+   standard = ease-in-out (symmetric, for hovers / two-way state). */
+:root {
+  --dur-instant: 120ms; --dur-fast: 180ms; --dur-base: 240ms; --dur-slow: 320ms; --dur-slower: 420ms;
+  --dur-map: 300ms;   /* pinned to the MapLibre outline paint; deliberately off the ladder */
+  --dur-hold: 700ms;  /* deliberate freeze before the configurator collapses on a fresh run (pvar result-mode) */
+  --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme system via [data-theme] + runtime CSS custom properties - light (default) + dark.
+ Layer 3, reduced to 2 themes 2026-06-02 (atlas/terminal usunięte; sand-luxury = roadmap). */
+@layer base {
+  /* Full token contract: every color a semantic role; a theme = one block. The two ORIGINAL themes
+     (light/dark) keep their values + gain the new families (action/chip/status/chart/map-ramp) mapped to match
+     their current look. The six NEW themes below carry Claude Design's palette values verbatim. */
+  :root,
+  [data-theme="light"] {
+    --bg-primary: #eef2f7; --bg-secondary: #ffffff; --bg-tertiary: #e2e8f0;
+    --text-primary: #111827; --text-secondary: #6b7280; --text-muted: #6b7280; --text-inverse: #ffffff;
+    --border-color: #d9e0e8; --accent-color: #3b82f6; --ink-navy: #1e3a5f; --tab-accent: #a16207;
+    --chrome-bg: #1e3a5f; --chrome-ink: #f1f4f8;
+    --action-bg: #1e3a5f; --action-ink: #ffffff; --action-hover: #16304f; --action-dis-bg: #e2e8f0; --action-dis-ink: #6b7280;
+    --chip-bg: #ffffff; --chip-ink: #6b7280; --chip-edge: #d9e0e8;
+    --status-ok: #059669; --status-warn: #b45309; --status-bad: #dc2626; --status-info: #3b82f6;
+    --map-bg: #ffffff; --map-border: #cbd5e1; --map-missing: #e5e7eb;
+    --map-ramp-1: #e8eef4; --map-ramp-2: #bcd0e6; --map-ramp-3: #8db0d2; --map-ramp-4: #5b8bb5; --map-ramp-5: #356a9c; --map-ramp-6: #1e3a5f;
+    --chart-s1: #1e3a8a; --chart-s2: #b0831f; --scrim: rgba(0,0,0,0.4);
+  }
+
+  /* ── Five NEW themes (Claude Design palettes Faza 2; original Papier+Dark dropped per Patryk) ── */
+  [data-theme="grafit"] {
+    --bg-primary: #1b2128; --bg-secondary: #232b34; --bg-tertiary: #2c3640;
+    --text-primary: #e7ecf2; --text-secondary: #aab4bf; --text-muted: #7d8a96; --text-inverse: #0f141a;
+    --border-color: #333d48; --accent-color: #5b9bd5; --ink-navy: #5b9bd5; --tab-accent: #5b9bd5;
+    --chrome-bg: #141a20; --chrome-ink: #dde4ec;
+    --action-bg: #5b9bd5; --action-ink: #0f141a; --action-hover: #74acdf; --action-dis-bg: #2c3640; --action-dis-ink: #5a6671;
+    --chip-bg: #313c47; --chip-ink: #c0cad4; --chip-edge: #3e4b58;
+    --status-ok: #36b37e; --status-warn: #d6a02a; --status-bad: #e3654f; --status-info: #5b9bd5;
+    --map-bg: #1e2730; --map-border: #38424d; --map-missing: #2c3640;
+    --map-ramp-1: #21323f; --map-ramp-2: #25506b; --map-ramp-3: #2f7196; --map-ramp-4: #3f9bc4; --map-ramp-5: #6cc0e0; --map-ramp-6: #a9ddf0;
+    --chart-s1: #5b9bd5; --chart-s2: #e0a93c; --scrim: rgba(0,0,0,0.55);
+  }
+  [data-theme="konsola"] {
+    --bg-primary: #0d1117; --bg-secondary: #131922; --bg-tertiary: #1b232e;
+    --text-primary: #d3dae2; --text-secondary: #9aa6a0; --text-muted: #6c786f; --text-inverse: #0d1117;
+    --border-color: #232c38; --accent-color: #3fb950; --ink-navy: #3fb950; --tab-accent: #3fb950;
+    --chrome-bg: #090d12; --chrome-ink: #c9d3cc;
+    --action-bg: #238636; --action-ink: #eaffea; --action-hover: #2ea043; --action-dis-bg: #1b232e; --action-dis-ink: #586069;
+    --chip-bg: #1e2a24; --chip-ink: #aec3b1; --chip-edge: #2c3d33;
+    --status-ok: #3fb950; --status-warn: #d29922; --status-bad: #f85149; --status-info: #58a6ff;
+    --map-bg: #0f1620; --map-border: #2a3a30; --map-missing: #1b232e;
+    --map-ramp-1: #0e2a18; --map-ramp-2: #15512b; --map-ramp-3: #1d7a3c; --map-ramp-4: #2aa64f; --map-ramp-5: #57d36e; --map-ramp-6: #9af2a3;
+    --chart-s1: #3fb950; --chart-s2: #58a6ff; --scrim: rgba(0,0,0,0.6);
+  }
+  [data-theme="sepia"] {
+    --bg-primary: #efe6d6; --bg-secondary: #faf4e8; --bg-tertiary: #e4d8c2;
+    --text-primary: #3a2f22; --text-secondary: #6a5b46; --text-muted: #756142; --text-inverse: #faf4e8;
+    --border-color: #d8c8ab; --accent-color: #9a5b2b; --ink-navy: #9a5b2b; --tab-accent: #9a5b2b;
+    --chrome-bg: #4a3826; --chrome-ink: #f0e6d4;
+    --action-bg: #9a5b2b; --action-ink: #fbf3e8; --action-hover: #834a20; --action-dis-bg: #ddceb2; --action-dis-ink: #9b8c6c;
+    --chip-bg: #e0d2b0; --chip-ink: #5e4a30; --chip-edge: #cdbb96;
+    --status-ok: #5f7d3a; --status-warn: #b07d1a; --status-bad: #b04428; --status-info: #4a6b8a;
+    --map-bg: #faf4e8; --map-border: #e0d8c8; --map-missing: #d8cdb6;
+    --map-ramp-1: #f0e3c8; --map-ramp-2: #ddc9a0; --map-ramp-3: #c2a571; --map-ramp-4: #9c7c49; --map-ramp-5: #715630; --map-ramp-6: #5f3212;
+    --chart-s1: #9a5b2b; --chart-s2: #4a6b8a; --scrim: rgba(0,0,0,0.35);
+  }
+  [data-theme="nokturn"] {
+    --bg-primary: #10172a; --bg-secondary: #182138; --bg-tertiary: #212c48;
+    --text-primary: #e4e9f5; --text-secondary: #a7b2cc; --text-muted: #7480a0; --text-inverse: #0a0f1d;
+    --border-color: #2a3556; --accent-color: #6f8ff0; --ink-navy: #6f8ff0; --tab-accent: #6f8ff0;
+    --chrome-bg: #0b1124; --chrome-ink: #d8e0f2;
+    --action-bg: #4f6fe0; --action-ink: #f2f5ff; --action-hover: #6a86ec; --action-dis-bg: #212c48; --action-dis-ink: #5b6a93;
+    --chip-bg: #243358; --chip-ink: #c0cae6; --chip-edge: #324270;
+    --status-ok: #2fb784; --status-warn: #e0b341; --status-bad: #ef6a72; --status-info: #6f8ff0;
+    --map-bg: #121b33; --map-border: #2c3a60; --map-missing: #212c48;
+    --map-ramp-1: #1a2750; --map-ramp-2: #283f86; --map-ramp-3: #345fb8; --map-ramp-4: #3f86d6; --map-ramp-5: #5fb4e6; --map-ramp-6: #9fe0f2;
+    --chart-s1: #6f8ff0; --chart-s2: #e0b341; --scrim: rgba(0,0,0,0.6);
+  }
+  [data-theme="kontrast"] {
+    --bg-primary: #ffffff; --bg-secondary: #ffffff; --bg-tertiary: #eef0f2;
+    --text-primary: #000000; --text-secondary: #2b2b2b; --text-muted: #565656; --text-inverse: #ffffff;
+    --border-color: #1a1a1a; --accent-color: #0b48c2; --ink-navy: #0b48c2; --tab-accent: #0b48c2;
+    --chrome-bg: #000000; --chrome-ink: #ffffff;
+    --action-bg: #0b48c2; --action-ink: #ffffff; --action-hover: #093a9e; --action-dis-bg: #e0e0e0; --action-dis-ink: #6b6b6b;
+    --chip-bg: #ffffff; --chip-ink: #000000; --chip-edge: #000000;
+    --status-ok: #117a3a; --status-warn: #8a5a00; --status-bad: #c01818; --status-info: #0b48c2;
+    --map-bg: #ffffff; --map-border: #000000; --map-missing: #cfcfcf;
+    --map-ramp-1: #d9e3f3; --map-ramp-2: #9fbbe6; --map-ramp-3: #5a86cf; --map-ramp-4: #2a5bb0; --map-ramp-5: #123f86; --map-ramp-6: #06234f;
+    --chart-s1: #0b48c2; --chart-s2: #c01818; --scrim: rgba(0,0,0,0.5);
+  }
+  [data-theme="mosiadz"] {
+    --bg-primary: #f6f3ec; --bg-secondary: #fffdf8; --bg-tertiary: #ece6da;
+    --text-primary: #2a2520; --text-secondary: #574f44; --text-muted: #756c5e; --text-inverse: #fbf8f1;
+    --border-color: #e0d8c8; --accent-color: #8a6a30; --ink-navy: #8a6a30; --tab-accent: #8a6a30;
+    --chrome-bg: #2e2820; --chrome-ink: #f2ece0;
+    --action-bg: #8a6a30; --action-ink: #fffdf6; --action-hover: #785c28; --action-dis-bg: #e6dfce; --action-dis-ink: #9a8f78;
+    --chip-bg: #f3eede; --chip-ink: #5a5142; --chip-edge: #d8cdb8;
+    --status-ok: #587533; --status-warn: #8a6418; --status-bad: #a8432a; --status-info: #4a6b8a;
+    --map-bg: #fffdf8; --map-border: #e0d8c8; --map-missing: #e2dccd;
+    --map-ramp-1: #f7f0e0; --map-ramp-2: #ead9b0; --map-ramp-3: #d4b878; --map-ramp-4: #b8923f; --map-ramp-5: #8c6a2c; --map-ramp-6: #5a3f1c;
+    --chart-s1: #8a6a30; --chart-s2: #4a6b8a; --scrim: rgba(0,0,0,0.35);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    /* No always-on transition here: it doubled with the Turbo 8 view-transition root cross-fade on every
+       navigation (two clocks on one surface). The theme swap is cross-faded by .theme-transition * below
+       (body is a descendant of html.theme-transition), so the toggle still animates. */
+  }
+
+  /* Smooth, SYNCHRONIZED theme toggle: armed only while .theme-transition is on <html> (added by
+     theme_switcher during the swap, removed after ~350ms) so hover/focus stay instant. Surrounding chrome runs
+     0.32s linear so it lands with the MapLibre outline (the map's render loop starts its paint-transition ~1 rAF
+     frame after the CSS compositor); the map box is pinned back to 0.3s below so it stays untouched. Both < the
+     350ms removal guard → JS unchanged. reduced-motion → no transition. */
+  @media (prefers-reduced-motion: no-preference) {
+    .theme-transition,
+    .theme-transition *,
+    .theme-transition *::before,
+    .theme-transition *::after {
+      /* Scoped to the 3 cheap paint props: box-shadow/fill/stroke removed - box-shadow over a universal
+         selector was the theme-toggle paint storm; map fill/stroke re-tint via JS, not this transition. */
+      transition: background-color var(--dur-slow) linear, border-color var(--dur-slow) linear, color var(--dur-slow) linear;
+    }
+    /* Map box (container + ocean + borders) holds 0.3s - the MapLibre outline is the reference, untouched.
+       Higher specificity (.theme-transition .map-box *) overrides the 0.32s chrome above; linear is inherited. */
+    .theme-transition .map-box,
+    .theme-transition .map-box * {
+      transition-duration: var(--dur-map);
+    }
+  }
+}
+
+/* Semantic theme tokens. @theme inline is REQUIRED here: values reference the runtime
+   custom properties defined above, and inline emits those refs directly into utilities,
+   so a [data-theme] swap re-tints via the cascade. Generates bg-canvas, text-ink,
+   border-edge, bg-accent (plus opacity modifiers via color-mix). */
+@theme inline {
+  --color-canvas: var(--bg-primary);
+  --color-surface: var(--bg-secondary);
+  --color-raised: var(--bg-tertiary);
+  --color-ink: var(--text-primary);
+  --color-ink-soft: var(--text-secondary);
+  --color-ink-muted: var(--text-muted);
+  --color-accent: var(--accent-color);
+  --color-edge: var(--border-color);
+  --color-navy: var(--ink-navy);
+  --color-tab: var(--tab-accent);
+  --color-chrome: var(--chrome-bg);
+  --color-chrome-ink: var(--chrome-ink);
+  --color-ink-inverse: var(--text-inverse);
+  --color-action: var(--action-bg);
+  --color-action-hover: var(--action-hover);
+  --color-action-ink: var(--action-ink);
+  --color-action-dis: var(--action-dis-bg);
+  --color-action-dis-ink: var(--action-dis-ink);
+  --color-chip: var(--chip-bg);
+  --color-chip-ink: var(--chip-ink);
+  --color-chip-edge: var(--chip-edge);
+  --color-ok: var(--status-ok);
+  --color-warn: var(--status-warn);
+  --color-bad: var(--status-bad);
+  --color-info: var(--status-info);
+  --color-map: var(--map-bg);
+  --color-map-edge: var(--map-border);
+
+  --animate-fade-in: fade-in var(--dur-slow) var(--ease-enter) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* New run-history card sliding in. */
+@keyframes run-enter {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Results panel transitioning in when a run is loaded/navigated. */
+@keyframes result-swap {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Year slider thumb. */
+@layer components {
+  /* Facet metadata chip: shared by the search results (and available to the picker description). */
+  .facet-chip { @apply rounded border border-chip-edge bg-chip px-1.5 py-0.5 text-[10px] text-chip-ink; }
+  /* A freshly-created run card animates into the history list. */
+  .run-enter { animation: run-enter var(--dur-slow) var(--ease-enter); }
+  /* Results panel fades/rises in on every run load (fresh compute + history navigation). */
+  .result-swap { animation: result-swap var(--dur-slow) var(--ease-enter); }
+
+  /* Configurator collapse: grid-template-rows 1fr<->0fr - native, smooth, NO JS max-height/scrollHeight/
+     reflow/timers (was the #1 jank). Driven purely by the section's data-analysis-mode (pvar sets it); the global
+     reduced-motion reset makes it instant. Inner child clips via min-height:0 + overflow:hidden. */
+  [data-analysis-config] {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows var(--dur-slower) var(--ease-enter), opacity var(--dur-base) var(--ease-enter);
+  }
+  [data-analysis-config] > * { min-height: 0; overflow: hidden; }
+  /* Collapsing (-> result-mode) is an exit: override the timing-function so it accelerates away (ease-in); the
+     destination state's transition is the one that plays, so expanding back keeps the base ease-enter. */
+  [data-analysis-mode="result"] [data-analysis-config] {
+    grid-template-rows: 0fr; opacity: 0; pointer-events: none;
+    transition-timing-function: var(--ease-exit);
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background-color: var(--ink-navy);
+    cursor: pointer;
+    transition: transform var(--dur-instant) var(--ease-standard);
+  }
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-radius: 9999px;
+    background-color: var(--ink-navy);
+    cursor: pointer;
+  }
+
+  /* Unified form controls. One custom chevron, theme-aware. */
+  .field-select,
+  .field-input {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    transition: border-color var(--dur-fast) var(--ease-standard);
+  }
+  .field-select {
+    appearance: none;
+    padding-right: 1.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 13px 13px;
+  }
+  .field-select:focus,
+  .field-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+/* MapLibre hover tooltip - theme-aware. MapLibre default: hardcoded white bg + NO color → inherits --text-primary,
+   which is near-white in dark theme → invisible white-on-white. UNLAYERED (not @layer) on purpose: maplibre-gl.css
+   ships unlayered, and @layer rules always lose to unlayered regardless of source order. Same specificity → wins by
+   load order (tailwind.css after maplibre-gl.css). */
+.maplibregl-popup-content {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+.maplibregl-popup-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.maplibregl-popup-anchor-top .maplibregl-popup-tip,
+.maplibregl-popup-anchor-top-left .maplibregl-popup-tip,
+.maplibregl-popup-anchor-top-right .maplibregl-popup-tip {
+  border-bottom-color: var(--bg-secondary);
+}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
+.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip,
+.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip {
+  border-top-color: var(--bg-secondary);
+}
+.maplibregl-popup-anchor-left .maplibregl-popup-tip {
+  border-right-color: var(--bg-secondary);
+}
+.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-left-color: var(--bg-secondary);
+}
+
+/* ── Explore↔Analysis - single state via [data-view] on the layout root (tab_controller)-adjacent. ──
+   Content swap (BOTH breakpoints): explore shows the data-selection controls, analysis shows the run history. The
+   stage (map↔analysis) and the rail section cross-fade on switch (handled in tab_controller); reduced-motion →
+   instant (base reset above). */
+[data-view="analysis"] [data-explore-only]  { display: none; }
+[data-view="explore"]  [data-analysis-only] { display: none; }
+
+/* Mobile only: in analysis the rail (nav) rises above the stage (the map's place) and FLIP-slides there; the theme
+   switcher (mobile-explore-only) also collapses in analysis. On desktop the theme stays put (bottom-left rail). */
+@media (max-width: 767.98px) {
+  [data-view="analysis"] [data-rail]  { order: 1; }
+  [data-view="analysis"] [data-stage] { order: 2; }
+  [data-view="analysis"] [data-mobile-explore-only] { display: none; }
+}
