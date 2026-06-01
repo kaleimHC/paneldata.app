@@ -1,0 +1,8 @@
+# Omakase Ruby styling for Rails
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+# Overwrite or add rules to create your own house style
+#
+# House style: [a, [b, c]] not [ a, [ b, c ] ] (overrides omakase's spaced-bracket default)
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
