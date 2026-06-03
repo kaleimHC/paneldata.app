@@ -1,0 +1,27 @@
+<% content_for :title, "System - paneldata.app" %>
+<main class="mx-auto max-w-2xl px-6 py-20">
+  <header class="mb-8">
+    <h1 class="text-2xl font-semibold tracking-tight text-ink">paneldata.app</h1>
+    <p class="mt-1 text-sm text-ink-soft">Live econometric replication platform - system status.</p>
+  </header>
+
+  <dl class="divide-y divide-edge rounded-xl border border-edge bg-surface">
+    <% [
+         ["Rails", @rails_version],
+         ["Ruby", @ruby_version],
+         ["Adapter", @adapter],
+         ["Observations", number_with_delimiter(@observation_count)],
+         ["Environment", @env],
+         ["Checked at", "#{@deployed_at} UTC"]
+       ].each do |label, value| %>
+      <div class="flex items-baseline justify-between gap-4 px-4 py-3">
+        <dt class="text-sm font-medium text-ink-soft"><%= label %></dt>
+        <dd class="truncate font-mono text-sm text-ink" title="<%= value %>"><%= value %></dd>
+      </div>
+    <% end %>
+  </dl>
+
+  <p class="mt-6 text-sm text-ink-muted">
+    <%= link_to t("common.back_to_panel"), root_path, class: "text-accent hover:underline" %>
+  </p>
+</main>

@@ -1,0 +1,13 @@
+<% content_for :title, "#{t('upload.title')} - paneldata.app" %>
+<%= render LayoutChromeComponent.new do %>
+  <section class="mx-auto max-w-2xl px-6 py-28 text-center md:py-36">
+    <p class="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-ink-muted"><%= t("upload.badge") %></p>
+    <h1 class="text-3xl font-semibold tracking-tight text-ink md:text-5xl"><%= t("upload.title") %></h1>
+    <p class="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-ink-soft">
+      <%= t("upload.lead") %>
+    </p>
+    <p class="mt-8 text-sm text-ink-muted">
+      <%= t("upload.in_progress") %> <%= link_to t("common.back_to_map"), root_path, class: "text-accent hover:underline" %>.
+    </p>
+  </section>
+<% end %>

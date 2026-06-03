@@ -1,0 +1,24 @@
+<%# Config-mode results panel (no run selected): static title + empty IRF/diagnostics boxes. Rendered server-side
+    when there is no ?run, and kept in a <template> so the client back-to-config (analysis tab re-click) can restore
+    it after a server-rendered run was shown. %>
+<header class="pt-2 text-center md:text-left">
+  <h2 class="font-serif text-lg font-semibold tracking-tight text-navy"><%= t("panels.results_title") %></h2>
+  <p class="mx-auto mt-1 max-w-2xl text-sm text-ink-soft md:mx-0"><%= t("panels.results_lead") %></p>
+</header>
+
+<details open class="overflow-hidden rounded-xl border border-edge bg-surface shadow-sm">
+  <summary class="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-medium text-ink marker:content-none">
+    <span><%= t("panels.irf_summary") %></span>
+  </summary>
+  <div class="border-t border-edge px-4 py-6 text-sm text-ink-muted">
+    <p class="text-center"><%= t("panels.irf_empty_html") %></p>
+  </div>
+</details>
+<details class="overflow-hidden rounded-xl border border-edge bg-surface shadow-sm">
+  <summary class="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-medium text-ink marker:content-none">
+    <span><%= t("panels.diagnostics_summary") %></span>
+  </summary>
+  <div class="border-t border-edge px-4 py-6 text-sm text-ink-muted">
+    <p class="text-center"><%= t("panels.diagnostics_empty") %></p>
+  </div>
+</details>

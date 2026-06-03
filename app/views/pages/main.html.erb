@@ -1,0 +1,55 @@
+<% code = "NY.GDP.PCAP.KD"; year = 2024 %>
+<% content_for :title, "paneldata.app - #{t('top_bar.tagline')}" %>
+
+<%= render LayoutChromeComponent.new(selected_code: code, initial_view: @run ? "analysis" : "explore", result_mode: @run.present?) do %>
+  <%# Mobile: marginal horizontal padding so the map gets max width; desktop keeps the roomy gutters. This wrapper
+      also carries the flex-height chain on desktop (flex-col flex-1) so the explore card can fill the viewport. %>
+  <div class="mx-auto w-full max-w-6xl px-1.5 py-3 md:flex md:min-h-0 md:flex-1 md:flex-col md:px-6 md:py-5">
+
+    <%# Shared indicator catalog: ONE copy, read by every picker (map + analysis predictor/response) and the
+        search overlay - replaces the per-picker copies (was 2, would be 3 with the response picker -> now 1). %>
+    <script type="application/json" data-indicator-catalog><%= raw IndicatorCatalog.entries(include_loggable: true).to_json.gsub("</", "<\\/") %></script>
+
+    <%# ── EXPLORE MAP (default) - map is the hero; rail drives it. Hidden when a run is opened (result-mode). ── %>
+    <section data-tab-target="panel" data-tab-name="explore" <%= "hidden" if @run %> class="space-y-4 md:flex md:min-h-0 md:flex-1 md:flex-col">
+      <%= render ChoroplethComponent.new(indicator_code: code, year: year) %>
+    </section>
+
+    <%# ── RUN ANALYSIS (Results & diagnostics live here as a section below the config) ── %>
+    <section data-tab-target="panel" data-tab-name="analysis" data-controller="pvar" <%= "hidden" unless @run %>
+             data-pvar-validation-labels-value="<%= {
+               checking: t('validation.checking'), no_years: t('validation.no_years'),
+               too_short: t('validation.too_short'), few_countries: t('validation.few_countries'),
+               short_panel: t('validation.short_panel'), ok: t('validation.ok'),
+               pick_indicator: t('validation.pick_indicator') }.to_json %>"
+             data-pvar-labels-value="<%= I18n.t('pvar').to_json %>"
+             data-analysis-mode="<%= @run ? "result" : "config" %>"
+             class="space-y-4 md:min-h-0 md:flex-1 md:overflow-y-auto">
+      <%# CONFIG block - collapses (fade + slide up) into result-mode; re-expands on a "Uruchom analizę" tab re-click. %>
+      <div data-pvar-target="configBlock" data-analysis-config>
+        <div class="space-y-4">
+          <header class="text-center md:text-left">
+            <h1 class="font-serif text-xl font-semibold tracking-tight text-navy"><%= t("panels.analysis_title") %></h1>
+            <p class="mx-auto mt-1 max-w-2xl text-sm text-ink-soft md:mx-0"><%= t("panels.analysis_lead_html") %></p>
+          </header>
+          <%= render RunConfigComponent.new %>
+        </div>
+      </div>
+
+      <%# RESULTS block - rises to be the sole main element in result-mode. Rendered SERVER-SIDE:
+          a completed run navigated via /?run=<id> shows here at first paint, so the Turbo view-transition
+          cross-fades smoothly (like Methodology) instead of an in-place JS swap that jumped. %>
+      <div data-analysis-results data-pvar-target="resultsBlock" class="space-y-4">
+        <% if @run %>
+          <%= render AnalysisResultComponent.new(run: @run) %>
+        <% else %>
+          <%= render "pages/results_placeholder" %>
+        <% end %>
+      </div>
+      <%# Static config-mode placeholder kept here so the client back-to-config (analysis tab re-click) can restore
+          it after a server-rendered run was shown - without a round-trip. %>
+      <template data-pvar-target="configPlaceholder"><%= render "pages/results_placeholder" %></template>
+    </section>
+
+  </div>
+<% end %>

@@ -1,0 +1,65 @@
+<% content_for :title, "#{t('methodology.title')} - paneldata.app" %>
+<%
+  replication_pdf = "/papers/replication-pvar-chmielak-kotermanski.pdf"
+  viewer_src = "/pdfjs/web/viewer.html?file=#{ERB::Util.url_encode(replication_pdf)}"
+  imf_url = "https://www.imf.org/external/pubs/ft/wp/2015/wp15174.pdf"
+  doi_url = "https://doi.org/10.1016/j.econlet.2015.11.024"
+%>
+
+<div data-controller="pdf-viewer" class="flex h-dvh flex-col bg-black">
+  <%# Reading-mode topbar: black, only logo (click = back to app), the two document tabs, and the language switcher. %>
+  <header class="flex items-center gap-4 bg-black px-4 py-2.5 text-slate-100">
+    <%= link_to root_path, class: "whitespace-nowrap", title: t("methodology.exit") do %>
+      <span class="text-lg font-semibold tracking-tight text-white">paneldata.app</span>
+    <% end %>
+
+    <nav class="mx-auto flex items-center gap-1" role="tablist" aria-label="<%= t('methodology.docs_aria') %>">
+      <% [["goes", "Góes (2016)"], ["replication", t("methodology.tab_replication")]].each do |doc, label| %>
+        <button type="button" role="tab" data-pdf-viewer-target="tab" data-doc="<%= doc %>" data-action="pdf-viewer#switch"
+                class="rounded-md px-3 py-1 text-sm text-slate-300 aria-selected:bg-white/10 aria-selected:font-medium aria-selected:text-white">
+          <%= label %>
+        </button>
+      <% end %>
+    </nav>
+
+    <%= render LocaleSwitcherComponent.new %>
+  </header>
+
+  <div class="relative min-h-0 flex-1">
+    <%# Goes (default): copyright-safe teaser - two pre-rendered first-page images (IMF WP + Economics Letters,
+        fair use) shown side by side at matched height. We never serve either full PDF. %>
+    <div data-pdf-viewer-target="goes" class="h-full overflow-y-auto bg-canvas text-ink">
+      <div class="mx-auto max-w-5xl px-4 py-8">
+        <div class="mx-auto mb-6 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
+          <p><%= t("methodology.goes_note_html") %></p>
+        </div>
+        <div class="flex flex-wrap items-start justify-center gap-6">
+          <figure class="flex flex-col items-center gap-2">
+            <a href="<%= imf_url %>" target="_blank" rel="noopener" class="block">
+              <img src="/papers/goes-imf-firstpage.png" alt="Goes (2016), IMF Working Paper WP/15/174 - first page"
+                   class="h-[60vh] w-auto rounded-lg border border-edge shadow-md transition-shadow duration-[var(--dur-fast)] ease-[var(--ease-standard)] hover:shadow-xl">
+            </a>
+            <figcaption>
+              <%= link_to t("methodology.goes_imf"), imf_url, target: "_blank", rel: "noopener",
+                    class: "text-sm font-medium text-navy hover:underline" %>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col items-center gap-2">
+            <a href="<%= doi_url %>" target="_blank" rel="noopener" class="block">
+              <img src="/papers/goes-elsevier-firstpage.png" alt="Goes (2016), Economics Letters 138 - first page"
+                   class="h-[60vh] w-auto rounded-lg border border-edge shadow-md transition-shadow duration-[var(--dur-fast)] ease-[var(--ease-standard)] hover:shadow-xl">
+            </a>
+            <figcaption>
+              <%= link_to t("methodology.goes_elsevier"), doi_url, target: "_blank", rel: "noopener",
+                    class: "text-sm font-medium text-navy hover:underline" %>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <%# Replication: full PDF.js viewer (our work, hosted freely). Hidden until selected. %>
+    <iframe data-pdf-viewer-target="replication" src="<%= viewer_src %>" title="<%= t('methodology.tab_replication') %>"
+            hidden class="h-full w-full border-0"></iframe>
+  </div>
+</div>

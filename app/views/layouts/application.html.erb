@@ -1,0 +1,63 @@
+<%
+  allowed_themes = SidebarComponent::THEMES   # single source of truth - all 7 themes valid for the cookie
+  requested_theme = cookies[:theme]
+  initial_theme = allowed_themes.include?(requested_theme) ? requested_theme : nil
+%>
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>"<%= " data-theme=#{initial_theme}".html_safe if initial_theme %>>
+  <head>
+    <title><%= content_for(:title) || "Paneldata" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Paneldata">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# Native smooth page transitions: Turbo 8 wraps same-origin visits in the View Transitions API
+        (graceful no-op on unsupported browsers; reduced-motion handled in CSS). %>
+    <meta name="view-transition" content="same-origin">
+
+    <%# Localized "no data" for the map tooltip - read fresh per hover (the map node is turbo-permanent, but
+        this meta re-renders per navigation, so it tracks the language). %>
+    <meta name="map-no-data" content="<%= t('coverage_map.no_data') %>">
+    <%# Localized labels for historical map entities whose period name must override the
+        ISO→DisplayNames name - e.g. the 1921-1991 polygons are the Soviet Union, not present-day Russia. The whole
+        coverage_map.hist namespace is keyed by the exact GeoJSON `name`; re-renders per navigation so it tracks the
+        language (read fresh on hover). Adding an entity = one YAML line per locale, no view change. %>
+    <meta name="map-hist-names" content="<%= I18n.t('coverage_map.hist').to_json %>">
+
+    <%# hreflang alternates - one per available locale + x-default → default (EN). %>
+    <% hreflang_alternates.each do |loc, href| %>
+      <%= tag.link rel: "alternate", hreflang: loc, href: href %>
+    <% end %>
+    <%= tag.link rel: "alternate", hreflang: "x-default",
+          href: url_for(request.path_parameters.merge(request.query_parameters).merge(locale: I18n.default_locale, only_path: false)) %>
+
+    <%# Anti-FOUC: light is ALWAYS the default (CLAUDE.md §4 - NIGDY dark jako default); dark only via explicit toggle. %>
+    <script nonce="<%= content_security_policy_nonce %>">
+      (function () {
+        if (!document.documentElement.hasAttribute("data-theme")) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+
+    <%= yield :head %>
+
+    <%= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# MapLibre GL CSS - vendored locally, before Tailwind. %>
+    <%= stylesheet_link_tag "maplibre-gl", "data-turbo-track": "reload" %>
+    <%# Tailwind 4 build output (builds/tailwind.css); NOT :app - see  / tailwindcss-rails#477 %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-canvas text-ink antialiased">
+    <%= yield %>
+  </body>
+</html>
