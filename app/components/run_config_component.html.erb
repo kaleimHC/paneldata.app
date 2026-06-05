@@ -1,0 +1,46 @@
+<section class="space-y-4 rounded-xl border border-edge bg-surface p-5 shadow-sm">
+  <h2 class="text-sm font-semibold text-ink"><%= t("run_config.title") %></h2>
+
+  <%# Two identical pickers: explanatory + response, both the shared analysis picker (cascade + loggability
+      gate). Each <select> carries its own data-pvar-target (predictor / response) and persists separately. %>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <p class="mb-1 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-ink-muted"><span class="h-1.5 w-1.5 rounded-full bg-info" aria-hidden="true"></span><%= t("run_config.predictor_aria") %></p>
+      <%= render IndicatorPickerComponent.new(mode: :analysis, role: :predictor, selected_code: default_predictor) %>
+    </div>
+    <div>
+      <p class="mb-1 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-ink-muted"><span class="h-1.5 w-1.5 rounded-full bg-ok" aria-hidden="true"></span><%= t("run_config.response_aria") %></p>
+      <%= render IndicatorPickerComponent.new(mode: :analysis, role: :response, selected_code: RunConfigComponent::RESPONSE_CODE) %>
+    </div>
+  </div>
+
+  <%# Period + bootstrap sit by the Run button. Period inputs clamp to the pair's common years (pvar). %>
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-edge pt-4 text-sm text-ink-soft">
+    <span class="inline-flex items-center gap-2"><%= t("run_config.over_period") %>
+      <input type="number" data-pvar-target="startYear" data-action="change->pvar#periodChanged" value="2000" min="1960" max="2024"
+             class="field-input w-20" aria-label="<%= t('run_config.period_aria') %> start">
+      <span>-</span>
+      <input type="number" data-pvar-target="endYear" data-action="change->pvar#periodChanged" value="2012" min="1961" max="2024"
+             class="field-input w-20" aria-label="<%= t('run_config.period_aria') %> end">
+    </span>
+    <span class="inline-flex items-center gap-2"><%= t("run_config.bootstrap") %>
+      <select data-pvar-target="bootstrap" data-action="change->pvar#periodChanged" class="field-select w-auto" aria-label="<%= t('run_config.bootstrap_aria') %>">
+        <% RunConfigComponent::BOOTSTRAP.each do |b| %><option <%= "selected" if b == 100 %>><%= b %></option><% end %>
+      </select>
+    </span>
+  </div>
+
+  <%# Live pre-run validation: instant client-side check of the explanatory×response pair for the period
+      (balanced countries / common years / period length). Updates as you change a variable or the years. %>
+  <p data-pvar-target="validation" class="text-xs text-ink-muted" role="status" aria-live="polite"></p>
+
+  <div class="flex flex-wrap items-center gap-3">
+    <button type="button" data-pvar-target="runButton" data-action="pvar#run"
+            class="rounded-lg border border-action bg-action px-4 py-2 text-sm font-medium text-action-ink hover:bg-action-hover disabled:cursor-not-allowed disabled:border-edge disabled:bg-action-dis disabled:text-action-dis-ink">
+      <%= t("run_config.run_button") %>
+    </button>
+    <span data-pvar-target="status" class="text-xs text-ink-muted" role="status" aria-live="polite">
+      <%= t("run_config.engine_note_html") %>
+    </span>
+  </div>
+</section>

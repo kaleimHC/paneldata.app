@@ -1,0 +1,73 @@
+<%# Section header: the run's variables (predictor -> response + period) at the very top. %>
+<header class="pt-2 text-center md:text-left">
+  <h2 class="font-serif text-lg font-semibold tracking-tight text-navy"><%= predictor %></h2>
+  <p class="mt-0.5 font-serif text-lg font-semibold tracking-tight text-ink-soft"><span class="text-ink-muted">&rarr;</span> <%= response %></p>
+  <p class="mt-1 font-mono text-xs text-ink-muted"><%= period %>N=<%= run.n_countries %> &middot; T=<%= run.n_years %></p>
+</header>
+
+<%# Headline scalars. %>
+<div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+  <%= stat(pv("peak_response"), "#{f(run.peak_irf, 3)}%", pv("at_year", h: run.peak_horizon)) %>
+  <%= stat(pv("gamma12"), f(run.gamma_12, 4), "p = #{f(run.p_gamma_12, 3)}") %>
+  <%= stat(pv("gamma21"), f(gamma21&.coefficient, 4), "p = #{f(gamma21&.p_value, 3)}") %>
+  <%= stat(pv("countries"), run.n_countries, pv("years_n", years: run.n_years)) %>
+</div>
+
+<details open class="overflow-hidden rounded-xl border border-edge bg-surface shadow-sm">
+  <summary class="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-medium text-ink marker:content-none">
+    <span><%= t("panels.irf_summary") %></span>
+  </summary>
+  <div class="border-t border-edge px-4 py-6 text-sm text-ink-muted">
+    <%= chart_svg %>
+    <div class="overflow-x-auto">
+      <table class="mt-3 w-full text-left text-xs">
+        <thead><tr class="text-ink-muted">
+          <th class="pr-3 font-medium"><%= pv("th_year") %></th>
+          <th class="pr-3 font-medium"><%= pv("th_irf") %></th>
+          <th class="pr-3 font-medium"><%= pv("th_ci") %></th>
+        </tr></thead>
+        <tbody>
+          <% irf.each do |p| %>
+            <tr>
+              <td class="py-1 pr-3"><%= p.horizon %></td>
+              <td class="py-1 pr-3 font-mono"><%= f(p.irf, 4) %></td>
+              <td class="py-1 pr-3 font-mono text-ink-soft"><%= p.ci_lower.nil? ? "-" : "[#{f(p.ci_lower, 3)}, #{f(p.ci_upper, 3)}]" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</details>
+
+<details class="overflow-hidden rounded-xl border border-edge bg-surface shadow-sm">
+  <summary class="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-medium text-ink marker:content-none">
+    <span><%= t("panels.diagnostics_summary") %></span>
+  </summary>
+  <div class="border-t border-edge px-4 py-6 text-sm text-ink-muted">
+    <% if diag.empty? %>
+      <p class="text-sm text-ink-muted"><%= pv("no_diagnostics") %></p>
+    <% else %>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs">
+          <thead><tr class="text-ink-muted">
+            <th class="pr-3 font-medium"><%= pv("th_equation") %></th>
+            <th class="pr-3 font-medium"><%= pv("th_test") %></th>
+            <th class="pr-3 font-medium"><%= pv("th_statistic") %></th>
+            <th class="pr-3 font-medium"><%= pv("th_pvalue") %></th>
+          </tr></thead>
+          <tbody>
+            <% diag.each do |d| %>
+              <tr>
+                <td class="py-1 pr-3 font-mono"><%= d.equation %></td>
+                <td class="py-1 pr-3"><%= d.test_name %></td>
+                <td class="py-1 pr-3 font-mono"><%= f(d.statistic, 3) %></td>
+                <td class="py-1 pr-3 font-mono"><%= f(d.p_value, 3) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+</details>
