@@ -1,0 +1,85 @@
+<% sel = "field-select mt-0.5 w-full" %>
+<div data-controller="indicator-picker"
+     data-indicator-picker-mode-value="<%= mode %>"
+     data-indicator-picker-role-value="<%= role %>"
+     data-indicator-picker-initial-value="<%= initial_code %>"
+     data-indicator-picker-region-labels-value="<%= IndicatorTaxonomy::REGIONAL_KEYS.union(IndicatorTaxonomy::NATIONAL_KEYS).index_with { |k| t("indicators.region.#{k}") }.merge('all' => t('indicators.region.all'), 'countries' => t('indicators.region.countries')).to_json %>"
+     data-indicator-picker-scope-labels-value="<%= scope_keys.index_with { |k| t("indicators.scope.#{k}") }.to_json %>"
+     data-indicator-picker-dziedzina-labels-value="<%= dziedzina_keys.index_with { |k| t("indicators.dziedzina.#{k}") }.to_json %>"
+     data-indicator-picker-all-dziedzina-value="<%= t('indicators.dziedzina.all') %>"
+     data-indicator-picker-all-publishers-value="<%= t('indicators.facet.all_publishers') %>"
+     data-indicator-picker-pick-publisher-value="<%= t('indicators.pick_publisher') %>"
+     data-action="indicator:search-select@window->indicator-picker#searchSelect<%= ' choropleth:loaded@window->indicator-picker#onLoaded' if mode == :map %>"
+     class="w-full max-w-sm space-y-1.5">
+
+  <% if mode == :map %>
+    <h2 class="text-[10px] font-semibold uppercase tracking-wider text-ink-muted"><%= t("data_selection.title") %></h2>
+  <% end %>
+
+  <%# Pokrycie - de-clutters: default Globalne, regional/national hidden until chosen. %>
+  <label class="block text-[10px] text-ink-muted"><%= t("indicators.facet.coverage") %>
+    <select data-indicator-picker-target="scope" data-action="indicator-picker#scopeChanged" class="<%= sel %>">
+      <% scope_keys.each do |k| %><option value="<%= k %>"><%= t("indicators.scope.#{k}") %></option><% end %>
+    </select>
+  </label>
+
+  <%# Region / Country - conditional, shown only for Regionalne/Krajowe; options rebuilt by JS from the catalog.
+      Collapses via grid-template-rows (composited-friendly vs the old max-height): the controller toggles
+      display:grid + 1fr<->0fr on this label; the single inner wrapper (min-h-0 overflow-hidden) is the grid track. %>
+  <label data-indicator-picker-target="regionField" class="hidden block text-[10px] text-ink-muted">
+    <span data-indicator-picker-target="regionInner" class="block min-h-0 overflow-hidden"><%= t("indicators.facet.region") %>
+      <select data-indicator-picker-target="region" data-action="indicator-picker#regionChanged" class="<%= sel %>"></select>
+    </span>
+  </label>
+
+  <%# Dziedzina (theme) - grouped from the dirty 66-value dimension into ~11. %>
+  <label class="block text-[10px] text-ink-muted"><%= t("indicators.facet.dziedzina") %>
+    <select data-indicator-picker-target="dziedzina" data-action="indicator-picker#dziedzinaChanged" class="<%= sel %>">
+      <option value="all"><%= t("indicators.dziedzina.all") %></option>
+      <% dziedzina_keys.each do |k| %><option value="<%= k %>"><%= t("indicators.dziedzina.#{k}") %></option><% end %>
+    </select>
+  </label>
+
+  <%# Wydawca (publisher) - 4th cascade field; picking one shortens the Wskaznik list. JS-populated from the
+      catalog under the current Pokrycie+Region+Dziedzina. Default "Wszyscy wydawcy". %>
+  <label class="block text-[10px] text-ink-muted"><%= t("indicators.facet.publisher") %>
+    <select data-indicator-picker-target="publisher" data-action="indicator-picker#publisherChanged" class="<%= sel %>"></select>
+  </label>
+
+  <%# Wskaznik - JS-populated; in analysis it IS the pvar predictor/response input. The magnifier sits BESIDE the
+      field: the ▾ browses the list, the lupka searches by name and sets THIS picker's cascade. %>
+  <label class="block text-[10px] text-ink-muted"><%= t("data_selection.indicator") %>
+    <span class="mt-0.5 flex items-stretch gap-1.5">
+      <select data-indicator-picker-target="indicator" data-action="indicator-picker#indicatorChanged"
+              <%= "data-pvar-target=#{role}" if analysis? %> class="field-select w-full"></select>
+      <button type="button" data-action="indicator-picker#openSearch"
+              aria-label="<%= t('search.label') %>" title="<%= t('search.label') %>"
+              class="inline-flex shrink-0 items-center justify-center rounded-md border border-edge px-2 text-ink-muted hover:border-ink-muted hover:text-ink">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </button>
+    </span>
+  </label>
+
+  <% if analysis? %>
+    <p data-indicator-picker-target="legend" class="hidden text-[10px] text-ink-muted">
+      <span class="text-warn">&#8856;</span> <%= t("indicators.non_loggable_hint") %>
+    </p>
+  <% end %>
+
+  <%# Description: plain label-left value-right rows. Kolekcja overflow is handled by standardizing the
+      data_sources.name naming, not by display tricks. %>
+  <dl data-indicator-picker-target="description" class="mt-2.5 space-y-1 border-t border-edge pt-2.5 text-[10px]">
+    <div class="flex justify-between gap-3"><dt class="shrink-0 text-ink-muted"><%= t("indicators.facet.collection") %></dt><dd data-indicator-picker-target="metaCollection" class="min-w-0 truncate text-right text-ink"><%= initial_collection_display %></dd></div>
+    <div class="flex justify-between gap-3"><dt class="text-ink-muted"><%= t("indicators.facet.coverage") %></dt><dd data-indicator-picker-target="metaCoverage" class="text-right text-ink">-</dd></div>
+    <% if mode == :map %>
+      <div class="flex justify-between gap-3"><dt class="text-ink-muted"><%= t("data_selection.period") %></dt><dd data-indicator-picker-target="metaPeriod" class="text-ink">-</dd></div>
+    <% end %>
+    <div class="flex justify-between gap-3"><dt class="shrink-0 text-ink-muted"><%= t("data_selection.license") %></dt>
+      <dd class="min-w-0 truncate text-right"><%= content_tag :a, (initial_entry&.dig(:license) || "-"), href: initial_entry&.dig(:license_url), target: "_blank", rel: "noopener", data: { indicator_picker_target: "metaLicense" }, class: "text-ink hover:text-accent" %></dd></div>
+    <div class="flex justify-between gap-3"><dt class="shrink-0 text-ink-muted"><%= t("data_selection.source") %></dt>
+      <dd class="min-w-0 truncate text-right"><%= content_tag :a, (initial_link_host || "-"), href: initial_link, target: "_blank", rel: "noopener", data: { indicator_picker_target: "metaLink" }, class: "text-accent hover:underline" %></dd></div>
+  </dl>
+</div>

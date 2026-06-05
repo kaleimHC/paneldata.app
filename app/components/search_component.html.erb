@@ -1,0 +1,30 @@
+<%# Indicator search OVERLAY. Rendered once; the triggers are the per-picker magnifiers (each Wskaznik field
+    has one beside it). A magnifier dispatches search:open {target} -> this controller opens the overlay for that
+    picker and, on click, dispatches indicator:search-select {code, target} back to it. The header names the field
+    being set. Mouse-only: type to filter, click a row to pick, × / backdrop to close (no keyboard affordances). %>
+<div data-controller="search" class="contents"
+     data-action="search:open@window->search#openFor"
+     data-search-scope-labels-value="<%= scope_labels.to_json %>"
+     data-search-dziedzina-labels-value="<%= dziedzina_labels.to_json %>"
+     data-search-titles-value="<%= target_titles.to_json %>"
+     data-search-no-results-value="<%= t('search.no_results') %>">
+
+  <%# Overlay (fixed; hidden until opened). Backdrop click closes; clicks on the panel do not. %>
+  <div data-search-target="overlay" data-action="click->search#backdrop" hidden
+       role="dialog" aria-modal="true" aria-label="<%= t('search.label') %>"
+       class="fixed inset-0 z-50 flex items-start justify-center bg-black/40 p-4 pt-[12vh]">
+    <div class="w-full max-w-lg overflow-hidden rounded-xl border border-edge bg-surface shadow-xl">
+      <div class="flex items-center justify-between gap-2 border-b border-edge px-4 pb-1 pt-2.5">
+        <span data-search-target="header" class="text-[10px] font-semibold uppercase tracking-wider text-ink-muted"></span>
+        <button type="button" data-action="search#close" aria-label="<%= t('search.close') %>" title="<%= t('search.close') %>"
+                class="-mr-1 flex h-6 w-6 items-center justify-center rounded text-ink-muted hover:bg-raised hover:text-ink">×</button>
+      </div>
+      <input data-search-target="input" data-action="input->search#query"
+             type="text" autocomplete="off" placeholder="<%= t('search.placeholder') %>"
+             aria-label="<%= t('search.placeholder') %>"
+             class="w-full border-0 border-b border-edge bg-transparent px-4 py-3 text-sm text-ink outline-none">
+      <ul data-search-target="results" data-action="click->search#clickResult" role="listbox"
+          class="max-h-[50vh] overflow-y-auto py-1 text-sm"></ul>
+    </div>
+  </div>
+</div>
