@@ -1,0 +1,19 @@
+<header class="flex items-center gap-4 bg-chrome px-4 py-2.5 text-chrome-ink">
+  <%= link_to root_path, class: "flex items-baseline gap-4 whitespace-nowrap" do %>
+    <span class="text-lg font-semibold tracking-tight text-chrome-ink">paneldata.app</span>
+    <span class="hidden text-sm font-light tracking-wide text-chrome-ink/70 sm:inline"><%= t("top_bar.tagline") %></span>
+  <% end %>
+  <div class="ml-auto flex items-center gap-4">
+    <nav class="hidden items-center gap-4 text-xs text-chrome-ink/80 md:flex" aria-label="<%= t('a11y.sections') %>">
+      <% TopBarComponent::NAV_KEYS.each do |key| %>
+        <% if key == "methodology" %>
+          <%= link_to t("top_bar.nav.#{key}"), methodology_path, class: "hover:text-chrome-ink" %>
+        <% else %>
+          <span class="cursor-default hover:text-chrome-ink" title="<%= t('top_bar.coming_soon') %>"><%= t("top_bar.nav.#{key}") %></span>
+        <% end %>
+      <% end %>
+    </nav>
+<%= render LocaleSwitcherComponent.new %>
+  </div>
+</header>
+<%# View tabs moved into the left rail (SidebarComponent) - works identically on desktop and in the mobile drawer. %>

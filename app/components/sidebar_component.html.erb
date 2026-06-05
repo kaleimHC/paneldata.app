@@ -1,0 +1,44 @@
+<div class="flex h-full flex-col gap-4 overflow-y-auto px-4 pb-4 pt-2">
+  <%# In-page view nav: Explore | Analysis split 50/50, centered. Lives in the rail (desktop: left column; mobile:
+      below the map as page content - no drawer). Driven by tab_controller. Results is a section within Analysis. %>
+  <nav class="flex items-stretch" role="tablist" aria-label="<%= t('a11y.views') %>">
+    <% view_tabs.each do |key| %>
+      <% active = tab_active?(key) %>
+      <button type="button" role="tab" data-tab-target="tab" data-action="tab#select" data-tab-name="<%= key %>"
+              aria-selected="<%= active %>"
+              class="flex-1 border-b-2 py-2 text-center text-xs <%= active ? 'border-tab font-medium text-tab' : 'border-transparent text-ink-muted hover:text-ink' %>">
+        <%= t("tabs.#{key}") %>
+      </button>
+    <% end %>
+  </nav>
+
+  <%# Indicator search overlay: rendered once; opened by the per-picker magnifiers (beside each Wskaznik
+      field). Each magnifier targets only its own picker. Mouse-only (no keyboard shortcut). %>
+  <%= render SearchComponent.new %>
+
+  <%# Explore-only controls - hidden on mobile when [data-view=analysis] (analysis = nav + its content only).
+      MOBILE: own surface box (bg/border) so it fades in/out together with its content in lockstep. DESKTOP: flush in rail. %>
+  <div data-explore-only class="rounded-xl border border-edge bg-surface p-3 md:rounded-none md:border-0 md:bg-transparent md:p-0">
+    <%= render IndicatorPickerComponent.new(mode: :map, selected_code: selected_code) %>
+  </div>
+
+  <section data-analysis-only data-controller="run-history" class="hidden space-y-1.5 md:block"
+           data-run-history-labels-value="<%= { today: t('history.today'), yesterday: t('history.yesterday'), older: t('history.older'), failed: t('history.failed'), queued: t('history.queued'), delete: t('history.delete') }.to_json %>">
+    <h2 class="text-[11px] font-semibold uppercase tracking-wider text-ink-muted"><%= t("sidebar.run_history") %></h2>
+    <div data-run-history-target="list" class="space-y-1.5"></div>
+    <p data-run-history-target="empty" class="rounded-lg border border-dashed border-edge px-3 py-2.5 text-[11px] text-ink-muted">
+      <%= t("sidebar.run_history_empty") %>
+    </p>
+  </section>
+
+  <%# Theme: always visible at the bottom of the rail on desktop; on mobile it's explore-only (hidden in analysis). %>
+  <div data-mobile-explore-only class="mt-auto border-t border-edge pt-3" data-controller="theme-switcher">
+    <label for="theme-select" class="mb-1 block text-[11px] font-medium uppercase tracking-wider text-ink-muted"><%= t("sidebar.theme") %></label>
+    <select id="theme-select" data-theme-switcher-target="selector" data-action="theme-switcher#change"
+            class="field-select w-full">
+      <% themes.each do |value| %>
+        <option value="<%= value %>"><%= t("themes.#{value}") %></option>
+      <% end %>
+    </select>
+  </div>
+</div>

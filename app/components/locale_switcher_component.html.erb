@@ -1,0 +1,10 @@
+<div class="flex items-center gap-0.5 text-xs" role="group" aria-label="<%= t('locale_switcher.label') %>">
+  <% locales.each do |loc| %>
+    <% if current?(loc) %>
+      <span class="rounded px-1.5 py-0.5 font-semibold text-chrome-ink" aria-current="true"><%= loc.to_s.upcase %></span>
+    <% else %>
+      <%= link_to loc.to_s.upcase, helpers.switch_locale_url(loc),
+            class: "rounded px-1.5 py-0.5 text-chrome-ink/60 hover:text-chrome-ink" %>
+    <% end %>
+  <% end %>
+</div>

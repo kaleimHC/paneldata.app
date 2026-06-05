@@ -1,0 +1,20 @@
+<%# Desktop: fills the viewport exactly (h-dvh) and never scrolls the page - the map area flexes to fit and the rail
+    scrolls internally if needed. Mobile: min-h-dvh + normal page scroll (map hero, content below). %>
+<div data-controller="tab" data-view="<%= initial_view %>" class="flex min-h-dvh flex-col bg-canvas text-ink md:h-dvh md:overflow-hidden">
+  <%= render TopBarComponent.new %>
+
+  <%# No drawer, no hamburger. MOBILE explore: map (stage) on top, rail below. MOBILE analysis: rail (nav) rises to
+      the top, explore-only controls collapse, analysis content shows in the stage below - all driven by [data-view]
+      on the root (CSS in application.css). DESKTOP: rail left, stage right, unchanged. %>
+  <div class="flex flex-1 flex-col md:min-h-0 md:flex-row">
+    <%# MOBILE: rail is transparent - the data-selection box carries its OWN surface so its bg fades in/out in lockstep
+        with its content (one opacity animation, no two-clock desync). DESKTOP: rail keeps the surface + right border. %>
+    <aside data-rail class="order-last w-full md:order-first md:w-72 md:shrink-0 md:min-h-0 md:border-r md:border-edge md:bg-surface">
+      <%= render SidebarComponent.new(selected_code: selected_code, initial_view: initial_view, result_mode: result_mode) %>
+    </aside>
+
+    <main data-stage class="order-first min-w-0 md:order-none md:flex md:min-h-0 md:flex-1 md:flex-col md:overflow-y-auto">
+      <%= content %>
+    </main>
+  </div>
+</div>
