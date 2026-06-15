@@ -1,0 +1,23 @@
+completed:
+  model_spec: pvar
+  response_indicator: gdp
+  predictor_indicator: efw
+  status: completed
+  seed: 42
+  progress: 100
+  params: '<%= { start_year: 2000, end_year: 2012, n_lags: 1, n_bootstrap: 100, n_exclude: 10 }.to_json %>'
+  gamma_12: 0.3191365900
+  p_gamma_12: 0.0100000000
+  peak_irf: 0.5000000000
+  peak_horizon: 3
+  n_countries: 157
+  n_years: 13
+
+running:
+  model_spec: pvar
+  response_indicator: gdp
+  predictor_indicator: polity
+  status: running
+  seed: 42
+  progress: 40
+  params: '<%= { start_year: 2000, end_year: 2012, n_bootstrap: 100 }.to_json %>'

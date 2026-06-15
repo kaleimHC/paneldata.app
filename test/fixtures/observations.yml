@@ -1,0 +1,20 @@
+# GDP (response) and Polity (predictor) over 2000-2002 for POL/DEU/FRA.
+# FRA is missing GDP 2002 on purpose -> strict-balance must drop FRA (PanelBuilder test).
+gdp_pol_00: { indicator: gdp, country_iso3c: POL, year: 2000, value: 10000, source_revision: t1 }
+gdp_pol_01: { indicator: gdp, country_iso3c: POL, year: 2001, value: 10500, source_revision: t1 }
+gdp_pol_02: { indicator: gdp, country_iso3c: POL, year: 2002, value: 11000, source_revision: t1 }
+gdp_deu_00: { indicator: gdp, country_iso3c: DEU, year: 2000, value: 30000, source_revision: t1 }
+gdp_deu_01: { indicator: gdp, country_iso3c: DEU, year: 2001, value: 30500, source_revision: t1 }
+gdp_deu_02: { indicator: gdp, country_iso3c: DEU, year: 2002, value: 31000, source_revision: t1 }
+gdp_fra_00: { indicator: gdp, country_iso3c: FRA, year: 2000, value: 28000, source_revision: t1 }
+gdp_fra_01: { indicator: gdp, country_iso3c: FRA, year: 2001, value: 28500, source_revision: t1 }
+
+pol_pol_00: { indicator: polity, country_iso3c: POL, year: 2000, value: 8, source_revision: t1 }
+pol_pol_01: { indicator: polity, country_iso3c: POL, year: 2001, value: 9, source_revision: t1 }
+pol_pol_02: { indicator: polity, country_iso3c: POL, year: 2002, value: 9, source_revision: t1 }
+pol_deu_00: { indicator: polity, country_iso3c: DEU, year: 2000, value: 10, source_revision: t1 }
+pol_deu_01: { indicator: polity, country_iso3c: DEU, year: 2001, value: 10, source_revision: t1 }
+pol_deu_02: { indicator: polity, country_iso3c: DEU, year: 2002, value: 10, source_revision: t1 }
+pol_fra_00: { indicator: polity, country_iso3c: FRA, year: 2000, value: 9, source_revision: t1 }
+pol_fra_01: { indicator: polity, country_iso3c: FRA, year: 2001, value: 9, source_revision: t1 }
+pol_fra_02: { indicator: polity, country_iso3c: FRA, year: 2002, value: 9, source_revision: t1 }

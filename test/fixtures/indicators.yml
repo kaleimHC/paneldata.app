@@ -1,0 +1,35 @@
+# gdp / co2: loggable (value_min > 0). polity: not loggable (value_min <= 0).
+# unloaded: no observations, value_min nil (not loggable). efw: legacy fixture, value_min nil (not loggable).
+gdp:
+  code: NY.GDP.PCAP.KD
+  name: GDP per capita
+  source: World Bank
+  value_min: 100.0
+  value_max: 90000.0
+  is_active: true
+efw:
+  code: efw_fraser
+  name: Economic Freedom of the World
+  source: Fraser Institute
+  is_active: true
+polity:
+  code: POLITY5
+  name: Polity5 democracy score
+  source: Center for Systemic Peace
+  value_min: -10.0
+  value_max: 10.0
+  is_active: true
+unloaded:
+  code: TEST.NODATA
+  name: Catalogued but unloaded
+  source: Test Source
+  is_active: true
+# co2: loggable (value_min > 0), no licence record -> computable. A 2nd computable indicator so a valid
+# predictor/response PVAR pair exists post-EFW-removal (efw was previously the loggable counterpart).
+co2:
+  code: owid_co2_per_capita
+  name: CO2 emissions per capita
+  source: Our World in Data
+  value_min: 0.01
+  value_max: 50.0
+  is_active: true

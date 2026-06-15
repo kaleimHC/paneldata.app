@@ -1,0 +1,13 @@
+completed_ar1:
+  analysis_run: completed
+  equation: log_gdp
+  test_name: AR1
+  statistic: -2.5000000000
+  p_value: 0.0100000000
+completed_sargan:
+  analysis_run: completed
+  equation: log_gdp
+  test_name: Sargan
+  statistic: 30.0000000000
+  p_value: 0.2000000000
+  df: 25

@@ -1,0 +1,16 @@
+pol:
+  iso3c: POL
+  name: Poland
+  entity_type: country
+deu:
+  iso3c: DEU
+  name: Germany
+  entity_type: country
+fra:
+  iso3c: FRA
+  name: France
+  entity_type: country
+wld:
+  iso3c: WLD
+  name: World
+  entity_type: aggregate

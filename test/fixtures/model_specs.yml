@@ -1,0 +1,4 @@
+pvar:
+  code: pvar_goes_2016
+  name: PVAR Goes 2016
+  estimator: plm::pgmm onestep FD

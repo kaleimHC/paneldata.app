@@ -1,0 +1,13 @@
+# gamma_21 (response -> predictor) is the log_efw equation, L.log_gdp regressor (analyses#show reads this pair).
+completed_efw_lgdp:
+  analysis_run: completed
+  equation: log_efw
+  regressor: L.log_gdp
+  coefficient: 0.3191365900
+  p_value: 0.0100000000
+completed_gdp_lefw:
+  analysis_run: completed
+  equation: log_gdp
+  regressor: L.log_efw
+  coefficient: 0.1000000000
+  p_value: 0.2000000000

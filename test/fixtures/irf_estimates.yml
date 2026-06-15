@@ -1,0 +1,12 @@
+completed_h0:
+  analysis_run: completed
+  horizon: 0
+  irf: 0.0000000000
+  ci_lower: -0.1000000000
+  ci_upper: 0.1000000000
+completed_h1:
+  analysis_run: completed
+  horizon: 1
+  irf: 0.2000000000
+  ci_lower: 0.0000000000
+  ci_upper: 0.4000000000
