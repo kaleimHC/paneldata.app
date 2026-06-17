@@ -1,0 +1,87 @@
+# Kamal 2.11 production config for paneldata.app
+# Single-machine architecture: build host = deploy target = same VPS (host via DEPLOY_HOST env)
+# Generated for Hetzner CX22 (institutions), kernel 6.12.90, Debian 13 trixie
+
+service: paneldata
+
+# Container image - NO registry prefix here (registry.server prepends ghcr.io).
+image: kaleimhc/paneldata
+
+servers:
+  web:
+    - <%= ENV["DEPLOY_HOST"] %>
+ # Sidekiq worker for the PVAR compute layer: same VPS, same image,
+ # cmd override runs the worker instead of the web server. R + plm live in the image.
+  job:
+    hosts:
+      - <%= ENV["DEPLOY_HOST"] %>
+    cmd: bundle exec sidekiq -C config/sidekiq.yml
+
+proxy:
+  ssl: true
+  host: paneldata.app
+ # kamal-proxy handles Let's Encrypt auto-provisioning + renewal
+
+registry:
+  server: 178.105.234.91:5001
+  username: local
+  password: local
+
+builder:
+  arch: amd64
+
+env:
+  clear:
+    RAILS_LOG_TO_STDOUT: "true"
+    RAILS_SERVE_STATIC_FILES: "true"
+    DB_HOST: paneldata-db
+    DATABASE_HOST: paneldata-db
+    DATABASE_USERNAME: paneldata
+    DATABASE_NAME: paneldata_production
+    REDIS_URL: redis://paneldata-redis:6379/0
+  secret:
+    - RAILS_MASTER_KEY
+    - DATABASE_PASSWORD
+
+# Persistent data volume mounted into the app container.
+volumes:
+  - "/srv/paneldata/data:/srv/paneldata/data"
+
+aliases:
+  console: app exec --interactive --reuse "bin/rails console"
+  shell: app exec --interactive --reuse "bash"
+  logs: app logs -f
+  dbc: app exec --interactive --reuse "bin/rails dbconsole"
+
+accessories:
+  db:
+    image: postgres:18-alpine
+    host: <%= ENV["DEPLOY_HOST"] %>
+    port: "127.0.0.1:5433:5432"
+    env:
+      clear:
+        POSTGRES_USER: paneldata
+        POSTGRES_DB: paneldata_production
+      secret:
+        - POSTGRES_PASSWORD
+ # NOTE: postgres image auto-creates role+db from POSTGRES_USER/DB/PASSWORD.
+ # If custom init SQL is needed later (extensions, grants), add db/production.sql.erb
+ # and restore a `files:` directive mapping it to /docker-entrypoint-initdb.d/.
+    directories:
+      - data:/var/lib/postgresql
+
+  redis:
+    image: redis:7-alpine
+    host: <%= ENV["DEPLOY_HOST"] %>
+    port: "127.0.0.1:6379:6379"
+    directories:
+      - data:/data
+    cmd: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+
+ssh:
+  user: deploy
+
+retain_containers: 3
+boot:
+  limit: 1
+  wait: 2
